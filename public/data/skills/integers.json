@@ -1,0 +1,2008 @@
+{
+  "title": "Integer Operations",
+  "description": "Master fundamental operations with integers.",
+  "waves": 5,
+  "timePerQuestion": 20,
+  "questions": [
+    {
+      "id": 1,
+      "wave": 1,
+      "question": "What is 5 + 3?",
+      "choices": ["6", "8", "9", "7"],
+      "answer": "8",
+      "points": 10
+    },
+    {
+      "id": 2,
+      "wave": 1,
+      "question": "What is 9 - 4?",
+      "choices": ["5", "6", "4", "13"],
+      "answer": "5",
+      "points": 10
+    },
+    {
+      "id": 3,
+      "wave": 1,
+      "question": "What is 6 × 2?",
+      "choices": ["8", "10", "12", "14"],
+      "answer": "12",
+      "points": 10
+    },
+    {
+      "id": 4,
+      "wave": 1,
+      "question": "What is 15 ÷ 3?",
+      "choices": ["3", "4", "5", "6"],
+      "answer": "5",
+      "points": 10
+    },
+    {
+      "id": 5,
+      "wave": 1,
+      "question": "What is 7 + 8?",
+      "choices": ["14", "15", "16", "17"],
+      "answer": "15",
+      "points": 10
+    },
+    {
+      "id": 6,
+      "wave": 1,
+      "question": "What is 12 - 5?",
+      "choices": ["6", "7", "8", "9"],
+      "answer": "7",
+      "points": 10
+    },
+    {
+      "id": 7,
+      "wave": 1,
+      "question": "What is 4 × 3?",
+      "choices": ["7", "10", "12", "15"],
+      "answer": "12",
+      "points": 10
+    },
+    {
+      "id": 8,
+      "wave": 1,
+      "question": "What is 18 ÷ 2?",
+      "choices": ["8", "9", "10", "11"],
+      "answer": "9",
+      "points": 10
+    },
+    {
+      "id": 9,
+      "wave": 1,
+      "question": "What is 6 + 9?",
+      "choices": ["14", "15", "16", "17"],
+      "answer": "15",
+      "points": 10
+    },
+    {
+      "id": 10,
+      "wave": 1,
+      "question": "What is 11 - 3?",
+      "choices": ["7", "8", "9", "10"],
+      "answer": "8",
+      "points": 10
+    },
+    {
+      "id": 11,
+      "wave": 1,
+      "question": "What is 5 × 4?",
+      "choices": ["15", "18", "20", "25"],
+      "answer": "20",
+      "points": 10
+    },
+    {
+      "id": 12,
+      "wave": 1,
+      "question": "What is 24 ÷ 4?",
+      "choices": ["5", "6", "7", "8"],
+      "answer": "6",
+      "points": 10
+    },
+    {
+      "id": 13,
+      "wave": 1,
+      "question": "What is 8 + 7?",
+      "choices": ["14", "15", "16", "17"],
+      "answer": "15",
+      "points": 10
+    },
+    {
+      "id": 14,
+      "wave": 1,
+      "question": "What is 16 - 9?",
+      "choices": ["6", "7", "8", "9"],
+      "answer": "7",
+      "points": 10
+    },
+    {
+      "id": 15,
+      "wave": 1,
+      "question": "What is 3 × 6?",
+      "choices": ["15", "18", "21", "24"],
+      "answer": "18",
+      "points": 10
+    },
+    {
+      "id": 16,
+      "wave": 1,
+      "question": "What is 28 ÷ 7?",
+      "choices": ["3", "4", "5", "6"],
+      "answer": "4",
+      "points": 10
+    },
+    {
+      "id": 17,
+      "wave": 1,
+      "question": "What is 4 + 5?",
+      "choices": ["8", "9", "10", "11"],
+      "answer": "9",
+      "points": 10
+    },
+    {
+      "id": 18,
+      "wave": 1,
+      "question": "What is 13 - 6?",
+      "choices": ["6", "7", "8", "9"],
+      "answer": "7",
+      "points": 10
+    },
+    {
+      "id": 19,
+      "wave": 1,
+      "question": "What is 7 × 2?",
+      "choices": ["12", "14", "16", "18"],
+      "answer": "14",
+      "points": 10
+    },
+    {
+      "id": 20,
+      "wave": 1,
+      "question": "What is 35 ÷ 5?",
+      "choices": ["6", "7", "8", "9"],
+      "answer": "7",
+      "points": 10
+    },
+    {
+      "id": 21,
+      "wave": 1,
+      "question": "What is 6 + 4?",
+      "choices": ["9", "10", "11", "12"],
+      "answer": "10",
+      "points": 10
+    },
+    {
+      "id": 22,
+      "wave": 1,
+      "question": "What is 14 - 8?",
+      "choices": ["5", "6", "7", "8"],
+      "answer": "6",
+      "points": 10
+    },
+    {
+      "id": 23,
+      "wave": 1,
+      "question": "What is 8 × 3?",
+      "choices": ["21", "24", "27", "30"],
+      "answer": "24",
+      "points": 10
+    },
+    {
+      "id": 24,
+      "wave": 1,
+      "question": "What is 36 ÷ 6?",
+      "choices": ["5", "6", "7", "8"],
+      "answer": "6",
+      "points": 10
+    },
+    {
+      "id": 25,
+      "wave": 1,
+      "question": "What is 9 + 6?",
+      "choices": ["14", "15", "16", "17"],
+      "answer": "15",
+      "points": 10
+    },
+    {
+      "id": 26,
+      "wave": 1,
+      "question": "What is 17 - 9?",
+      "choices": ["7", "8", "9", "10"],
+      "answer": "8",
+      "points": 10
+    },
+    {
+      "id": 27,
+      "wave": 1,
+      "question": "What is 5 × 5?",
+      "choices": ["20", "25", "30", "35"],
+      "answer": "25",
+      "points": 10
+    },
+    {
+      "id": 28,
+      "wave": 1,
+      "question": "What is 32 ÷ 8?",
+      "choices": ["3", "4", "5", "6"],
+      "answer": "4",
+      "points": 10
+    },
+    {
+      "id": 29,
+      "wave": 1,
+      "question": "What is 7 + 5?",
+      "choices": ["11", "12", "13", "14"],
+      "answer": "12",
+      "points": 10
+    },
+    {
+      "id": 30,
+      "wave": 1,
+      "question": "What is 15 - 7?",
+      "choices": ["7", "8", "9", "10"],
+      "answer": "8",
+      "points": 10
+    },
+    {
+      "id": 31,
+      "wave": 1,
+      "question": "What is 9 × 2?",
+      "choices": ["16", "18", "20", "22"],
+      "answer": "18",
+      "points": 10
+    },
+    {
+      "id": 32,
+      "wave": 1,
+      "question": "What is 42 ÷ 7?",
+      "choices": ["5", "6", "7", "8"],
+      "answer": "6",
+      "points": 10
+    },
+    {
+      "id": 33,
+      "wave": 1,
+      "question": "What is 8 + 4?",
+      "choices": ["10", "11", "12", "13"],
+      "answer": "12",
+      "points": 10
+    },
+    {
+      "id": 34,
+      "wave": 1,
+      "question": "What is 19 - 6?",
+      "choices": ["12", "13", "14", "15"],
+      "answer": "13",
+      "points": 10
+    },
+    {
+      "id": 35,
+      "wave": 1,
+      "question": "What is 6 × 4?",
+      "choices": ["20", "22", "24", "26"],
+      "answer": "24",
+      "points": 10
+    },
+    {
+      "id": 36,
+      "wave": 1,
+      "question": "What is 40 ÷ 5?",
+      "choices": ["6", "7", "8", "9"],
+      "answer": "8",
+      "points": 10
+    },
+    {
+      "id": 37,
+      "wave": 1,
+      "question": "What is 3 + 8?",
+      "choices": ["10", "11", "12", "13"],
+      "answer": "11",
+      "points": 10
+    },
+    {
+      "id": 38,
+      "wave": 1,
+      "question": "What is 18 - 5?",
+      "choices": ["12", "13", "14", "15"],
+      "answer": "13",
+      "points": 10
+    },
+    {
+      "id": 39,
+      "wave": 1,
+      "question": "What is 7 × 3?",
+      "choices": ["18", "21", "24", "27"],
+      "answer": "21",
+      "points": 10
+    },
+    {
+      "id": 40,
+      "wave": 1,
+      "question": "What is 45 ÷ 9?",
+      "choices": ["4", "5", "6", "7"],
+      "answer": "5",
+      "points": 10
+    },
+    {
+      "id": 41,
+      "wave": 1,
+      "question": "What is 12 + 8?",
+      "choices": ["18", "19", "20", "21"],
+      "answer": "20",
+      "points": 10
+    },
+    {
+      "id": 42,
+      "wave": 1,
+      "question": "What is 20 - 7?",
+      "choices": ["12", "13", "14", "15"],
+      "answer": "13",
+      "points": 10
+    },
+    {
+      "id": 43,
+      "wave": 1,
+      "question": "What is 4 × 5?",
+      "choices": ["15", "18", "20", "25"],
+      "answer": "20",
+      "points": 10
+    },
+    {
+      "id": 44,
+      "wave": 1,
+      "question": "What is 48 ÷ 8?",
+      "choices": ["5", "6", "7", "8"],
+      "answer": "6",
+      "points": 10
+    },
+    {
+      "id": 45,
+      "wave": 1,
+      "question": "What is 11 + 9?",
+      "choices": ["18", "19", "20", "21"],
+      "answer": "20",
+      "points": 10
+    },
+    {
+      "id": 46,
+      "wave": 1,
+      "question": "What is 22 - 8?",
+      "choices": ["13", "14", "15", "16"],
+      "answer": "14",
+      "points": 10
+    },
+    {
+      "id": 47,
+      "wave": 1,
+      "question": "What is 3 × 8?",
+      "choices": ["21", "24", "27", "30"],
+      "answer": "24",
+      "points": 10
+    },
+    {
+      "id": 48,
+      "wave": 1,
+      "question": "What is 54 ÷ 6?",
+      "choices": ["8", "9", "10", "11"],
+      "answer": "9",
+      "points": 10
+    },
+    {
+      "id": 49,
+      "wave": 1,
+      "question": "What is 13 + 7?",
+      "choices": ["18", "19", "20", "21"],
+      "answer": "20",
+      "points": 10
+    },
+    {
+      "id": 50,
+      "wave": 1,
+      "question": "What is 25 - 9?",
+      "choices": ["15", "16", "17", "18"],
+      "answer": "16",
+      "points": 10
+    },
+    {
+      "id": 51,
+      "wave": 2,
+      "question": "What is -8 + 5?",
+      "choices": ["-13", "-3", "3", "13"],
+      "answer": "-3",
+      "points": 15
+    },
+    {
+      "id": 52,
+      "wave": 2,
+      "question": "What is 12 - (-4)?",
+      "choices": ["8", "16", "-8", "-16"],
+      "answer": "16",
+      "points": 15
+    },
+    {
+      "id": 53,
+      "wave": 2,
+      "question": "What is -6 × 3?",
+      "choices": ["-18", "18", "-9", "9"],
+      "answer": "-18",
+      "points": 15
+    },
+    {
+      "id": 54,
+      "wave": 2,
+      "question": "What is -24 ÷ 4?",
+      "choices": ["-6", "6", "-20", "20"],
+      "answer": "-6",
+      "points": 15
+    },
+    {
+      "id": 55,
+      "wave": 2,
+      "question": "What is -15 + 9?",
+      "choices": ["-24", "-6", "6", "24"],
+      "answer": "-6",
+      "points": 15
+    },
+    {
+      "id": 56,
+      "wave": 2,
+      "question": "What is 7 - (-8)?",
+      "choices": ["-1", "1", "-15", "15"],
+      "answer": "15",
+      "points": 15
+    },
+    {
+      "id": 57,
+      "wave": 2,
+      "question": "What is -9 × (-2)?",
+      "choices": ["-18", "18", "-7", "7"],
+      "answer": "18",
+      "points": 15
+    },
+    {
+      "id": 58,
+      "wave": 2,
+      "question": "What is 35 ÷ (-7)?",
+      "choices": ["-5", "5", "-42", "42"],
+      "answer": "-5",
+      "points": 15
+    },
+    {
+      "id": 59,
+      "wave": 2,
+      "question": "What is -12 + (-6)?",
+      "choices": ["-18", "18", "-6", "6"],
+      "answer": "-18",
+      "points": 15
+    },
+    {
+      "id": 60,
+      "wave": 2,
+      "question": "What is -5 - 11?",
+      "choices": ["-16", "16", "-6", "6"],
+      "answer": "-16",
+      "points": 15
+    },
+    {
+      "id": 61,
+      "wave": 2,
+      "question": "What is 8 × (-4)?",
+      "choices": ["-32", "32", "-12", "12"],
+      "answer": "-32",
+      "points": 15
+    },
+    {
+      "id": 62,
+      "wave": 2,
+      "question": "What is -36 ÷ (-9)?",
+      "choices": ["-4", "4", "-45", "45"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 63,
+      "wave": 2,
+      "question": "What is -7 + 14?",
+      "choices": ["-21", "21", "-7", "7"],
+      "answer": "7",
+      "points": 15
+    },
+    {
+      "id": 64,
+      "wave": 2,
+      "question": "What is 15 - 23?",
+      "choices": ["-8", "8", "-38", "38"],
+      "answer": "-8",
+      "points": 15
+    },
+    {
+      "id": 65,
+      "wave": 2,
+      "question": "What is -11 × 2?",
+      "choices": ["-22", "22", "-9", "9"],
+      "answer": "-22",
+      "points": 15
+    },
+    {
+      "id": 66,
+      "wave": 2,
+      "question": "What is 42 ÷ (-6)?",
+      "choices": ["-7", "7", "-36", "36"],
+      "answer": "-7",
+      "points": 15
+    },
+    {
+      "id": 67,
+      "wave": 2,
+      "question": "What is -18 + 25?",
+      "choices": ["-43", "43", "-7", "7"],
+      "answer": "7",
+      "points": 15
+    },
+    {
+      "id": 68,
+      "wave": 2,
+      "question": "What is 4 - (-12)?",
+      "choices": ["-8", "8", "-16", "16"],
+      "answer": "16",
+      "points": 15
+    },
+    {
+      "id": 69,
+      "wave": 2,
+      "question": "What is -13 × (-3)?",
+      "choices": ["-39", "39", "-16", "16"],
+      "answer": "39",
+      "points": 15
+    },
+    {
+      "id": 70,
+      "wave": 2,
+      "question": "What is -48 ÷ 8?",
+      "choices": ["-6", "6", "-40", "40"],
+      "answer": "-6",
+      "points": 15
+    },
+    {
+      "id": 71,
+      "wave": 2,
+      "question": "What is -9 + (-7)?",
+      "choices": ["-16", "16", "-2", "2"],
+      "answer": "-16",
+      "points": 15
+    },
+    {
+      "id": 72,
+      "wave": 2,
+      "question": "What is -3 - 17?",
+      "choices": ["-20", "20", "-14", "14"],
+      "answer": "-20",
+      "points": 15
+    },
+    {
+      "id": 73,
+      "wave": 2,
+      "question": "What is 7 × (-5)?",
+      "choices": ["-35", "35", "-12", "12"],
+      "answer": "-35",
+      "points": 15
+    },
+    {
+      "id": 74,
+      "wave": 2,
+      "question": "What is -56 ÷ (-7)?",
+      "choices": ["-8", "8", "-49", "49"],
+      "answer": "8",
+      "points": 15
+    },
+    {
+      "id": 75,
+      "wave": 2,
+      "question": "What is -22 + 18?",
+      "choices": ["-40", "40", "-4", "4"],
+      "answer": "-4",
+      "points": 15
+    },
+    {
+      "id": 76,
+      "wave": 2,
+      "question": "What is 9 - (-15)?",
+      "choices": ["-6", "6", "-24", "24"],
+      "answer": "24",
+      "points": 15
+    },
+    {
+      "id": 77,
+      "wave": 2,
+      "question": "What is -14 × 4?",
+      "choices": ["-56", "56", "-10", "10"],
+      "answer": "-56",
+      "points": 15
+    },
+    {
+      "id": 78,
+      "wave": 2,
+      "question": "What is 63 ÷ (-9)?",
+      "choices": ["-7", "7", "-54", "54"],
+      "answer": "-7",
+      "points": 15
+    },
+    {
+      "id": 79,
+      "wave": 2,
+      "question": "What is -16 + 29?",
+      "choices": ["-45", "45", "-13", "13"],
+      "answer": "13",
+      "points": 15
+    },
+    {
+      "id": 80,
+      "wave": 2,
+      "question": "What is 6 - 19?",
+      "choices": ["-13", "13", "-25", "25"],
+      "answer": "-13",
+      "points": 15
+    },
+    {
+      "id": 81,
+      "wave": 2,
+      "question": "What is -8 × (-6)?",
+      "choices": ["-48", "48", "-14", "14"],
+      "answer": "48",
+      "points": 15
+    },
+    {
+      "id": 82,
+      "wave": 2,
+      "question": "What is -72 ÷ 12?",
+      "choices": ["-6", "6", "-60", "60"],
+      "answer": "-6",
+      "points": 15
+    },
+    {
+      "id": 83,
+      "wave": 2,
+      "question": "What is -25 + (-8)?",
+      "choices": ["-33", "33", "-17", "17"],
+      "answer": "-33",
+      "points": 15
+    },
+    {
+      "id": 84,
+      "wave": 2,
+      "question": "What is -4 - 21?",
+      "choices": ["-25", "25", "-17", "17"],
+      "answer": "-25",
+      "points": 15
+    },
+    {
+      "id": 85,
+      "wave": 2,
+      "question": "What is 12 × (-3)?",
+      "choices": ["-36", "36", "-9", "9"],
+      "answer": "-36",
+      "points": 15
+    },
+    {
+      "id": 86,
+      "wave": 2,
+      "question": "What is -84 ÷ (-12)?",
+      "choices": ["-7", "7", "-96", "96"],
+      "answer": "7",
+      "points": 15
+    },
+    {
+      "id": 87,
+      "wave": 2,
+      "question": "What is -31 + 24?",
+      "choices": ["-55", "55", "-7", "7"],
+      "answer": "-7",
+      "points": 15
+    },
+    {
+      "id": 88,
+      "wave": 2,
+      "question": "What is 11 - (-13)?",
+      "choices": ["-2", "2", "-24", "24"],
+      "answer": "24",
+      "points": 15
+    },
+    {
+      "id": 89,
+      "wave": 2,
+      "question": "What is -17 × 3?",
+      "choices": ["-51", "51", "-14", "20"],
+      "answer": "-51",
+      "points": 15
+    },
+    {
+      "id": 90,
+      "wave": 2,
+      "question": "What is 80 ÷ (-16)?",
+      "choices": ["-5", "5", "-64", "64"],
+      "answer": "-5",
+      "points": 15
+    },
+    {
+      "id": 91,
+      "wave": 2,
+      "question": "What is -19 + 35?",
+      "choices": ["-54", "54", "-16", "16"],
+      "answer": "16",
+      "points": 15
+    },
+    {
+      "id": 92,
+      "wave": 2,
+      "question": "What is 8 - 26?",
+      "choices": ["-18", "18", "-34", "34"],
+      "answer": "-18",
+      "points": 15
+    },
+    {
+      "id": 93,
+      "wave": 2,
+      "question": "What is -15 × (-4)?",
+      "choices": ["-60", "60", "-19", "11"],
+      "answer": "60",
+      "points": 15
+    },
+    {
+      "id": 94,
+      "wave": 2,
+      "question": "What is -90 ÷ 15?",
+      "choices": ["-6", "6", "-75", "75"],
+      "answer": "-6",
+      "points": 15
+    },
+    {
+      "id": 95,
+      "wave": 2,
+      "question": "What is -27 + (-12)?",
+      "choices": ["-39", "39", "-15", "15"],
+      "answer": "-39",
+      "points": 15
+    },
+    {
+      "id": 96,
+      "wave": 2,
+      "question": "What is -6 - 18?",
+      "choices": ["-24", "24", "-12", "12"],
+      "answer": "-24",
+      "points": 15
+    },
+    {
+      "id": 97,
+      "wave": 2,
+      "question": "What is 9 × (-7)?",
+      "choices": ["-63", "63", "-2", "16"],
+      "answer": "-63",
+      "points": 15
+    },
+    {
+      "id": 98,
+      "wave": 2,
+      "question": "What is -100 ÷ (-20)?",
+      "choices": ["-5", "5", "-80", "120"],
+      "answer": "5",
+      "points": 15
+    },
+    {
+      "id": 99,
+      "wave": 2,
+      "question": "What is -43 + 51?",
+      "choices": ["-94", "94", "-8", "8"],
+      "answer": "8",
+      "points": 15
+    },
+    {
+      "id": 100,
+      "wave": 2,
+      "question": "What is 13 - (-25)?",
+      "choices": ["-12", "12", "-38", "38"],
+      "answer": "38",
+      "points": 15
+    },
+    {
+      "id": 101,
+      "wave": 3,
+      "question": "What is -25 + (-47)?",
+      "choices": ["-72", "72", "-22", "22"],
+      "answer": "-72",
+      "points": 20
+    },
+    {
+      "id": 102,
+      "wave": 3,
+      "question": "What is 38 - (-52)?",
+      "choices": ["-14", "14", "-90", "90"],
+      "answer": "90",
+      "points": 20
+    },
+    {
+      "id": 103,
+      "wave": 3,
+      "question": "What is -18 × (-15)?",
+      "choices": ["-270", "270", "-33", "3"],
+      "answer": "270",
+      "points": 20
+    },
+    {
+      "id": 104,
+      "wave": 3,
+      "question": "What is 144 ÷ (-12)?",
+      "choices": ["-12", "12", "-132", "156"],
+      "answer": "-12",
+      "points": 20
+    },
+    {
+      "id": 105,
+      "wave": 3,
+      "question": "What is -67 + 89?",
+      "choices": ["-156", "156", "-22", "22"],
+      "answer": "22",
+      "points": 20
+    },
+    {
+      "id": 106,
+      "wave": 3,
+      "question": "What is 24 - 76?",
+      "choices": ["-52", "52", "-100", "100"],
+      "answer": "-52",
+      "points": 20
+    },
+    {
+      "id": 107,
+      "wave": 3,
+      "question": "What is 23 × (-16)?",
+      "choices": ["-368", "368", "-7", "39"],
+      "answer": "-368",
+      "points": 20
+    },
+    {
+      "id": 108,
+      "wave": 3,
+      "question": "What is -225 ÷ 15?",
+      "choices": ["-15", "15", "-210", "240"],
+      "answer": "-15",
+      "points": 20
+    },
+    {
+      "id": 109,
+      "wave": 3,
+      "question": "What is -84 + (-36)?",
+      "choices": ["-120", "120", "-48", "48"],
+      "answer": "-120",
+      "points": 20
+    },
+    {
+      "id": 110,
+      "wave": 3,
+      "question": "What is -29 - 55?",
+      "choices": ["-84", "84", "-26", "26"],
+      "answer": "-84",
+      "points": 20
+    },
+    {
+      "id": 111,
+      "wave": 3,
+      "question": "What is -19 × 24?",
+      "choices": ["-456", "456", "-5", "43"],
+      "answer": "-456",
+      "points": 20
+    },
+    {
+      "id": 112,
+      "wave": 3,
+      "question": "What is 392 ÷ (-14)?",
+      "choices": ["-28", "28", "-378", "406"],
+      "answer": "-28",
+      "points": 20
+    },
+    {
+      "id": 113,
+      "wave": 3,
+      "question": "What is -93 + 147?",
+      "choices": ["-240", "240", "-54", "54"],
+      "answer": "54",
+      "points": 20
+    },
+    {
+      "id": 114,
+      "wave": 3,
+      "question": "What is 42 - (-68)?",
+      "choices": ["-26", "26", "-110", "110"],
+      "answer": "110",
+      "points": 20
+    },
+    {
+      "id": 115,
+      "wave": 3,
+      "question": "What is -31 × (-22)?",
+      "choices": ["-682", "682", "-53", "9"],
+      "answer": "682",
+      "points": 20
+    },
+    {
+      "id": 116,
+      "wave": 3,
+      "question": "What is -384 ÷ 16?",
+      "choices": ["-24", "24", "-368", "400"],
+      "answer": "-24",
+      "points": 20
+    },
+    {
+      "id": 117,
+      "wave": 3,
+      "question": "What is -128 + (-94)?",
+      "choices": ["-222", "222", "-34", "34"],
+      "answer": "-222",
+      "points": 20
+    },
+    {
+      "id": 118,
+      "wave": 3,
+      "question": "What is -73 - 87?",
+      "choices": ["-160", "160", "-14", "14"],
+      "answer": "-160",
+      "points": 20
+    },
+    {
+      "id": 119,
+      "wave": 3,
+      "question": "What is 35 × (-18)?",
+      "choices": ["-630", "630", "-17", "53"],
+      "answer": "-630",
+      "points": 20
+    },
+    {
+      "id": 120,
+      "wave": 3,
+      "question": "What is 504 ÷ (-21)?",
+      "choices": ["-24", "24", "-483", "525"],
+      "answer": "-24",
+      "points": 20
+    },
+    {
+      "id": 121,
+      "wave": 3,
+      "question": "What is -156 + 239?",
+      "choices": ["-395", "395", "-83", "83"],
+      "answer": "83",
+      "points": 20
+    },
+    {
+      "id": 122,
+      "wave": 3,
+      "question": "What is 67 - 124?",
+      "choices": ["-57", "57", "-191", "191"],
+      "answer": "-57",
+      "points": 20
+    },
+    {
+      "id": 123,
+      "wave": 3,
+      "question": "What is -26 × 17?",
+      "choices": ["-442", "442", "-9", "43"],
+      "answer": "-442",
+      "points": 20
+    },
+    {
+      "id": 124,
+      "wave": 3,
+      "question": "What is -450 ÷ (-25)?",
+      "choices": ["-18", "18", "-425", "475"],
+      "answer": "18",
+      "points": 20
+    },
+    {
+      "id": 125,
+      "wave": 3,
+      "question": "What is -215 + (-78)?",
+      "choices": ["-293", "293", "-137", "137"],
+      "answer": "-293",
+      "points": 20
+    },
+    {
+      "id": 126,
+      "wave": 3,
+      "question": "What is -96 - 154?",
+      "choices": ["-250", "250", "-58", "58"],
+      "answer": "-250",
+      "points": 20
+    },
+    {
+      "id": 127,
+      "wave": 3,
+      "question": "What is 48 × (-19)?",
+      "choices": ["-912", "912", "-29", "67"],
+      "answer": "-912",
+      "points": 20
+    },
+    {
+      "id": 128,
+      "wave": 3,
+      "question": "What is 672 ÷ (-24)?",
+      "choices": ["-28", "28", "-648", "696"],
+      "answer": "-28",
+      "points": 20
+    },
+    {
+      "id": 129,
+      "wave": 3,
+      "question": "What is -187 + 284?",
+      "choices": ["-471", "471", "-97", "97"],
+      "answer": "97",
+      "points": 20
+    },
+    {
+      "id": 130,
+      "wave": 3,
+      "question": "What is 53 - (-91)?",
+      "choices": ["-38", "38", "-144", "144"],
+      "answer": "144",
+      "points": 20
+    },
+    {
+      "id": 131,
+      "wave": 3,
+      "question": "What is -37 × (-28)?",
+      "choices": ["-1036", "1036", "-65", "9"],
+      "answer": "1036",
+      "points": 20
+    },
+    {
+      "id": 132,
+      "wave": 3,
+      "question": "What is -588 ÷ 21?",
+      "choices": ["-28", "28", "-567", "609"],
+      "answer": "-28",
+      "points": 20
+    },
+    {
+      "id": 133,
+      "wave": 3,
+      "question": "What is -274 + (-126)?",
+      "choices": ["-400", "400", "-148", "148"],
+      "answer": "-400",
+      "points": 20
+    },
+    {
+      "id": 134,
+      "wave": 3,
+      "question": "What is -145 - 198?",
+      "choices": ["-343", "343", "-53", "53"],
+      "answer": "-343",
+      "points": 20
+    },
+    {
+      "id": 135,
+      "wave": 3,
+      "question": "What is 62 × (-25)?",
+      "choices": ["-1550", "1550", "-37", "87"],
+      "answer": "-1550",
+      "points": 20
+    },
+    {
+      "id": 136,
+      "wave": 3,
+      "question": "What is 756 ÷ (-27)?",
+      "choices": ["-28", "28", "-729", "783"],
+      "answer": "-28",
+      "points": 20
+    },
+    {
+      "id": 137,
+      "wave": 3,
+      "question": "What is -298 + 419?",
+      "choices": ["-717", "717", "-121", "121"],
+      "answer": "121",
+      "points": 20
+    },
+    {
+      "id": 138,
+      "wave": 3,
+      "question": "What is 84 - 157?",
+      "choices": ["-73", "73", "-241", "241"],
+      "answer": "-73",
+      "points": 20
+    },
+    {
+      "id": 139,
+      "wave": 3,
+      "question": "What is -44 × 23?",
+      "choices": ["-1012", "1012", "-21", "67"],
+      "answer": "-1012",
+      "points": 20
+    },
+    {
+      "id": 140,
+      "wave": 3,
+      "question": "What is -720 ÷ (-30)?",
+      "choices": ["-24", "24", "-690", "750"],
+      "answer": "24",
+      "points": 20
+    },
+    {
+      "id": 141,
+      "wave": 3,
+      "question": "What is -356 + (-189)?",
+      "choices": ["-545", "545", "-167", "167"],
+      "answer": "-545",
+      "points": 20
+    },
+    {
+      "id": 142,
+      "wave": 3,
+      "question": "What is -276 - 347?",
+      "choices": ["-623", "623", "-71", "71"],
+      "answer": "-623",
+      "points": 20
+    },
+    {
+      "id": 143,
+      "wave": 3,
+      "question": "What is 73 × (-32)?",
+      "choices": ["-2336", "2336", "-41", "105"],
+      "answer": "-2336",
+      "points": 20
+    },
+    {
+      "id": 144,
+      "wave": 3,
+      "question": "What is 936 ÷ (-36)?",
+      "choices": ["-26", "26", "-900", "972"],
+      "answer": "-26",
+      "points": 20
+    },
+    {
+      "id": 145,
+      "wave": 3,
+      "question": "What is -418 + 576?",
+      "choices": ["-994", "994", "-158", "158"],
+      "answer": "158",
+      "points": 20
+    },
+    {
+      "id": 146,
+      "wave": 3,
+      "question": "What is 95 - (-213)?",
+      "choices": ["-118", "118", "-308", "308"],
+      "answer": "308",
+      "points": 20
+    },
+    {
+      "id": 147,
+      "wave": 3,
+      "question": "What is -58 × (-34)?",
+      "choices": ["-1972", "1972", "-92", "24"],
+      "answer": "1972",
+      "points": 20
+    },
+    {
+      "id": 148,
+      "wave": 3,
+      "question": "What is -1104 ÷ 48?",
+      "choices": ["-23", "23", "-1056", "1152"],
+      "answer": "-23",
+      "points": 20
+    },
+    {
+      "id": 149,
+      "wave": 3,
+      "question": "What is -537 + (-264)?",
+      "choices": ["-801", "801", "-273", "273"],
+      "answer": "-801",
+      "points": 20
+    },
+    {
+      "id": 150,
+      "wave": 3,
+      "question": "What is -389 - 476?",
+      "choices": ["-865", "865", "-87", "87"],
+      "answer": "-865",
+      "points": 20
+    },
+    {
+      "id": 151,
+      "wave": 4,
+      "question": "What is -847 + (-536)?",
+      "choices": ["-1383", "1383", "-311", "311"],
+      "answer": "-1383",
+      "points": 25
+    },
+    {
+      "id": 152,
+      "wave": 4,
+      "question": "What is 729 - (-684)?",
+      "choices": ["45", "-45", "1413", "-1413"],
+      "answer": "1413",
+      "points": 25
+    },
+    {
+      "id": 153,
+      "wave": 4,
+      "question": "What is -76 × (-89)?",
+      "choices": ["-6764", "6764", "-165", "13"],
+      "answer": "6764",
+      "points": 25
+    },
+    {
+      "id": 154,
+      "wave": 4,
+      "question": "What is 1596 ÷ (-42)?",
+      "choices": ["-38", "38", "-1554", "1638"],
+      "answer": "-38",
+      "points": 25
+    },
+    {
+      "id": 155,
+      "wave": 4,
+      "question": "What is -1247 + 1856?",
+      "choices": ["-3103", "3103", "-609", "609"],
+      "answer": "609",
+      "points": 25
+    },
+    {
+      "id": 156,
+      "wave": 4,
+      "question": "What is 564 - 1398?",
+      "choices": ["-834", "834", "-1962", "1962"],
+      "answer": "-834",
+      "points": 25
+    },
+    {
+      "id": 157,
+      "wave": 4,
+      "question": "What is 127 × (-56)?",
+      "choices": ["-7112", "7112", "-71", "183"],
+      "answer": "-7112",
+      "points": 25
+    },
+    {
+      "id": 158,
+      "wave": 4,
+      "question": "What is -2184 ÷ 52?",
+      "choices": ["-42", "42", "-2132", "2236"],
+      "answer": "-42",
+      "points": 25
+    },
+    {
+      "id": 159,
+      "wave": 4,
+      "question": "What is -1634 + (-987)?",
+      "choices": ["-2621", "2621", "-647", "647"],
+      "answer": "-2621",
+      "points": 25
+    },
+    {
+      "id": 160,
+      "wave": 4,
+      "question": "What is -926 - 1573?",
+      "choices": ["-2499", "2499", "-647", "647"],
+      "answer": "-2499",
+      "points": 25
+    },
+    {
+      "id": 161,
+      "wave": 4,
+      "question": "What is -138 × 74?",
+      "choices": ["-10212", "10212", "-64", "212"],
+      "answer": "-10212",
+      "points": 25
+    },
+    {
+      "id": 162,
+      "wave": 4,
+      "question": "What is 2856 ÷ (-68)?",
+      "choices": ["-42", "42", "-2788", "2924"],
+      "answer": "-42",
+      "points": 25
+    },
+    {
+      "id": 163,
+      "wave": 4,
+      "question": "What is -2145 + 3478?",
+      "choices": ["-5623", "5623", "-1333", "1333"],
+      "answer": "1333",
+      "points": 25
+    },
+    {
+      "id": 164,
+      "wave": 4,
+      "question": "What is 813 - (-1276)?",
+      "choices": ["-463", "463", "-2089", "2089"],
+      "answer": "2089",
+      "points": 25
+    },
+    {
+      "id": 165,
+      "wave": 4,
+      "question": "What is -194 × (-85)?",
+      "choices": ["-16490", "16490", "-279", "109"],
+      "answer": "16490",
+      "points": 25
+    },
+    {
+      "id": 166,
+      "wave": 4,
+      "question": "What is -3276 ÷ 84?",
+      "choices": ["-39", "39", "-3192", "3360"],
+      "answer": "-39",
+      "points": 25
+    },
+    {
+      "id": 167,
+      "wave": 4,
+      "question": "What is -2847 + (-1564)?",
+      "choices": ["-4411", "4411", "-1283", "1283"],
+      "answer": "-4411",
+      "points": 25
+    },
+    {
+      "id": 168,
+      "wave": 4,
+      "question": "What is -1758 - 2396?",
+      "choices": ["-4154", "4154", "-638", "638"],
+      "answer": "-4154",
+      "points": 25
+    },
+    {
+      "id": 169,
+      "wave": 4,
+      "question": "What is 256 × (-93)?",
+      "choices": ["-23808", "23808", "-163", "349"],
+      "answer": "-23808",
+      "points": 25
+    },
+    {
+      "id": 170,
+      "wave": 4,
+      "question": "What is 4284 ÷ (-96)?",
+      "choices": ["-44.625", "44.625", "-45", "45"],
+      "answer": "-45",
+      "points": 25
+    },
+    {
+      "id": 171,
+      "wave": 4,
+      "question": "What is -3569 + 5247?",
+      "choices": ["-8816", "8816", "-1678", "1678"],
+      "answer": "1678",
+      "points": 25
+    },
+    {
+      "id": 172,
+      "wave": 4,
+      "question": "What is 1024 - 2897?",
+      "choices": ["-1873", "1873", "-3921", "3921"],
+      "answer": "-1873",
+      "points": 25
+    },
+    {
+      "id": 173,
+      "wave": 4,
+      "question": "What is -347 × 126?",
+      "choices": ["-43722", "43722", "-221", "473"],
+      "answer": "-43722",
+      "points": 25
+    },
+    {
+      "id": 174,
+      "wave": 4,
+      "question": "What is -5184 ÷ (-144)?",
+      "choices": ["-36", "36", "-5040", "5328"],
+      "answer": "36",
+      "points": 25
+    },
+    {
+      "id": 175,
+      "wave": 4,
+      "question": "What is -4736 + (-2845)?",
+      "choices": ["-7581", "7581", "-1891", "1891"],
+      "answer": "-7581",
+      "points": 25
+    },
+    {
+      "id": 176,
+      "wave": 4,
+      "question": "What is -2967 - 3584?",
+      "choices": ["-6551", "6551", "-617", "617"],
+      "answer": "-6551",
+      "points": 25
+    },
+    {
+      "id": 177,
+      "wave": 4,
+      "question": "What is 428 × (-167)?",
+      "choices": ["-71476", "71476", "-261", "595"],
+      "answer": "-71476",
+      "points": 25
+    },
+    {
+      "id": 178,
+      "wave": 4,
+      "question": "What is 6432 ÷ (-201)?",
+      "choices": ["-32", "32", "-6231", "6633"],
+      "answer": "-32",
+      "points": 25
+    },
+    {
+      "id": 179,
+      "wave": 4,
+      "question": "What is -5897 + 8246?",
+      "choices": ["-14143", "14143", "-2349", "2349"],
+      "answer": "2349",
+      "points": 25
+    },
+    {
+      "id": 180,
+      "wave": 4,
+      "question": "What is 1536 - (-3984)?",
+      "choices": ["-2448", "2448", "-5520", "5520"],
+      "answer": "5520",
+      "points": 25
+    },
+    {
+      "id": 181,
+      "wave": 4,
+      "question": "What is -586 × (-234)?",
+      "choices": ["-137124", "137124", "-820", "352"],
+      "answer": "137124",
+      "points": 25
+    },
+    {
+      "id": 182,
+      "wave": 4,
+      "question": "What is -7392 ÷ 264?",
+      "choices": ["-28", "28", "-7128", "7656"],
+      "answer": "-28",
+      "points": 25
+    },
+    {
+      "id": 183,
+      "wave": 4,
+      "question": "What is -6785 + (-3649)?",
+      "choices": ["-10434", "10434", "-3136", "3136"],
+      "answer": "-10434",
+      "points": 25
+    },
+    {
+      "id": 184,
+      "wave": 4,
+      "question": "What is -4832 - 5967?",
+      "choices": ["-10799", "10799", "-1135", "1135"],
+      "answer": "-10799",
+      "points": 25
+    },
+    {
+      "id": 185,
+      "wave": 4,
+      "question": "What is 675 × (-298)?",
+      "choices": ["-201150", "201150", "-377", "973"],
+      "answer": "-201150",
+      "points": 25
+    },
+    {
+      "id": 186,
+      "wave": 4,
+      "question": "What is 8736 ÷ (-324)?",
+      "choices": ["-27", "27", "-8412", "9060"],
+      "answer": "-27",
+      "points": 25
+    },
+    {
+      "id": 187,
+      "wave": 4,
+      "question": "What is -7843 + 12567?",
+      "choices": ["-20410", "20410", "-4724", "4724"],
+      "answer": "4724",
+      "points": 25
+    },
+    {
+      "id": 188,
+      "wave": 4,
+      "question": "What is 2178 - 6935?",
+      "choices": ["-4757", "4757", "-9113", "9113"],
+      "answer": "-4757",
+      "points": 25
+    },
+    {
+      "id": 189,
+      "wave": 4,
+      "question": "What is -764 × 387?",
+      "choices": ["-295668", "295668", "-377", "1151"],
+      "answer": "-295668",
+      "points": 25
+    },
+    {
+      "id": 190,
+      "wave": 4,
+      "question": "What is -9856 ÷ (-376)?",
+      "choices": ["-26.23", "26.23", "-26", "26"],
+      "answer": "26",
+      "points": 25
+    },
+    {
+      "id": 191,
+      "wave": 4,
+      "question": "What is -8945 + (-4276)?",
+      "choices": ["-13221", "13221", "-4669", "4669"],
+      "answer": "-13221",
+      "points": 25
+    },
+    {
+      "id": 192,
+      "wave": 4,
+      "question": "What is -6782 - 7834?",
+      "choices": ["-14616", "14616", "-1052", "1052"],
+      "answer": "-14616",
+      "points": 25
+    },
+    {
+      "id": 193,
+      "wave": 4,
+      "question": "What is 843 × (-456)?",
+      "choices": ["-384408", "384408", "-387", "1299"],
+      "answer": "-384408",
+      "points": 25
+    },
+    {
+      "id": 194,
+      "wave": 4,
+      "question": "What is 11628 ÷ (-492)?",
+      "choices": ["-23.63", "23.63", "-24", "24"],
+      "answer": "-24",
+      "points": 25
+    },
+    {
+      "id": 195,
+      "wave": 4,
+      "question": "What is -9743 + 15286?",
+      "choices": ["-25029", "25029", "-5543", "5543"],
+      "answer": "5543",
+      "points": 25
+    },
+    {
+      "id": 196,
+      "wave": 4,
+      "question": "What is 3456 - (-8742)?",
+      "choices": ["-5286", "5286", "-12198", "12198"],
+      "answer": "12198",
+      "points": 25
+    },
+    {
+      "id": 197,
+      "wave": 4,
+      "question": "What is -927 × (-583)?",
+      "choices": ["-540441", "540441", "-1510", "344"],
+      "answer": "540441",
+      "points": 25
+    },
+    {
+      "id": 198,
+      "wave": 4,
+      "question": "What is -12936 ÷ 537?",
+      "choices": ["-24.1", "24.1", "-24", "24"],
+      "answer": "-24",
+      "points": 25
+    },
+    {
+      "id": 199,
+      "wave": 4,
+      "question": "What is -11847 + (-6528)?",
+      "choices": ["-18375", "18375", "-5319", "5319"],
+      "answer": "-18375",
+      "points": 25
+    },
+    {
+      "id": 200,
+      "wave": 4,
+      "question": "What is -8569 - 9784?",
+      "choices": ["-18353", "18353", "-1215", "1215"],
+      "answer": "-18353",
+      "points": 25
+    },
+      {
+        "id": 201,
+        "wave": 5,
+        "question": "What is |-7| + (-9)?",
+        "choices": ["-16", "16", "-2", "2"],
+        "answer": "-2",
+        "points": 30
+      },
+      {
+        "id": 202,
+        "wave": 5,
+        "question": "What is |15| - |23|?",
+        "choices": ["38", "-8", "8", "-38"],
+        "answer": "-8",
+        "points": 30
+      },
+      {
+        "id": 203,
+        "wave": 5,
+        "question": "What is |-8| × (-6)?",
+        "choices": ["-48", "14", "-14", "48"],
+        "answer": "-48",
+        "points": 30
+      },
+      {
+        "id": 204,
+        "wave": 5,
+        "question": "What is |-36| ÷ 9?",
+        "choices": ["4", "-4", "45", "-45"],
+        "answer": "4",
+        "points": 30
+      },
+      {
+        "id": 205,
+        "wave": 5,
+        "question": "What is |-12| + (-18)?",
+        "choices": ["30", "-30", "6", "-6"],
+        "answer": "-6",
+        "points": 30
+      },
+      {
+        "id": 206,
+        "wave": 5,
+        "question": "What is |-5| - |-12|?",
+        "choices": ["-17", "7", "-7", "17"],
+        "answer": "-7",
+        "points": 30
+      },
+      {
+        "id": 207,
+        "wave": 5,
+        "question": "What is |-9| × |-4|?",
+        "choices": ["36", "-36", "13", "-13"],
+        "answer": "36",
+        "points": 30
+      },
+      {
+        "id": 208,
+        "wave": 5,
+        "question": "What is |-45| ÷ (-5)?",
+        "choices": ["-9", "50", "-50", "9"],
+        "answer": "-9",
+        "points": 30
+      },
+      {
+        "id": 209,
+        "wave": 5,
+        "question": "What is |−14| + |-8|?",
+        "choices": ["6", "-6", "22", "-22"],
+        "answer": "22",
+        "points": 30
+      },
+      {
+        "id": 210,
+        "wave": 5,
+        "question": "What is |-7| - (-15)?",
+        "choices": ["-8", "8", "-22", "22"],
+        "answer": "22",
+        "points": 30
+      },
+      {
+        "id": 211,
+        "wave": 5,
+        "question": "What is |-3| × 11?",
+        "choices": ["33", "-33", "14", "-14"],
+        "answer": "33",
+        "points": 30
+      },
+      {
+        "id": 212,
+        "wave": 5,
+        "question": "What is |48| ÷ |-6|?",
+        "choices": ["54", "-54", "8", "-8"],
+        "answer": "8",
+        "points": 30
+      },
+      {
+        "id": 213,
+        "wave": 5,
+        "question": "What is |-11| + 17?",
+        "choices": ["28", "-28", "6", "-6"],
+        "answer": "28",
+        "points": 30
+      },
+      {
+        "id": 214,
+        "wave": 5,
+        "question": "What is |20| - |-13|?",
+        "choices": ["-7", "7", "33", "-33"],
+        "answer": "7",
+        "points": 30
+      },
+      {
+        "id": 215,
+        "wave": 5,
+        "question": "What is |-6| × (-7)?",
+        "choices": ["42", "-42", "13", "-13"],
+        "answer": "-42",
+        "points": 30
+      },
+      {
+        "id": 216,
+        "wave": 5,
+        "question": "What is |-63| ÷ 7?",
+        "choices": ["-9", "56", "9", "-56"],
+        "answer": "9",
+        "points": 30
+      },
+      {
+        "id": 217,
+        "wave": 5,
+        "question": "What is |-25| + |-15|?",
+        "choices": ["40", "-40", "10", "-10"],
+        "answer": "40",
+        "points": 30
+      },
+      {
+        "id": 218,
+        "wave": 5,
+        "question": "What is |8| - (-12)?",
+        "choices": ["-4", "4", "-20", "20"],
+        "answer": "20",
+        "points": 30
+      },
+      {
+        "id": 219,
+        "wave": 5,
+        "question": "What is |-5| × |-9|?",
+        "choices": ["45", "-45", "14", "-14"],
+        "answer": "45",
+        "points": 30
+      },
+      {
+        "id": 220,
+        "wave": 5,
+        "question": "What is |-28| ÷ (-4)?",
+        "choices": ["-7", "32", "-32", "7"],
+        "answer": "-7",
+        "points": 30
+      },
+      {
+        "id": 221,
+        "wave": 5,
+        "question": "What is |-16| + 9?",
+        "choices": ["25", "-25", "7", "-7"],
+        "answer": "25",
+        "points": 30
+      },
+      {
+        "id": 222,
+        "wave": 5,
+        "question": "What is |22| - |-18|?",
+        "choices": ["-4", "4", "40", "-40"],
+        "answer": "4",
+        "points": 30
+      },
+      {
+        "id": 223,
+        "wave": 5,
+        "question": "What is |-12| × 3?",
+        "choices": ["36", "-36", "15", "-15"],
+        "answer": "36",
+        "points": 30
+      },
+      {
+        "id": 224,
+        "wave": 5,
+        "question": "What is |42| ÷ |-7|?",
+        "choices": ["49", "-49", "6", "-6"],
+        "answer": "6",
+        "points": 30
+      },
+      {
+        "id": 225,
+        "wave": 5,
+        "question": "What is |-19| + (-21)?",
+        "choices": ["40", "-40", "2", "-2"],
+        "answer": "-2",
+        "points": 30
+      },
+      {
+        "id": 226,
+        "wave": 5,
+        "question": "What is |30| - |-24|?",
+        "choices": ["-6", "6", "54", "-54"],
+        "answer": "6",
+        "points": 30
+      },
+      {
+        "id": 227,
+        "wave": 5,
+        "question": "What is |-8| × (-5)?",
+        "choices": ["40", "-40", "13", "-13"],
+        "answer": "-40",
+        "points": 30
+      },
+      {
+        "id": 228,
+        "wave": 5,
+        "question": "What is |-72| ÷ 8?",
+        "choices": ["-9", "80", "-80", "9"],
+        "answer": "9",
+        "points": 30
+      },
+      {
+        "id": 229,
+        "wave": 5,
+        "question": "What is |-13| + |-7|?",
+        "choices": ["20", "-20", "6", "-6"],
+        "answer": "20",
+        "points": 30
+      },
+      {
+        "id": 230,
+        "wave": 5,
+        "question": "What is |17| - (-11)?",
+        "choices": ["-6", "6", "-28", "28"],
+        "answer": "28",
+        "points": 30
+      },
+      {
+        "id": 231,
+        "wave": 5,
+        "question": "What is |-4| × |6|?",
+        "choices": ["24", "-24", "10", "-10"],
+        "answer": "24",
+        "points": 30
+      },
+      {
+        "id": 232,
+        "wave": 5,
+        "question": "What is |-35| ÷ (-7)?",
+        "choices": ["-5", "42", "-42", "5"],
+        "answer": "-5",
+        "points": 30
+      },
+      {
+        "id": 233,
+        "wave": 5,
+        "question": "What is |-26| + 14?",
+        "choices": ["40", "-40", "12", "-12"],
+        "answer": "40",
+        "points": 30
+      },
+      {
+        "id": 234,
+        "wave": 5,
+        "question": "What is |31| - |-19|?",
+        "choices": ["-12", "12", "50", "-50"],
+        "answer": "12",
+        "points": 30
+      },
+      {
+        "id": 235,
+        "wave": 5,
+        "question": "What is |-7| × 8?",
+        "choices": ["56", "-56", "15", "-15"],
+        "answer": "56",
+        "points": 30
+      },
+      {
+        "id": 236,
+        "wave": 5,
+        "question": "What is |54| ÷ |-9|?",
+        "choices": ["63", "-63", "6", "-6"],
+        "answer": "6",
+        "points": 30
+      },
+      {
+        "id": 237,
+        "wave": 5,
+        "question": "What is |-18| + (-22)?",
+        "choices": ["40", "-40", "4", "-4"],
+        "answer": "-4",
+        "points": 30
+      },
+      {
+        "id": 238,
+        "wave": 5,
+        "question": "What is |27| - |-15|?",
+        "choices": ["-12", "12", "42", "-42"],
+        "answer": "12",
+        "points": 30
+      },
+      {
+        "id": 239,
+        "wave": 5,
+        "question": "What is |-11| × (-3)?",
+        "choices": ["33", "-33", "14", "-14"],
+        "answer": "-33",
+        "points": 30
+      },
+      {
+        "id": 240,
+        "wave": 5,
+        "question": "What is |-56| ÷ 7?",
+        "choices": ["-8", "63", "-63", "8"],
+        "answer": "8",
+        "points": 30
+      },
+      {
+        "id": 241,
+        "wave": 5,
+        "question": "What is |-23| + |-17|?",
+        "choices": ["40", "-40", "6", "-6"],
+        "answer": "40",
+        "points": 30
+      },
+      {
+        "id": 242,
+        "wave": 5,
+        "question": "What is |29| - (-13)?",
+        "choices": ["-16", "16", "-42", "42"],
+        "answer": "42",
+        "points": 30
+      },
+      {
+        "id": 243,
+        "wave": 5,
+        "question": "What is |-6| × |-8|?",
+        "choices": ["48", "-48", "14", "-14"],
+        "answer": "48",
+        "points": 30
+      },
+      {
+        "id": 244,
+        "wave": 5,
+        "question": "What is |-49| ÷ (-7)?",
+        "choices": ["-7", "56", "-56", "7"],
+        "answer": "-7",
+        "points": 30
+      },
+      {
+        "id": 245,
+        "wave": 5,
+        "question": "What is |-32| + 18?",
+        "choices": ["50", "-50", "14", "-14"],
+        "answer": "50",
+        "points": 30
+      },
+      {
+        "id": 246,
+        "wave": 5,
+        "question": "What is |25| - |-21|?",
+        "choices": ["-4", "4", "46", "-46"],
+        "answer": "4",
+        "points": 30
+      },
+      {
+        "id": 247,
+        "wave": 5,
+        "question": "What is |-9| × 7?",
+        "choices": ["63", "-63", "16", "-16"],
+        "answer": "63",
+        "points": 30
+      },
+      {
+        "id": 248,
+        "wave": 5,
+        "question": "What is |64| ÷ |-8|?",
+        "choices": ["72", "-72", "8", "-8"],
+        "answer": "8",
+        "points": 30
+      },
+      {
+        "id": 249,
+        "wave": 5,
+        "question": "What is |-28| + (-16)?",
+        "choices": ["44", "-44", "12", "-12"],
+        "answer": "12",
+        "points": 30
+      },
+      {
+        "id": 250,
+        "wave": 5,
+        "question": "What is |33| - |-27|?",
+        "choices": ["-6", "6", "60", "-60"],
+        "answer": "6",
+        "points": 30
+      }
+    ]
+}

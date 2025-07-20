@@ -1,0 +1,13 @@
+{
+  "basic-operations": [
+    "integers",
+    "fractions",
+    "decimals",
+    "mixed-problems",
+    "order-of-operations"
+  ],
+  "advanced-operations": [
+    "algebra-basics",
+    "geometry"
+  ]
+} 
