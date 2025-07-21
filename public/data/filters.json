@@ -6,8 +6,7 @@
     "mixed-problems",
     "order-of-operations"
   ],
-  "advanced-operations": [
-    "algebra-builder",
-    "geometry"
-  ]
+  "algebra-builder": [
+    "algebra-basics"
+    ]
 } 

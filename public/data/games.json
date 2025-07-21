@@ -36,17 +36,10 @@
   },
   
   {
-    "id": "algebra-builder",
+    "id": "algebra-basics",
     "title": "Algebra Builder",
     "description": "Solve simple Algebraic questions",
     "difficulty": "Medium",
     "color": "secondary"
-  },
-  {
-    "id": "geometry",
-    "title": "Geometry Essentials",
-    "description": "Calculate areas, perimeters, and angles of basic shapes.",
-    "difficulty": "Medium",
-    "color": "success"
   }
 ]
