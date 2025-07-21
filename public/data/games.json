@@ -36,11 +36,11 @@
   },
   
   {
-    "id": "algebra-basics",
-    "title": "Algebra Basics",
-    "description": "Solve simple equations and work with variables.",
-    "difficulty": "Hard",
-    "color": "warning"
+    "id": "algebra-builder",
+    "title": "Algebra Builder",
+    "description": "Solve simple Algebraic questions",
+    "difficulty": "Medium",
+    "color": "secondary"
   },
   {
     "id": "geometry",
