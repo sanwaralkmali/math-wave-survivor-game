@@ -16,12 +16,20 @@ interface Skill {
   color: string;
 }
 
+interface Question {
+  question: string;
+  choices: string[];
+  answer: string;
+  points: number;
+  wave: number;
+}
+
 interface SkillData {
   title: string;
   description: string;
   waves: number;
   timePerQuestion: number;
-  questions: any[];
+  questions: Question[];
 }
 
 type GameState = 'home' | 'dashboard' | 'playing' | 'gameover';
@@ -143,7 +151,31 @@ const Index = () => {
     setPlayerName('');
     setGameScore(0);
     setGameWave(0);
-    navigate('/?filtered=basic-operations');
+
+    // Dynamically determine filter group for the skill
+    if (selectedSkill) {
+      fetch('/data/filters.json')
+        .then(res => res.json())
+        .then(filters => {
+          let foundFilter = null;
+          for (const [filterName, skillIds] of Object.entries(filters)) {
+            if (Array.isArray(skillIds) && skillIds.includes(selectedSkill.id)) {
+              foundFilter = filterName;
+              break;
+            }
+          }
+          if (foundFilter) {
+            navigate(`/?filtered=${encodeURIComponent(foundFilter)}`);
+          } else {
+            navigate('/');
+          }
+        })
+        .catch(() => {
+          navigate('/');
+        });
+    } else {
+      navigate('/');
+    }
   };
 
   if (loading) {

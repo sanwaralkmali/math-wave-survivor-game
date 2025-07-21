@@ -41,5 +41,33 @@
     "description": "Solve simple Algebraic questions",
     "difficulty": "Medium",
     "color": "secondary"
+  },
+  {
+    "id": "fraction-decimal",
+    "title": "Fraction to Decimal",
+    "description": "Convert fractions into their decimal equivalents and practice related problems.",
+    "difficulty": "Easy",
+    "color": "primary"
+  },
+  {
+    "id": "fraction-percentage",
+    "title": "Fraction to Percentage",
+    "description": "Convert fractions into percentages and solve percentage-based questions.",
+    "difficulty": "Easy",
+    "color": "primary"
+  },
+  {
+    "id": "decimal-percentage",
+    "title": "Decimal to Percentage",
+    "description": "Convert decimals into percentages and practice percentage calculations.",
+    "difficulty": "Easy",
+    "color": "primary"
+  },
+  {
+    "id": "mixed-conversion",
+    "title": "Mixed Conversion",
+    "description": "Practice converting between fractions, decimals, and percentages in a variety of problems.",
+    "difficulty": "Medium",
+    "color": "secondary"
   }
 ]
