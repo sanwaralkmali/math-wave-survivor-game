@@ -69,5 +69,26 @@
     "description": "Practice converting between fractions, decimals, and percentages in a variety of problems.",
     "difficulty": "Medium",
     "color": "secondary"
+  },
+  {
+    "id": "basic-scientific-notation",
+    "title": "Basic Scientific Notation",
+    "description": "Learn the basics of scientific notation and how to express numbers in this form.",
+    "difficulty": "Medium",
+    "color": "secondary"
+  },
+  {
+    "id": "classification-numbers",
+    "title": "Classification of Numbers",
+    "description": "Classify numbers as natural, whole, integers, rational, or irrational.",
+    "difficulty": "Medium",
+    "color": "secondary"
+  },
+  {
+    "id": "operations-scientific-notation",
+    "title": "Operations with Scientific Notation",
+    "description": "Practice addition, subtraction, multiplication, and division with numbers in scientific notation.",
+    "difficulty": "Medium",
+    "color": "secondary"
   }
 ]
