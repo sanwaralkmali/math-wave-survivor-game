@@ -98,18 +98,32 @@
     "difficulty": "Medium",
     "color": "secondary"
   },
-{
-  "id": "solving-equations",
-  "title": "Solving Equations",
-  "description": "Learn to solve one-step, two-step, and multi-step equations.",
-  "difficulty": "Medium",
-  "color": "primary"
-},
-{
-  "id": "solving-inequalities",
-  "title": "Solving Inequalities",
-  "description": "Practice solving and graphing linear inequalities.",
-  "difficulty": "Medium",
-  "color": "primary"
-}
+  {
+    "id": "solving-equations",
+    "title": "Solving Equations",
+    "description": "Learn to solve one-step, two-step, and multi-step equations.",
+    "difficulty": "Medium",
+    "color": "primary"
+  },
+  {
+    "id": "solving-inequalities",
+    "title": "Solving Inequalities",
+    "description": "Practice solving and graphing linear inequalities.",
+    "difficulty": "Medium",
+    "color": "primary"
+  },
+  {
+    "id": "gcf-factoring",
+    "title": "GCF Factoring",
+    "description": "Find the greatest common factor of two or more numbers.",
+    "difficulty": "Medium",
+    "color": "primary"
+  },
+  {
+    "id": "factoring-by-grouping",
+    "title": "Factoring by Grouping",
+    "description": "Factorize expressions by grouping terms.",
+    "difficulty": "Hard",
+    "color": "primary"
+  }
 ]
