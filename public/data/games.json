@@ -34,7 +34,7 @@
     "difficulty": "Medium",
     "color": "secondary"
   },
-  
+
   {
     "id": "algebra-basics",
     "title": "Algebra Builder",
@@ -88,6 +88,13 @@
     "id": "operations-scientific-notation",
     "title": "Operations with Scientific Notation",
     "description": "Practice addition, subtraction, multiplication, and division with numbers in scientific notation.",
+    "difficulty": "Medium",
+    "color": "secondary"
+  },
+  {
+    "id": "simplify-expressions",
+    "title": "Simplify Expressions",
+    "description": "Practice evaluating, distributing, and combining like terms.",
     "difficulty": "Medium",
     "color": "secondary"
   }
