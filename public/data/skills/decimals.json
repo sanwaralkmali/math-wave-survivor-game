@@ -1,1433 +1,1433 @@
 {
-    "title": "Decimals Operations",
-    "description": "Work with decimals like a pro! Whether it’s shopping, measuring, or solving tricky problems, practice decimal operations in a game that rewards accuracy and speed!",
-    "waves": 5,
-    "timePerQuestion": 30,
-    "questions": [
-  {
-    "id": 1,
-    "wave": 1,
-    "question": "What is 2.3 + 1.5?",
-    "choices": ["3.8", "4.8", "2.8", "3.5"],
-    "answer": "3.8",
-    "points": 10
-  },
-  {
-    "id": 2,
-    "wave": 1,
-    "question": "What is 4.7 - 2.2?",
-    "choices": ["2.5", "3.5", "2.9", "1.5"],
-    "answer": "2.5",
-    "points": 10
-  },
-  {
-    "id": 3,
-    "wave": 1,
-    "question": "What is 1.6 + 3.1?",
-    "choices": ["4.7", "5.7", "4.2", "3.7"],
-    "answer": "4.7",
-    "points": 10
-  },
-  {
-    "id": 4,
-    "wave": 1,
-    "question": "What is 5.8 - 1.4?",
-    "choices": ["4.4", "5.4", "3.4", "4.2"],
-    "answer": "4.4",
-    "points": 10
-  },
-  {
-    "id": 5,
-    "wave": 1,
-    "question": "What is 3.2 + 2.6?",
-    "choices": ["5.8", "6.8", "5.2", "4.8"],
-    "answer": "5.8",
-    "points": 10
-  },
-  {
-    "id": 6,
-    "wave": 1,
-    "question": "What is 7.3 - 4.1?",
-    "choices": ["3.2", "4.2", "2.2", "3.4"],
-    "answer": "3.2",
-    "points": 10
-  },
-  {
-    "id": 7,
-    "wave": 1,
-    "question": "What is 2.8 + 1.9?",
-    "choices": ["4.7", "3.7", "5.7", "4.9"],
-    "answer": "4.7",
-    "points": 10
-  },
-  {
-    "id": 8,
-    "wave": 1,
-    "question": "What is 6.5 - 2.3?",
-    "choices": ["4.2", "5.2", "3.2", "4.8"],
-    "answer": "4.2",
-    "points": 10
-  },
-  {
-    "id": 9,
-    "wave": 1,
-    "question": "What is 1.4 + 5.2?",
-    "choices": ["6.6", "7.6", "5.6", "6.2"],
-    "answer": "6.6",
-    "points": 10
-  },
-  {
-    "id": 10,
-    "wave": 1,
-    "question": "What is 8.7 - 3.5?",
-    "choices": ["5.2", "6.2", "4.2", "5.8"],
-    "answer": "5.2",
-    "points": 10
-  },
-  {
-    "id": 11,
-    "wave": 1,
-    "question": "What is 3.6 + 2.3?",
-    "choices": ["5.9", "6.9", "4.9", "5.3"],
-    "answer": "5.9",
-    "points": 10
-  },
-  {
-    "id": 12,
-    "wave": 1,
-    "question": "What is 9.1 - 4.7?",
-    "choices": ["4.4", "5.4", "3.4", "4.8"],
-    "answer": "4.4",
-    "points": 10
-  },
-  {
-    "id": 13,
-    "wave": 1,
-    "question": "What is 2.7 + 3.8?",
-    "choices": ["6.5", "7.5", "5.5", "6.9"],
-    "answer": "6.5",
-    "points": 10
-  },
-  {
-    "id": 14,
-    "wave": 1,
-    "question": "What is 7.9 - 2.6?",
-    "choices": ["5.3", "6.3", "4.3", "5.9"],
-    "answer": "5.3",
-    "points": 10
-  },
-  {
-    "id": 15,
-    "wave": 1,
-    "question": "What is 4.1 + 1.8?",
-    "choices": ["5.9", "6.9", "4.9", "5.1"],
-    "answer": "5.9",
-    "points": 10
-  },
-  {
-    "id": 16,
-    "wave": 1,
-    "question": "What is 6.4 - 3.2?",
-    "choices": ["3.2", "4.2", "2.2", "3.6"],
-    "answer": "3.2",
-    "points": 10
-  },
-  {
-    "id": 17,
-    "wave": 1,
-    "question": "What is 1.9 + 4.5?",
-    "choices": ["6.4", "7.4", "5.4", "6.8"],
-    "answer": "6.4",
-    "points": 10
-  },
-  {
-    "id": 18,
-    "wave": 1,
-    "question": "What is 8.3 - 5.1?",
-    "choices": ["3.2", "4.2", "2.2", "3.8"],
-    "answer": "3.2",
-    "points": 10
-  },
-  {
-    "id": 19,
-    "wave": 1,
-    "question": "What is 3.5 + 2.7?",
-    "choices": ["6.2", "7.2", "5.2", "6.8"],
-    "answer": "6.2",
-    "points": 10
-  },
-  {
-    "id": 20,
-    "wave": 1,
-    "question": "What is 9.6 - 4.3?",
-    "choices": ["5.3", "6.3", "4.3", "5.9"],
-    "answer": "5.3",
-    "points": 10
-  },
-  {
-    "id": 21,
-    "wave": 1,
-    "question": "What is 2.4 + 3.9?",
-    "choices": ["6.3", "7.3", "5.3", "6.9"],
-    "answer": "6.3",
-    "points": 10
-  },
-  {
-    "id": 22,
-    "wave": 1,
-    "question": "What is 7.8 - 1.5?",
-    "choices": ["6.3", "7.3", "5.3", "6.9"],
-    "answer": "6.3",
-    "points": 10
-  },
-  {
-    "id": 23,
-    "wave": 1,
-    "question": "What is 4.6 + 2.8?",
-    "choices": ["7.4", "8.4", "6.4", "7.8"],
-    "answer": "7.4",
-    "points": 10
-  },
-  {
-    "id": 24,
-    "wave": 1,
-    "question": "What is 8.1 - 3.7?",
-    "choices": ["4.4", "5.4", "3.4", "4.8"],
-    "answer": "4.4",
-    "points": 10
-  },
-  {
-    "id": 25,
-    "wave": 1,
-    "question": "What is 1.7 + 5.6?",
-    "choices": ["7.3", "8.3", "6.3", "7.9"],
-    "answer": "7.3",
-    "points": 10
-  },
-  {
-    "id": 26,
-    "wave": 1,
-    "question": "What is 9.2 - 2.8?",
-    "choices": ["6.4", "7.4", "5.4", "6.8"],
-    "answer": "6.4",
-    "points": 10
-  },
-  {
-    "id": 27,
-    "wave": 1,
-    "question": "What is 3.8 + 4.1?",
-    "choices": ["7.9", "8.9", "6.9", "7.1"],
-    "answer": "7.9",
-    "points": 10
-  },
-  {
-    "id": 28,
-    "wave": 1,
-    "question": "What is 6.9 - 4.5?",
-    "choices": ["2.4", "3.4", "1.4", "2.8"],
-    "answer": "2.4",
-    "points": 10
-  },
-  {
-    "id": 29,
-    "wave": 1,
-    "question": "What is 5.3 + 1.6?",
-    "choices": ["6.9", "7.9", "5.9", "6.3"],
-    "answer": "6.9",
-    "points": 10
-  },
-  {
-    "id": 30,
-    "wave": 1,
-    "question": "What is 8.7 - 6.2?",
-    "choices": ["2.5", "3.5", "1.5", "2.9"],
-    "answer": "2.5",
-    "points": 10
-  },
-  {
-    "id": 31,
-    "wave": 1,
-    "question": "What is 2.1 + 4.7?",
-    "choices": ["6.8", "7.8", "5.8", "6.2"],
-    "answer": "6.8",
-    "points": 10
-  },
-  {
-    "id": 32,
-    "wave": 1,
-    "question": "What is 7.6 - 3.3?",
-    "choices": ["4.3", "5.3", "3.3", "4.9"],
-    "answer": "4.3",
-    "points": 10
-  },
-  {
-    "id": 33,
-    "wave": 1,
-    "question": "What is 4.9 + 3.4?",
-    "choices": ["8.3", "9.3", "7.3", "8.9"],
-    "answer": "8.3",
-    "points": 10
-  },
-  {
-    "id": 34,
-    "wave": 1,
-    "question": "What is 9.8 - 5.4?",
-    "choices": ["4.4", "5.4", "3.4", "4.8"],
-    "answer": "4.4",
-    "points": 10
-  },
-  {
-    "id": 35,
-    "wave": 1,
-    "question": "What is 1.3 + 6.2?",
-    "choices": ["7.5", "8.5", "6.5", "7.9"],
-    "answer": "7.5",
-    "points": 10
-  },
-  {
-    "id": 36,
-    "wave": 1,
-    "question": "What is 8.4 - 2.1?",
-    "choices": ["6.3", "7.3", "5.3", "6.9"],
-    "answer": "6.3",
-    "points": 10
-  },
-  {
-    "id": 37,
-    "wave": 1,
-    "question": "What is 3.7 + 5.8?",
-    "choices": ["9.5", "10.5", "8.5", "9.1"],
-    "answer": "9.5",
-    "points": 10
-  },
-  {
-    "id": 38,
-    "wave": 1,
-    "question": "What is 7.2 - 4.9?",
-    "choices": ["2.3", "3.3", "1.3", "2.9"],
-    "answer": "2.3",
-    "points": 10
-  },
-  {
-    "id": 39,
-    "wave": 1,
-    "question": "What is 6.1 + 2.4?",
-    "choices": ["8.5", "9.5", "7.5", "8.9"],
-    "answer": "8.5",
-    "points": 10
-  },
-  {
-    "id": 40,
-    "wave": 1,
-    "question": "What is 9.3 - 3.8?",
-    "choices": ["5.5", "6.5", "4.5", "5.9"],
-    "answer": "5.5",
-    "points": 10
-  },
-  {
-    "id": 41,
-    "wave": 1,
-    "question": "What is 2.5 + 6.7?",
-    "choices": ["9.2", "10.2", "8.2", "9.8"],
-    "answer": "9.2",
-    "points": 10
-  },
-  {
-    "id": 42,
-    "wave": 1,
-    "question": "What is 8.6 - 5.2?",
-    "choices": ["3.4", "4.4", "2.4", "3.8"],
-    "answer": "3.4",
-    "points": 10
-  },
-  {
-    "id": 43,
-    "wave": 1,
-    "question": "What is 4.8 + 1.7?",
-    "choices": ["6.5", "7.5", "5.5", "6.9"],
-    "answer": "6.5",
-    "points": 10
-  },
-  {
-    "id": 44,
-    "wave": 1,
-    "question": "What is 7.1 - 2.9?",
-    "choices": ["4.2", "5.2", "3.2", "4.8"],
-    "answer": "4.2",
-    "points": 10
-  },
-  {
-    "id": 45,
-    "wave": 1,
-    "question": "What is 5.4 + 3.6?",
-    "choices": ["9.0", "10.0", "8.0", "9.6"],
-    "answer": "9.0",
-    "points": 10
-  },
-  {
-    "id": 46,
-    "wave": 1,
-    "question": "What is 9.7 - 4.1?",
-    "choices": ["5.6", "6.6", "4.6", "5.2"],
-    "answer": "5.6",
-    "points": 10
-  },
-  {
-    "id": 47,
-    "wave": 1,
-    "question": "What is 1.8 + 7.3?",
-    "choices": ["9.1", "10.1", "8.1", "9.7"],
-    "answer": "9.1",
-    "points": 10
-  },
-  {
-    "id": 48,
-    "wave": 1,
-    "question": "What is 6.8 - 3.4?",
-    "choices": ["3.4", "4.4", "2.4", "3.8"],
-    "answer": "3.4",
-    "points": 10
-  },
-  {
-    "id": 49,
-    "wave": 1,
-    "question": "What is 4.2 + 5.9?",
-    "choices": ["10.1", "11.1", "9.1", "10.7"],
-    "answer": "10.1",
-    "points": 10
-  },
-  {
-    "id": 50,
-    "wave": 1,
-    "question": "What is 8.5 - 6.7?",
-    "choices": ["1.8", "2.8", "0.8", "2.2"],
-    "answer": "1.8",
-    "points": 10
-  },
-  {
-    "id": 51,
-    "wave": 2,
-    "question": "What is 3.25 + 2.47?",
-    "choices": ["5.72", "6.72", "4.72", "5.62"],
-    "answer": "5.72",
-    "points": 15
-  },
-  {
-    "id": 52,
-    "wave": 2,
-    "question": "What is 7.83 - 4.56?",
-    "choices": ["3.27", "4.27", "2.27", "3.37"],
-    "answer": "3.27",
-    "points": 15
-  },
-  {
-    "id": 53,
-    "wave": 2,
-    "question": "What is 2.4 × 3.5?",
-    "choices": ["8.4", "9.4", "7.4", "8.8"],
-    "answer": "8.4",
-    "points": 15
-  },
-  {
-    "id": 54,
-    "wave": 2,
-    "question": "What is 9.6 ÷ 2.4?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 15
-  },
-  {
-    "id": 55,
-    "wave": 2,
-    "question": "What is 5.68 + 3.29?",
-    "choices": ["8.97", "9.97", "7.97", "8.87"],
-    "answer": "8.97",
-    "points": 15
-  },
-  {
-    "id": 56,
-    "wave": 2,
-    "question": "What is 8.42 - 5.67?",
-    "choices": ["2.75", "3.75", "1.75", "2.85"],
-    "answer": "2.75",
-    "points": 15
-  },
-  {
-    "id": 57,
-    "wave": 2,
-    "question": "What is 1.6 × 4.5?",
-    "choices": ["7.2", "8.2", "6.2", "7.8"],
-    "answer": "7.2",
-    "points": 15
-  },
-  {
-    "id": 58,
-    "wave": 2,
-    "question": "What is 12.8 ÷ 3.2?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 15
-  },
-  {
-    "id": 59,
-    "wave": 2,
-    "question": "What is 4.73 + 6.18?",
-    "choices": ["10.91", "11.91", "9.91", "10.81"],
-    "answer": "10.91",
-    "points": 15
-  },
-  {
-    "id": 60,
-    "wave": 2,
-    "question": "What is 9.34 - 2.89?",
-    "choices": ["6.45", "7.45", "5.45", "6.55"],
-    "answer": "6.45",
-    "points": 15
-  },
-  {
-    "id": 61,
-    "wave": 2,
-    "question": "What is 2.8 × 1.5?",
-    "choices": ["4.2", "5.2", "3.2", "4.8"],
-    "answer": "4.2",
-    "points": 15
-  },
-  {
-    "id": 62,
-    "wave": 2,
-    "question": "What is 15.6 ÷ 3.9?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 15
-  },
-  {
-    "id": 63,
-    "wave": 2,
-    "question": "What is 6.47 + 1.85?",
-    "choices": ["8.32", "9.32", "7.32", "8.42"],
-    "answer": "8.32",
-    "points": 15
-  },
-  {
-    "id": 64,
-    "wave": 2,
-    "question": "What is 7.91 - 3.46?",
-    "choices": ["4.45", "5.45", "3.45", "4.55"],
-    "answer": "4.45",
-    "points": 15
-  },
-  {
-    "id": 65,
-    "wave": 2,
-    "question": "What is 3.2 × 2.1?",
-    "choices": ["6.72", "7.72", "5.72", "6.62"],
-    "answer": "6.72",
-    "points": 15
-  },
-  {
-    "id": 66,
-    "wave": 2,
-    "question": "What is 18.4 ÷ 4.6?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 15
-  },
-  {
-    "id": 67,
-    "wave": 2,
-    "question": "What is 8.56 + 4.37?",
-    "choices": ["12.93", "13.93", "11.93", "12.83"],
-    "answer": "12.93",
-    "points": 15
-  },
-  {
-    "id": 68,
-    "wave": 2,
-    "question": "What is 10.25 - 6.48?",
-    "choices": ["3.77", "4.77", "2.77", "3.87"],
-    "answer": "3.77",
-    "points": 15
-  },
-  {
-    "id": 69,
-    "wave": 2,
-    "question": "What is 1.8 × 3.6?",
-    "choices": ["6.48", "7.48", "5.48", "6.38"],
-    "answer": "6.48",
-    "points": 15
-  },
-  {
-    "id": 70,
-    "wave": 2,
-    "question": "What is 21.6 ÷ 5.4?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 15
-  },
-  {
-    "id": 71,
-    "wave": 2,
-    "question": "What is 5.29 + 7.64?",
-    "choices": ["12.93", "13.93", "11.93", "12.83"],
-    "answer": "12.93",
-    "points": 15
-  },
-  {
-    "id": 72,
-    "wave": 2,
-    "question": "What is 9.17 - 4.39?",
-    "choices": ["4.78", "5.78", "3.78", "4.88"],
-    "answer": "4.78",
-    "points": 15
-  },
-  {
-    "id": 73,
-    "wave": 2,
-    "question": "What is 4.5 × 1.2?",
-    "choices": ["5.4", "6.4", "4.4", "5.8"],
-    "answer": "5.4",
-    "points": 15
-  },
-  {
-    "id": 74,
-    "wave": 2,
-    "question": "What is 14.4 ÷ 2.4?",
-    "choices": ["6", "7", "5", "6.5"],
-    "answer": "6",
-    "points": 15
-  },
-  {
-    "id": 75,
-    "wave": 2,
-    "question": "What is 3.84 + 5.97?",
-    "choices": ["9.81", "10.81", "8.81", "9.71"],
-    "answer": "9.81",
-    "points": 15
-  },
-  {
-    "id": 76,
-    "wave": 2,
-    "question": "What is 11.63 - 7.28?",
-    "choices": ["4.35", "5.35", "3.35", "4.45"],
-    "answer": "4.35",
-    "points": 15
-  },
-  {
-    "id": 77,
-    "wave": 2,
-    "question": "What is 2.7 × 2.4?",
-    "choices": ["6.48", "7.48", "5.48", "6.38"],
-    "answer": "6.48",
-    "points": 15
-  },
-  {
-    "id": 78,
-    "wave": 2,
-    "question": "What is 16.8 ÷ 4.2?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 15
-  },
-  {
-    "id": 79,
-    "wave": 2,
-    "question": "What is 7.41 + 2.85?",
-    "choices": ["10.26", "11.26", "9.26", "10.16"],
-    "answer": "10.26",
-    "points": 15
-  },
-  {
-    "id": 80,
-    "wave": 2,
-    "question": "What is 8.72 - 5.94?",
-    "choices": ["2.78", "3.78", "1.78", "2.88"],
-    "answer": "2.78",
-    "points": 15
-  },
-  {
-    "id": 81,
-    "wave": 2,
-    "question": "What is 3.6 × 1.8?",
-    "choices": ["6.48", "7.48", "5.48", "6.38"],
-    "answer": "6.48",
-    "points": 15
-  },
-  {
-    "id": 82,
-    "wave": 2,
-    "question": "What is 19.2 ÷ 4.8?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 15
-  },
-  {
-    "id": 83,
-    "wave": 2,
-    "question": "What is 6.58 + 8.34?",
-    "choices": ["14.92", "15.92", "13.92", "14.82"],
-    "answer": "14.92",
-    "points": 15
-  },
-  {
-    "id": 84,
-    "wave": 2,
-    "question": "What is 12.47 - 9.69?",
-    "choices": ["2.78", "3.78", "1.78", "2.88"],
-    "answer": "2.78",
-    "points": 15
-  },
-  {
-    "id": 85,
-    "wave": 2,
-    "question": "What is 5.4 × 1.6?",
-    "choices": ["8.64", "9.64", "7.64", "8.54"],
-    "answer": "8.64",
-    "points": 15
-  },
-  {
-    "id": 86,
-    "wave": 2,
-    "question": "What is 22.5 ÷ 4.5?",
-    "choices": ["5", "6", "4", "5.5"],
-    "answer": "5",
-    "points": 15
-  },
-  {
-    "id": 87,
-    "wave": 2,
-    "question": "What is 4.93 + 6.28?",
-    "choices": ["11.21", "12.21", "10.21", "11.11"],
-    "answer": "11.21",
-    "points": 15
-  },
-  {
-    "id": 88,
-    "wave": 2,
-    "question": "What is 13.56 - 8.79?",
-    "choices": ["4.77", "5.77", "3.77", "4.87"],
-    "answer": "4.77",
-    "points": 15
-  },
-  {
-    "id": 89,
-    "wave": 2,
-    "question": "What is 2.9 × 3.2?",
-    "choices": ["9.28", "10.28", "8.28", "9.18"],
-    "answer": "9.28",
-    "points": 15
-  },
-  {
-    "id": 90,
-    "wave": 2,
-    "question": "What is 17.5 ÷ 3.5?",
-    "choices": ["5", "6", "4", "5.5"],
-    "answer": "5",
-    "points": 15
-  },
-  {
-    "id": 91,
-    "wave": 2,
-    "question": "What is 8.74 + 3.58?",
-    "choices": ["12.32", "13.32", "11.32", "12.22"],
-    "answer": "12.32",
-    "points": 15
-  },
-  {
-    "id": 92,
-    "wave": 2,
-    "question": "What is 15.21 - 7.46?",
-    "choices": ["7.75", "8.75", "6.75", "7.85"],
-    "answer": "7.75",
-    "points": 15
-  },
-  {
-    "id": 93,
-    "wave": 2,
-    "question": "What is 4.8 × 2.5?",
-    "choices": ["12", "13", "11", "12.5"],
-    "answer": "12",
-    "points": 15
-  },
-  {
-    "id": 94,
-    "wave": 2,
-    "question": "What is 24.6 ÷ 6.15?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 15
-  },
-  {
-    "id": 95,
-    "wave": 2,
-    "question": "What is 7.35 + 4.89?",
-    "choices": ["12.24", "13.24", "11.24", "12.14"],
-    "answer": "12.24",
-    "points": 15
-  },
-  {
-    "id": 96,
-    "wave": 2,
-    "question": "What is 10.84 - 6.37?",
-    "choices": ["4.47", "5.47", "3.47", "4.57"],
-    "answer": "4.47",
-    "points": 15
-  },
-  {
-    "id": 97,
-    "wave": 2,
-    "question": "What is 3.7 × 2.8?",
-    "choices": ["10.36", "11.36", "9.36", "10.26"],
-    "answer": "10.36",
-    "points": 15
-  },
-  {
-    "id": 98,
-    "wave": 2,
-    "question": "What is 20.4 ÷ 5.1?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 15
-  },
-  {
-    "id": 99,
-    "wave": 2,
-    "question": "What is 9.67 + 5.48?",
-    "choices": ["15.15", "16.15", "14.15", "15.05"],
-    "answer": "15.15",
-    "points": 15
-  },
-  {
-    "id": 100,
-    "wave": 2,
-    "question": "What is 14.92 - 8.55?",
-    "choices": ["6.37", "7.37", "5.37", "6.47"],
-    "answer": "6.37",
-    "points": 15
-  },
-  {
-    "id": 101,
-    "wave": 3,
-    "question": "What is 4.758 + 3.294?",
-    "choices": ["8.052", "9.052", "7.052", "8.142"],
-    "answer": "8.052",
-    "points": 20
-  },
-  {
-    "id": 102,
-    "wave": 3,
-    "question": "What is 12.635 - 7.897?",
-    "choices": ["4.738", "5.738", "3.738", "4.828"],
-    "answer": "4.738",
-    "points": 20
-  },
-  {
-    "id": 103,
-    "wave": 3,
-    "question": "What is 3.42 × 2.75?",
-    "choices": ["9.405", "10.405", "8.405", "9.315"],
-    "answer": "9.405",
-    "points": 20
-  },
-  {
-    "id": 104,
-    "wave": 3,
-    "question": "What is 15.68 ÷ 3.92?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 20
-  },
-  {
-    "id": 105,
-    "wave": 3,
-    "question": "What is 7.829 + 5.376?",
-    "choices": ["13.205", "14.205", "12.205", "13.115"],
-    "answer": "13.205",
-    "points": 20
-  },
-  {
-    "id": 106,
-    "wave": 3,
-    "question": "What is 18.427 - 9.659?",
-    "choices": ["8.768", "9.768", "7.768", "8.858"],
-    "answer": "8.768",
-    "points": 20
-  },
-  {
-    "id": 107,
-    "wave": 3,
-    "question": "What is 2.85 × 4.36?",
-    "choices": ["12.426", "13.426", "11.426", "12.336"],
-    "answer": "12.426",
-    "points": 20
-  },
-  {
-    "id": 108,
-    "wave": 3,
-    "question": "What is 26.25 ÷ 5.25?",
-    "choices": ["5", "6", "4", "5.5"],
-    "answer": "5",
-    "points": 20
-  },
-  {
-    "id": 109,
-    "wave": 3,
-    "question": "What is 6.547 + 8.395?",
-    "choices": ["14.942", "15.942", "13.942", "14.852"],
-    "answer": "14.942",
-    "points": 20
-  },
-  {
-    "id": 110,
-    "wave": 3,
-    "question": "What is 21.348 - 12.579?",
-    "choices": ["8.769", "9.769", "7.769", "8.859"],
-    "answer": "8.769",
-    "points": 20
-  },
-  {
-    "id": 111,
-    "wave": 3,
-    "question": "What is 5.64 × 1.75?",
-    "choices": ["9.87", "10.87", "8.87", "9.77"],
-    "answer": "9.87",
-    "points": 20
-  },
-  {
-    "id": 112,
-    "wave": 3,
-    "question": "What is 32.76 ÷ 6.84?",
-    "choices": ["4.8", "5.8", "3.8", "4.3"],
-    "answer": "4.8",
-    "points": 20
-  },
-  {
-    "id": 113,
-    "wave": 3,
-    "question": "What is 9.283 + 4.768?",
-    "choices": ["14.051", "15.051", "13.051", "14.141"],
-    "answer": "14.051",
-    "points": 20
-  },
-  {
-    "id": 114,
-    "wave": 3,
-    "question": "What is 17.506 - 8.829?",
-    "choices": ["8.677", "9.677", "7.677", "8.767"],
-    "answer": "8.677",
-    "points": 20
-  },
-  {
-    "id": 115,
-    "wave": 3,
-    "question": "What is 4.28 × 3.15?",
-    "choices": ["13.482", "14.482", "12.482", "13.392"],
-    "answer": "13.482",
-    "points": 20
-  },
-  {
-    "id": 116,
-    "wave": 3,
-    "question": "What is 28.35 ÷ 5.67?",
-    "choices": ["5", "6", "4", "5.5"],
-    "answer": "5",
-    "points": 20
-  },
-  {
-    "id": 117,
-    "wave": 3,
-    "question": "What is 8.649 + 7.284?",
-    "choices": ["15.933", "16.933", "14.933", "15.843"],
-    "answer": "15.933",
-    "points": 20
-  },
-  {
-    "id": 118,
-    "wave": 3,
-    "question": "What is 19.725 - 11.948?",
-    "choices": ["7.777", "8.777", "6.777", "7.867"],
-    "answer": "7.777",
-    "points": 20
-  },
-  {
-    "id": 119,
-    "wave": 3,
-    "question": "What is 6.35 × 2.48?",
-    "choices": ["15.748", "16.748", "14.748", "15.658"],
-    "answer": "15.748",
-    "points": 20
-  },
-  {
-    "id": 120,
-    "wave": 3,
-    "question": "What is 39.6 ÷ 7.2?",
-    "choices": ["5.5", "6.5", "4.5", "5"],
-    "answer": "5.5",
-    "points": 20
-  },
-  {
-    "id": 121,
-    "wave": 3,
-    "question": "What is 5.874 + 9.367?",
-    "choices": ["15.241", "16.241", "14.241", "15.151"],
-    "answer": "15.241",
-    "points": 20
-  },
-  {
-    "id": 122,
-    "wave": 3,
-    "question": "What is 23.846 - 15.729?",
-    "choices": ["8.117", "9.117", "7.117", "8.207"],
-    "answer": "8.117",
-    "points": 20
-  },
-  {
-    "id": 123,
-    "wave": 3,
-    "question": "What is 3.96 × 4.25?",
-    "choices": ["16.83", "17.83", "15.83", "16.73"],
-    "answer": "16.83",
-    "points": 20
-  },
-  {
-    "id": 124,
-    "wave": 3,
-    "question": "What is 31.5 ÷ 6.3?",
-    "choices": ["5", "6", "4", "5.5"],
-    "answer": "5",
-    "points": 20
-  },
-  {
-    "id": 125,
-    "wave": 3,
-    "question": "What is 7.958 + 6.437?",
-    "choices": ["14.395", "15.395", "13.395", "14.485"],
-    "answer": "14.395",
-    "points": 20
-  },
-  {
-    "id": 126,
-    "wave": 3,
-    "question": "What is 20.564 - 12.789?",
-    "choices": ["7.775", "8.775", "6.775", "7.865"],
-    "answer": "7.775",
-    "points": 20
-  },
-  {
-    "id": 127,
-    "wave": 3,
-    "question": "What is 5.48 × 3.75?",
-    "choices": ["20.55", "21.55", "19.55", "20.45"],
-    "answer": "20.55",
-    "points": 20
-  },
-  {
-    "id": 128,
-    "wave": 3,
-    "question": "What is 42.84 ÷ 7.14?",
-    "choices": ["6", "7", "5", "6.5"],
-    "answer": "6",
-    "points": 20
-  },
-  {
-    "id": 129,
-    "wave": 3,
-    "question": "What is 9.476 + 8.585?",
-    "choices": ["18.061", "19.061", "17.061", "18.151"],
-    "answer": "18.061",
-    "points": 20
-  },
-  {
-    "id": 130,
-    "wave": 3,
-    "question": "What is 25.738 - 17.869?",
-    "choices": ["7.869", "8.869", "6.869", "7.959"],
-    "answer": "7.869",
-    "points": 20
-  },
-  {
-    "id": 131,
-    "wave": 3,
-    "question": "What is 4.72 × 5.25?",
-    "choices": ["24.78", "25.78", "23.78", "24.68"],
-    "answer": "24.78",
-    "points": 20
-  },
-  {
-    "id": 132,
-    "wave": 3,
-    "question": "What is 38.4 ÷ 9.6?",
-    "choices": ["4", "5", "3", "4.5"],
-    "answer": "4",
-    "points": 20
-  },
-  {
-    "id": 133,
-    "wave": 3,
-    "question": "What is 6.847 + 5.698?",
-    "choices": ["12.545", "13.545", "11.545", "12.635"],
-    "answer": "12.545",
-    "points": 20
-  },
-  {
-    "id": 134,
-    "wave": 3,
-    "question": "What is 22.936 - 14.759?",
-    "choices": ["8.177", "9.177", "7.177", "8.267"],
-    "answer": "8.177",
-    "points": 20
-  },
-  {
-    "id": 135,
-    "wave": 3,
-    "question": "What is 7.24 × 2.65?",
-    "choices": ["19.186", "20.186", "18.186", "19.096"],
-    "answer": "19.186",
-    "points": 20
-  },
-  {
-    "id": 136,
-    "wave": 3,
-    "question": "What is 45.36 ÷ 8.4?",
-    "choices": ["5.4", "6.4", "4.4", "5.9"],
-    "answer": "5.4",
-    "points": 20
-  },
-  {
-    "id": 137,
-    "wave": 3,
-    "question": "What is 8.529 + 7.846?",
-    "choices": ["16.375", "17.375", "15.375", "16.285"],
-    "answer": "16.375",
-    "points": 20
-  },
-  {
-    "id": 138,
-    "wave": 3,
-    "question": "What is 27.485 - 19.697?",
-    "choices": ["7.788", "8.788", "6.788", "7.878"],
-    "answer": "7.788",
-    "points": 20
-  },
-  {
-    "id": 139,
-    "wave": 3,
-    "question": "What is 3.85 × 6.4?",
-    "choices": ["24.64", "25.64", "23.64", "24.54"],
-    "answer": "24.64",
-    "points": 20
-  },
-  {
-    "id": 140,
-    "wave": 3,
-    "question": "What is 41.6 ÷ 6.5?",
-    "choices": ["6.4", "7.4", "5.4", "6.9"],
-    "answer": "6.4",
-    "points": 20
-  },
-  {
-    "id": 141,
-    "wave": 3,
-    "question": "What is 9.738 + 4.597?",
-    "choices": ["14.335", "15.335", "13.335", "14.425"],
-    "answer": "14.335",
-    "points": 20
-  },
-  {
-    "id": 142,
-    "wave": 3,
-    "question": "What is 24.827 - 16.959?",
-    "choices": ["7.868", "8.868", "6.868", "7.958"],
-    "answer": "7.868",
-    "points": 20
-  },
-  {
-    "id": 143,
-    "wave": 3,
-    "question": "What is 6.58 × 3.45?",
-    "choices": ["22.701", "23.701", "21.701", "22.611"],
-    "answer": "22.701",
-    "points": 20
-  },
-  {
-    "id": 144,
-    "wave": 3,
-    "question": "What is 48.3 ÷ 9.66?",
-    "choices": ["5", "6", "4", "5.5"],
-    "answer": "5",
-    "points": 20
-  },
-  {
-    "id": 145,
-    "wave": 3,
-    "question": "What is 5.694 + 8.758?",
-    "choices": ["14.452", "15.452", "13.452", "14.542"],
-    "answer": "14.452",
-    "points": 20
-  },
-  {
-    "id": 146,
-    "wave": 3,
-    "question": "What is 21.736 - 13.889?",
-    "choices": ["7.847", "8.847", "6.847", "7.937"],
-    "answer": "7.847",
-    "points": 20
-  },
-  {
-    "id": 147,
-    "wave": 3,
-    "question": "What is 4.95 × 5.8?",
-    "choices": ["28.71", "29.71", "27.71", "28.61"],
-    "answer": "28.71",
-    "points": 20
-  },
-  {
-    "id": 148,
-    "wave": 3,
-    "question": "What is 52.5 ÷ 10.5?",
-    "choices": ["5", "6", "4", "5.5"],
-    "answer": "5",
-    "points": 20
-  },
-  {
-    "id": 149,
-    "wave": 3,
-    "question": "What is 7.385 + 6.947?",
-    "choices": ["14.332", "15.332", "13.332", "14.422"],
-    "answer": "14.332",
-    "points": 20
-  },
-  {
-    "id": 150,
-    "wave": 3,
-    "question": "What is 29.654 - 18.777?",
-    "choices": ["10.877", "11.877", "9.877", "10.967"],
-    "answer": "10.877",
-    "points": 20
-  },
-  {
-    "id": 150,
-    "wave": 3,
-    "question": "What is 29.654 - 18.777?",
-    "choices": ["10.877", "11.877", "9.877", "10.967"],
-    "answer": "10.877",
-    "points": 20
-  },
-  {
-    "id": 151,
-    "wave": 4,
-    "question": "What is 12.4576 + 8.7389?",
-    "choices": ["21.1965", "22.1965", "20.1965", "21.2865"],
-    "answer": "21.1965",
-    "points": 25
-  },
-  {
-    "id": 152,
-    "wave": 4,
-    "question": "What is 34.8274 - 16.9537?",
-    "choices": ["17.8737", "18.8737", "16.8737", "17.9637"],
-    "answer": "17.8737",
-    "points": 25
-  },
-  {
-    "id": 153,
-    "wave": 4,
-    "question": "What is 6.785 × 4.236?",
-    "choices": ["28.741", "29.741", "27.741", "28.651"],
-    "answer": "28.741",
-    "points": 25
-  },
-  {
-    "id": 154,
-    "wave": 4,
-    "question": "What is 65.472 ÷ 12.96?",
-    "choices": ["5.05", "6.05", "4.05", "5.55"],
-    "answer": "5.05",
-    "points": 25
-  },
-  {
-    "id": 155,
-    "wave": 4,
-    "question": "What is 9.8347 + 15.6824?",
-    "choices": ["25.5171", "26.5171", "24.5171", "25.6071"],
-    "answer": "25.5171",
-    "points": 25
-  },
-  {
-    "id": 156,
-    "wave": 4,
-    "question": "What is 45.7293 - 27.8649?",
-    "choices": ["17.8644", "18.8644", "16.8644", "17.9544"],
-    "answer": "17.8644",
-    "points": 25
-  },
-  {
-    "id": 157,
-    "wave": 4,
-    "question": "What is 7.924 × 3.675?",
-    "choices": ["29.121", "30.121", "28.121", "29.031"],
-    "answer": "29.121",
-    "points": 25
-  },
-  {
-    "id": 158,
-    "wave": 4,
-    "question": "What is 78.624 ÷ 15.48?",
-    "choices": ["5.08", "6.08", "4.08", "5.58"],
-    "answer": "5.08",
-    "points": 25
-  },
-  {
-    "id": 159,
-    "wave": 4,
-    "question": "What is 18.5963 + 24.7428?",
-    "choices": ["43.3391", "44.3391", "42.3391", "43.4291"],
-    "answer": "43.3391",
-    "points": 25
-  },
-  {
-    "id": 160,
-    "wave": 4,
-    "question": "What is 52.8746 - 29.9587?",
-    "choices": ["22.9159", "23.9159", "21.9159", "22.8259"],
-    "answer": "22.9159",
-    "points": 25
-  },
-  {
-    "id": 161,
-    "wave": 4,
-    "question": "What is 5.637 × 6.428?",
-    "choices": ["36.224", "37.224", "35.224", "36.134"],
-    "answer": "36.224",
-    "points": 25
-  },
-  {
-    "id": 162,
-    "wave": 4,
-    "question": "What is 91.35 ÷ 18.27?",
-    "choices": ["5", "6", "4", "5.5"],
-    "answer": "5",
-    "points": 25
-  },
-  {
-    "id": 163,
-    "wave": 4,
-    "question": "What is 13.7849 + 19.5372?",
-    "choices": ["33.3221", "34.3221", "32.3221", "33.4121"],
-    "answer": "33.3221",
-    "points": 25
-  },
-  {
-    "id": 164,
-    "wave": 4,
-    "question": "What is 67.4826 - 38.7954?",
-    "choices": ["28.6872", "29.6872", "27.6872", "28.7772"],
-    "answer": "28.6872",
-    "points": 25
-  },
-  {
-    "id": 165,
-    "wave": 4,
-    "question": "What is 8.495 × 7.236?",
-    "choices": ["61.459", "62.459", "60.459", "61.369"],
-    "answer": "61.459",
-    "points": 25
-  },
-  {
-    "id": 166,
-    "wave": 4,
-    "question": "What is 104.76 ÷ 17.46?",
-    "choices": ["6", "7", "5", "6.5"],
-    "answer": "6",
-    "points": 25
-  },
-  {
-    "id": 167,
-    "wave": 4,
-    "question": "What is 22.6485 + 17.8937?",
-    "choices": ["40.5422", "41.5422", "39.5422", "40.6322"],
-    "answer": "40.5422",
-    "points": 25
-  },
-  {
-    "id": 168,
-    "wave": 4,
-    "question": "What is 73.9264 - 45.7839?",
-    "choices": ["28.1425", "29.1425", "27.1425", "28.2325"],
-    "answer": "28.1425",
-    "points": 25
-  },
-  {
-    "id": 169,
-    "wave": 4,
-    "question": "What is 9.758 × 5.429?",
-    "choices": ["52.97", "53.97", "51.97", "52.88"],
-    "answer": "52.97",
-    "points": 25
-  },
-  {
-    "id": 170,
-    "wave": 4,
-    "question": "What is 123.84 ÷ 19.68?",
-    "choices": ["6.29", "7.29", "5.29", "6.79"],
-    "answer": "6.29",
-    "points": 25
-  },
-  {
-    "id": 171,
-    "wave": 4,
-    "question": "What is 16.9573 + 28.4687?",
-    "choices": ["45.426", "46.426", "44.426", "45.516"],
-    "answer": "45.426",
-    "points": 25
-  },
-  {
-    "id": 172,
-    "wave": 4,
-    "question": "What is 84.7529 - 56.8764?",
-    "choices": ["27.8765", "28.8765", "26.8765", "27.9665"],
-    "answer": "27.8765",
-    "points": 25
-  },
-  {
-    "id": 173,
-    "wave": 4,
-    "question": "What is 4.867 × 8.593?",
-    "choices": ["41.822", "42.822", "40.822", "41.732"],
-    "answer": "41.822",
-    "points": 25
-  },
-  {
-    "id": 174,
-    "wave": 4,
-    "question": "What is 136.5 ÷ 21.84?",
-    "choices": ["6.25", "7.25", "5.25", "6.75"],
-    "answer": "6.25",
-    "points": 25
-  },
-  {
-    "id": 175,
-    "wave": 4,
-    "question": "What is 25.7394 + 32.8567?",
-    "choices": ["58.5961", "59.5961", "57.5961", "58.6861"],
-    "answer": "58.5961",
-    "points": 25
-  },
-  {
-    "id": 176,
-    "wave": 4,
-    "question": "What is 93.6847 - 65.9283?",
-    "choices": ["27.7564", "28.7564", "26.7564", "27.8464"],
-    "answer": "27.7564",
-    "points": 25
-  },
-  {
-    "id": 177,
-    "wave": 4,
-    "question": "What is 7.638 × 6.724?",
-    "choices": ["51.364", "52.364", "50.364", "51.274"],
-    "answer": "51.364",
-    "points": 25
-  }, 
+  "title": "Decimals Operations",
+  "description": "Work with decimals like a pro! Whether it’s shopping, measuring, or solving tricky problems, practice decimal operations in a game that rewards accuracy and speed!",
+  "waves": 5,
+  "timePerQuestion": 30,
+  "questions": [
+    {
+      "id": 1,
+      "wave": 1,
+      "question": "What is 2.3 + 1.5?",
+      "choices": ["3.8", "4.8", "2.8", "3.5"],
+      "answer": "3.8",
+      "points": 10
+    },
+    {
+      "id": 2,
+      "wave": 1,
+      "question": "What is 4.7 - 2.2?",
+      "choices": ["2.5", "3.5", "2.9", "1.5"],
+      "answer": "2.5",
+      "points": 10
+    },
+    {
+      "id": 3,
+      "wave": 1,
+      "question": "What is 1.6 + 3.1?",
+      "choices": ["4.7", "5.7", "4.2", "3.7"],
+      "answer": "4.7",
+      "points": 10
+    },
+    {
+      "id": 4,
+      "wave": 1,
+      "question": "What is 5.8 - 1.4?",
+      "choices": ["4.4", "5.4", "3.4", "4.2"],
+      "answer": "4.4",
+      "points": 10
+    },
+    {
+      "id": 5,
+      "wave": 1,
+      "question": "What is 3.2 + 2.6?",
+      "choices": ["5.8", "6.8", "5.2", "4.8"],
+      "answer": "5.8",
+      "points": 10
+    },
+    {
+      "id": 6,
+      "wave": 1,
+      "question": "What is 7.3 - 4.1?",
+      "choices": ["3.2", "4.2", "2.2", "3.4"],
+      "answer": "3.2",
+      "points": 10
+    },
+    {
+      "id": 7,
+      "wave": 1,
+      "question": "What is 2.8 + 1.9?",
+      "choices": ["4.7", "3.7", "5.7", "4.9"],
+      "answer": "4.7",
+      "points": 10
+    },
+    {
+      "id": 8,
+      "wave": 1,
+      "question": "What is 6.5 - 2.3?",
+      "choices": ["4.2", "5.2", "3.2", "4.8"],
+      "answer": "4.2",
+      "points": 10
+    },
+    {
+      "id": 9,
+      "wave": 1,
+      "question": "What is 1.4 + 5.2?",
+      "choices": ["6.6", "7.6", "5.6", "6.2"],
+      "answer": "6.6",
+      "points": 10
+    },
+    {
+      "id": 10,
+      "wave": 1,
+      "question": "What is 8.7 - 3.5?",
+      "choices": ["5.2", "6.2", "4.2", "5.8"],
+      "answer": "5.2",
+      "points": 10
+    },
+    {
+      "id": 11,
+      "wave": 1,
+      "question": "What is 3.6 + 2.3?",
+      "choices": ["5.9", "6.9", "4.9", "5.3"],
+      "answer": "5.9",
+      "points": 10
+    },
+    {
+      "id": 12,
+      "wave": 1,
+      "question": "What is 9.1 - 4.7?",
+      "choices": ["4.4", "5.4", "3.4", "4.8"],
+      "answer": "4.4",
+      "points": 10
+    },
+    {
+      "id": 13,
+      "wave": 1,
+      "question": "What is 2.7 + 3.8?",
+      "choices": ["6.5", "7.5", "5.5", "6.9"],
+      "answer": "6.5",
+      "points": 10
+    },
+    {
+      "id": 14,
+      "wave": 1,
+      "question": "What is 7.9 - 2.6?",
+      "choices": ["5.3", "6.3", "4.3", "5.9"],
+      "answer": "5.3",
+      "points": 10
+    },
+    {
+      "id": 15,
+      "wave": 1,
+      "question": "What is 4.1 + 1.8?",
+      "choices": ["5.9", "6.9", "4.9", "5.1"],
+      "answer": "5.9",
+      "points": 10
+    },
+    {
+      "id": 16,
+      "wave": 1,
+      "question": "What is 6.4 - 3.2?",
+      "choices": ["3.2", "4.2", "2.2", "3.6"],
+      "answer": "3.2",
+      "points": 10
+    },
+    {
+      "id": 17,
+      "wave": 1,
+      "question": "What is 1.9 + 4.5?",
+      "choices": ["6.4", "7.4", "5.4", "6.8"],
+      "answer": "6.4",
+      "points": 10
+    },
+    {
+      "id": 18,
+      "wave": 1,
+      "question": "What is 8.3 - 5.1?",
+      "choices": ["3.2", "4.2", "2.2", "3.8"],
+      "answer": "3.2",
+      "points": 10
+    },
+    {
+      "id": 19,
+      "wave": 1,
+      "question": "What is 3.5 + 2.7?",
+      "choices": ["6.2", "7.2", "5.2", "6.8"],
+      "answer": "6.2",
+      "points": 10
+    },
+    {
+      "id": 20,
+      "wave": 1,
+      "question": "What is 9.6 - 4.3?",
+      "choices": ["5.3", "6.3", "4.3", "5.9"],
+      "answer": "5.3",
+      "points": 10
+    },
+    {
+      "id": 21,
+      "wave": 1,
+      "question": "What is 2.4 + 3.9?",
+      "choices": ["6.3", "7.3", "5.3", "6.9"],
+      "answer": "6.3",
+      "points": 10
+    },
+    {
+      "id": 22,
+      "wave": 1,
+      "question": "What is 7.8 - 1.5?",
+      "choices": ["6.3", "7.3", "5.3", "6.9"],
+      "answer": "6.3",
+      "points": 10
+    },
+    {
+      "id": 23,
+      "wave": 1,
+      "question": "What is 4.6 + 2.8?",
+      "choices": ["7.4", "8.4", "6.4", "7.8"],
+      "answer": "7.4",
+      "points": 10
+    },
+    {
+      "id": 24,
+      "wave": 1,
+      "question": "What is 8.1 - 3.7?",
+      "choices": ["4.4", "5.4", "3.4", "4.8"],
+      "answer": "4.4",
+      "points": 10
+    },
+    {
+      "id": 25,
+      "wave": 1,
+      "question": "What is 1.7 + 5.6?",
+      "choices": ["7.3", "8.3", "6.3", "7.9"],
+      "answer": "7.3",
+      "points": 10
+    },
+    {
+      "id": 26,
+      "wave": 1,
+      "question": "What is 9.2 - 2.8?",
+      "choices": ["6.4", "7.4", "5.4", "6.8"],
+      "answer": "6.4",
+      "points": 10
+    },
+    {
+      "id": 27,
+      "wave": 1,
+      "question": "What is 3.8 + 4.1?",
+      "choices": ["7.9", "8.9", "6.9", "7.1"],
+      "answer": "7.9",
+      "points": 10
+    },
+    {
+      "id": 28,
+      "wave": 1,
+      "question": "What is 6.9 - 4.5?",
+      "choices": ["2.4", "3.4", "1.4", "2.8"],
+      "answer": "2.4",
+      "points": 10
+    },
+    {
+      "id": 29,
+      "wave": 1,
+      "question": "What is 5.3 + 1.6?",
+      "choices": ["6.9", "7.9", "5.9", "6.3"],
+      "answer": "6.9",
+      "points": 10
+    },
+    {
+      "id": 30,
+      "wave": 1,
+      "question": "What is 8.7 - 6.2?",
+      "choices": ["2.5", "3.5", "1.5", "2.9"],
+      "answer": "2.5",
+      "points": 10
+    },
+    {
+      "id": 31,
+      "wave": 1,
+      "question": "What is 2.1 + 4.7?",
+      "choices": ["6.8", "7.8", "5.8", "6.2"],
+      "answer": "6.8",
+      "points": 10
+    },
+    {
+      "id": 32,
+      "wave": 1,
+      "question": "What is 7.6 - 3.3?",
+      "choices": ["4.3", "5.3", "3.3", "4.9"],
+      "answer": "4.3",
+      "points": 10
+    },
+    {
+      "id": 33,
+      "wave": 1,
+      "question": "What is 4.9 + 3.4?",
+      "choices": ["8.3", "9.3", "7.3", "8.9"],
+      "answer": "8.3",
+      "points": 10
+    },
+    {
+      "id": 34,
+      "wave": 1,
+      "question": "What is 9.8 - 5.4?",
+      "choices": ["4.4", "5.4", "3.4", "4.8"],
+      "answer": "4.4",
+      "points": 10
+    },
+    {
+      "id": 35,
+      "wave": 1,
+      "question": "What is 1.3 + 6.2?",
+      "choices": ["7.5", "8.5", "6.5", "7.9"],
+      "answer": "7.5",
+      "points": 10
+    },
+    {
+      "id": 36,
+      "wave": 1,
+      "question": "What is 8.4 - 2.1?",
+      "choices": ["6.3", "7.3", "5.3", "6.9"],
+      "answer": "6.3",
+      "points": 10
+    },
+    {
+      "id": 37,
+      "wave": 1,
+      "question": "What is 3.7 + 5.8?",
+      "choices": ["9.5", "10.5", "8.5", "9.1"],
+      "answer": "9.5",
+      "points": 10
+    },
+    {
+      "id": 38,
+      "wave": 1,
+      "question": "What is 7.2 - 4.9?",
+      "choices": ["2.3", "3.3", "1.3", "2.9"],
+      "answer": "2.3",
+      "points": 10
+    },
+    {
+      "id": 39,
+      "wave": 1,
+      "question": "What is 6.1 + 2.4?",
+      "choices": ["8.5", "9.5", "7.5", "8.9"],
+      "answer": "8.5",
+      "points": 10
+    },
+    {
+      "id": 40,
+      "wave": 1,
+      "question": "What is 9.3 - 3.8?",
+      "choices": ["5.5", "6.5", "4.5", "5.9"],
+      "answer": "5.5",
+      "points": 10
+    },
+    {
+      "id": 41,
+      "wave": 1,
+      "question": "What is 2.5 + 6.7?",
+      "choices": ["9.2", "10.2", "8.2", "9.8"],
+      "answer": "9.2",
+      "points": 10
+    },
+    {
+      "id": 42,
+      "wave": 1,
+      "question": "What is 8.6 - 5.2?",
+      "choices": ["3.4", "4.4", "2.4", "3.8"],
+      "answer": "3.4",
+      "points": 10
+    },
+    {
+      "id": 43,
+      "wave": 1,
+      "question": "What is 4.8 + 1.7?",
+      "choices": ["6.5", "7.5", "5.5", "6.9"],
+      "answer": "6.5",
+      "points": 10
+    },
+    {
+      "id": 44,
+      "wave": 1,
+      "question": "What is 7.1 - 2.9?",
+      "choices": ["4.2", "5.2", "3.2", "4.8"],
+      "answer": "4.2",
+      "points": 10
+    },
+    {
+      "id": 45,
+      "wave": 1,
+      "question": "What is 5.4 + 3.6?",
+      "choices": ["9.0", "10.0", "8.0", "9.6"],
+      "answer": "9.0",
+      "points": 10
+    },
+    {
+      "id": 46,
+      "wave": 1,
+      "question": "What is 9.7 - 4.1?",
+      "choices": ["5.6", "6.6", "4.6", "5.2"],
+      "answer": "5.6",
+      "points": 10
+    },
+    {
+      "id": 47,
+      "wave": 1,
+      "question": "What is 1.8 + 7.3?",
+      "choices": ["9.1", "10.1", "8.1", "9.7"],
+      "answer": "9.1",
+      "points": 10
+    },
+    {
+      "id": 48,
+      "wave": 1,
+      "question": "What is 6.8 - 3.4?",
+      "choices": ["3.4", "4.4", "2.4", "3.8"],
+      "answer": "3.4",
+      "points": 10
+    },
+    {
+      "id": 49,
+      "wave": 1,
+      "question": "What is 4.2 + 5.9?",
+      "choices": ["10.1", "11.1", "9.1", "10.7"],
+      "answer": "10.1",
+      "points": 10
+    },
+    {
+      "id": 50,
+      "wave": 1,
+      "question": "What is 8.5 - 6.7?",
+      "choices": ["1.8", "2.8", "0.8", "2.2"],
+      "answer": "1.8",
+      "points": 10
+    },
+    {
+      "id": 51,
+      "wave": 2,
+      "question": "What is 3.25 + 2.47?",
+      "choices": ["5.72", "6.72", "4.72", "5.62"],
+      "answer": "5.72",
+      "points": 15
+    },
+    {
+      "id": 52,
+      "wave": 2,
+      "question": "What is 7.83 - 4.56?",
+      "choices": ["3.27", "4.27", "2.27", "3.37"],
+      "answer": "3.27",
+      "points": 15
+    },
+    {
+      "id": 53,
+      "wave": 2,
+      "question": "What is 2.4 × 3.5?",
+      "choices": ["8.4", "9.4", "7.4", "8.8"],
+      "answer": "8.4",
+      "points": 15
+    },
+    {
+      "id": 54,
+      "wave": 2,
+      "question": "What is 9.6 ÷ 2.4?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 55,
+      "wave": 2,
+      "question": "What is 5.68 + 3.29?",
+      "choices": ["8.97", "9.97", "7.97", "8.87"],
+      "answer": "8.97",
+      "points": 15
+    },
+    {
+      "id": 56,
+      "wave": 2,
+      "question": "What is 8.42 - 5.67?",
+      "choices": ["2.75", "3.75", "1.75", "2.85"],
+      "answer": "2.75",
+      "points": 15
+    },
+    {
+      "id": 57,
+      "wave": 2,
+      "question": "What is 1.6 × 4.5?",
+      "choices": ["7.2", "8.2", "6.2", "7.8"],
+      "answer": "7.2",
+      "points": 15
+    },
+    {
+      "id": 58,
+      "wave": 2,
+      "question": "What is 12.8 ÷ 3.2?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 59,
+      "wave": 2,
+      "question": "What is 4.73 + 6.18?",
+      "choices": ["10.91", "11.91", "9.91", "10.81"],
+      "answer": "10.91",
+      "points": 15
+    },
+    {
+      "id": 60,
+      "wave": 2,
+      "question": "What is 9.34 - 2.89?",
+      "choices": ["6.45", "7.45", "5.45", "6.55"],
+      "answer": "6.45",
+      "points": 15
+    },
+    {
+      "id": 61,
+      "wave": 2,
+      "question": "What is 2.8 × 1.5?",
+      "choices": ["4.2", "5.2", "3.2", "4.8"],
+      "answer": "4.2",
+      "points": 15
+    },
+    {
+      "id": 62,
+      "wave": 2,
+      "question": "What is 15.6 ÷ 3.9?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 63,
+      "wave": 2,
+      "question": "What is 6.47 + 1.85?",
+      "choices": ["8.32", "9.32", "7.32", "8.42"],
+      "answer": "8.32",
+      "points": 15
+    },
+    {
+      "id": 64,
+      "wave": 2,
+      "question": "What is 7.91 - 3.46?",
+      "choices": ["4.45", "5.45", "3.45", "4.55"],
+      "answer": "4.45",
+      "points": 15
+    },
+    {
+      "id": 65,
+      "wave": 2,
+      "question": "What is 3.2 × 2.1?",
+      "choices": ["6.72", "7.72", "5.72", "6.62"],
+      "answer": "6.72",
+      "points": 15
+    },
+    {
+      "id": 66,
+      "wave": 2,
+      "question": "What is 18.4 ÷ 4.6?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 67,
+      "wave": 2,
+      "question": "What is 8.56 + 4.37?",
+      "choices": ["12.93", "13.93", "11.93", "12.83"],
+      "answer": "12.93",
+      "points": 15
+    },
+    {
+      "id": 68,
+      "wave": 2,
+      "question": "What is 10.25 - 6.48?",
+      "choices": ["3.77", "4.77", "2.77", "3.87"],
+      "answer": "3.77",
+      "points": 15
+    },
+    {
+      "id": 69,
+      "wave": 2,
+      "question": "What is 1.8 × 3.6?",
+      "choices": ["6.48", "7.48", "5.48", "6.38"],
+      "answer": "6.48",
+      "points": 15
+    },
+    {
+      "id": 70,
+      "wave": 2,
+      "question": "What is 21.6 ÷ 5.4?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 71,
+      "wave": 2,
+      "question": "What is 5.29 + 7.64?",
+      "choices": ["12.93", "13.93", "11.93", "12.83"],
+      "answer": "12.93",
+      "points": 15
+    },
+    {
+      "id": 72,
+      "wave": 2,
+      "question": "What is 9.17 - 4.39?",
+      "choices": ["4.78", "5.78", "3.78", "4.88"],
+      "answer": "4.78",
+      "points": 15
+    },
+    {
+      "id": 73,
+      "wave": 2,
+      "question": "What is 4.5 × 1.2?",
+      "choices": ["5.4", "6.4", "4.4", "5.8"],
+      "answer": "5.4",
+      "points": 15
+    },
+    {
+      "id": 74,
+      "wave": 2,
+      "question": "What is 14.4 ÷ 2.4?",
+      "choices": ["6", "7", "5", "6.5"],
+      "answer": "6",
+      "points": 15
+    },
+    {
+      "id": 75,
+      "wave": 2,
+      "question": "What is 3.84 + 5.97?",
+      "choices": ["9.81", "10.81", "8.81", "9.71"],
+      "answer": "9.81",
+      "points": 15
+    },
+    {
+      "id": 76,
+      "wave": 2,
+      "question": "What is 11.63 - 7.28?",
+      "choices": ["4.35", "5.35", "3.35", "4.45"],
+      "answer": "4.35",
+      "points": 15
+    },
+    {
+      "id": 77,
+      "wave": 2,
+      "question": "What is 2.7 × 2.4?",
+      "choices": ["6.48", "7.48", "5.48", "6.38"],
+      "answer": "6.48",
+      "points": 15
+    },
+    {
+      "id": 78,
+      "wave": 2,
+      "question": "What is 16.8 ÷ 4.2?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 79,
+      "wave": 2,
+      "question": "What is 7.41 + 2.85?",
+      "choices": ["10.26", "11.26", "9.26", "10.16"],
+      "answer": "10.26",
+      "points": 15
+    },
+    {
+      "id": 80,
+      "wave": 2,
+      "question": "What is 8.72 - 5.94?",
+      "choices": ["2.78", "3.78", "1.78", "2.88"],
+      "answer": "2.78",
+      "points": 15
+    },
+    {
+      "id": 81,
+      "wave": 2,
+      "question": "What is 3.6 × 1.8?",
+      "choices": ["6.48", "7.48", "5.48", "6.38"],
+      "answer": "6.48",
+      "points": 15
+    },
+    {
+      "id": 82,
+      "wave": 2,
+      "question": "What is 19.2 ÷ 4.8?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 83,
+      "wave": 2,
+      "question": "What is 6.58 + 8.34?",
+      "choices": ["14.92", "15.92", "13.92", "14.82"],
+      "answer": "14.92",
+      "points": 15
+    },
+    {
+      "id": 84,
+      "wave": 2,
+      "question": "What is 12.47 - 9.69?",
+      "choices": ["2.78", "3.78", "1.78", "2.88"],
+      "answer": "2.78",
+      "points": 15
+    },
+    {
+      "id": 85,
+      "wave": 2,
+      "question": "What is 5.4 × 1.6?",
+      "choices": ["8.64", "9.64", "7.64", "8.54"],
+      "answer": "8.64",
+      "points": 15
+    },
+    {
+      "id": 86,
+      "wave": 2,
+      "question": "What is 22.5 ÷ 4.5?",
+      "choices": ["5", "6", "4", "5.5"],
+      "answer": "5",
+      "points": 15
+    },
+    {
+      "id": 87,
+      "wave": 2,
+      "question": "What is 4.93 + 6.28?",
+      "choices": ["11.21", "12.21", "10.21", "11.11"],
+      "answer": "11.21",
+      "points": 15
+    },
+    {
+      "id": 88,
+      "wave": 2,
+      "question": "What is 13.56 - 8.79?",
+      "choices": ["4.77", "5.77", "3.77", "4.87"],
+      "answer": "4.77",
+      "points": 15
+    },
+    {
+      "id": 89,
+      "wave": 2,
+      "question": "What is 2.9 × 3.2?",
+      "choices": ["9.28", "10.28", "8.28", "9.18"],
+      "answer": "9.28",
+      "points": 15
+    },
+    {
+      "id": 90,
+      "wave": 2,
+      "question": "What is 17.5 ÷ 3.5?",
+      "choices": ["5", "6", "4", "5.5"],
+      "answer": "5",
+      "points": 15
+    },
+    {
+      "id": 91,
+      "wave": 2,
+      "question": "What is 8.74 + 3.58?",
+      "choices": ["12.32", "13.32", "11.32", "12.22"],
+      "answer": "12.32",
+      "points": 15
+    },
+    {
+      "id": 92,
+      "wave": 2,
+      "question": "What is 15.21 - 7.46?",
+      "choices": ["7.75", "8.75", "6.75", "7.85"],
+      "answer": "7.75",
+      "points": 15
+    },
+    {
+      "id": 93,
+      "wave": 2,
+      "question": "What is 4.8 × 2.5?",
+      "choices": ["12", "13", "11", "12.5"],
+      "answer": "12",
+      "points": 15
+    },
+    {
+      "id": 94,
+      "wave": 2,
+      "question": "What is 24.6 ÷ 6.15?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 95,
+      "wave": 2,
+      "question": "What is 7.35 + 4.89?",
+      "choices": ["12.24", "13.24", "11.24", "12.14"],
+      "answer": "12.24",
+      "points": 15
+    },
+    {
+      "id": 96,
+      "wave": 2,
+      "question": "What is 10.84 - 6.37?",
+      "choices": ["4.47", "5.47", "3.47", "4.57"],
+      "answer": "4.47",
+      "points": 15
+    },
+    {
+      "id": 97,
+      "wave": 2,
+      "question": "What is 3.7 × 2.8?",
+      "choices": ["10.36", "11.36", "9.36", "10.26"],
+      "answer": "10.36",
+      "points": 15
+    },
+    {
+      "id": 98,
+      "wave": 2,
+      "question": "What is 20.4 ÷ 5.1?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 15
+    },
+    {
+      "id": 99,
+      "wave": 2,
+      "question": "What is 9.67 + 5.48?",
+      "choices": ["15.15", "16.15", "14.15", "15.05"],
+      "answer": "15.15",
+      "points": 15
+    },
+    {
+      "id": 100,
+      "wave": 2,
+      "question": "What is 14.92 - 8.55?",
+      "choices": ["6.37", "7.37", "5.37", "6.47"],
+      "answer": "6.37",
+      "points": 15
+    },
+    {
+      "id": 101,
+      "wave": 3,
+      "question": "What is 4.758 + 3.294?",
+      "choices": ["8.052", "9.052", "7.052", "8.142"],
+      "answer": "8.052",
+      "points": 20
+    },
+    {
+      "id": 102,
+      "wave": 3,
+      "question": "What is 12.635 - 7.897?",
+      "choices": ["4.738", "5.738", "3.738", "4.828"],
+      "answer": "4.738",
+      "points": 20
+    },
+    {
+      "id": 103,
+      "wave": 3,
+      "question": "What is 3.42 × 2.75?",
+      "choices": ["9.405", "10.405", "8.405", "9.315"],
+      "answer": "9.405",
+      "points": 20
+    },
+    {
+      "id": 104,
+      "wave": 3,
+      "question": "What is 15.68 ÷ 3.92?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 20
+    },
+    {
+      "id": 105,
+      "wave": 3,
+      "question": "What is 7.829 + 5.376?",
+      "choices": ["13.205", "14.205", "12.205", "13.115"],
+      "answer": "13.205",
+      "points": 20
+    },
+    {
+      "id": 106,
+      "wave": 3,
+      "question": "What is 18.427 - 9.659?",
+      "choices": ["8.768", "9.768", "7.768", "8.858"],
+      "answer": "8.768",
+      "points": 20
+    },
+    {
+      "id": 107,
+      "wave": 3,
+      "question": "What is 2.85 × 4.36?",
+      "choices": ["12.426", "13.426", "11.426", "12.336"],
+      "answer": "12.426",
+      "points": 20
+    },
+    {
+      "id": 108,
+      "wave": 3,
+      "question": "What is 26.25 ÷ 5.25?",
+      "choices": ["5", "6", "4", "5.5"],
+      "answer": "5",
+      "points": 20
+    },
+    {
+      "id": 109,
+      "wave": 3,
+      "question": "What is 6.547 + 8.395?",
+      "choices": ["14.942", "15.942", "13.942", "14.852"],
+      "answer": "14.942",
+      "points": 20
+    },
+    {
+      "id": 110,
+      "wave": 3,
+      "question": "What is 21.348 - 12.579?",
+      "choices": ["8.769", "9.769", "7.769", "8.859"],
+      "answer": "8.769",
+      "points": 20
+    },
+    {
+      "id": 111,
+      "wave": 3,
+      "question": "What is 5.64 × 1.75?",
+      "choices": ["9.87", "10.87", "8.87", "9.77"],
+      "answer": "9.87",
+      "points": 20
+    },
+    {
+      "id": 112,
+      "wave": 3,
+      "question": "What is 32.76 ÷ 6.84?",
+      "choices": ["4.8", "5.8", "3.8", "4.3"],
+      "answer": "4.8",
+      "points": 20
+    },
+    {
+      "id": 113,
+      "wave": 3,
+      "question": "What is 9.283 + 4.768?",
+      "choices": ["14.051", "15.051", "13.051", "14.141"],
+      "answer": "14.051",
+      "points": 20
+    },
+    {
+      "id": 114,
+      "wave": 3,
+      "question": "What is 17.506 - 8.829?",
+      "choices": ["8.677", "9.677", "7.677", "8.767"],
+      "answer": "8.677",
+      "points": 20
+    },
+    {
+      "id": 115,
+      "wave": 3,
+      "question": "What is 4.28 × 3.15?",
+      "choices": ["13.482", "14.482", "12.482", "13.392"],
+      "answer": "13.482",
+      "points": 20
+    },
+    {
+      "id": 116,
+      "wave": 3,
+      "question": "What is 28.35 ÷ 5.67?",
+      "choices": ["5", "6", "4", "5.5"],
+      "answer": "5",
+      "points": 20
+    },
+    {
+      "id": 117,
+      "wave": 3,
+      "question": "What is 8.649 + 7.284?",
+      "choices": ["15.933", "16.933", "14.933", "15.843"],
+      "answer": "15.933",
+      "points": 20
+    },
+    {
+      "id": 118,
+      "wave": 3,
+      "question": "What is 19.725 - 11.948?",
+      "choices": ["7.777", "8.777", "6.777", "7.867"],
+      "answer": "7.777",
+      "points": 20
+    },
+    {
+      "id": 119,
+      "wave": 3,
+      "question": "What is 6.35 × 2.48?",
+      "choices": ["15.748", "16.748", "14.748", "15.658"],
+      "answer": "15.748",
+      "points": 20
+    },
+    {
+      "id": 120,
+      "wave": 3,
+      "question": "What is 39.6 ÷ 7.2?",
+      "choices": ["5.5", "6.5", "4.5", "5"],
+      "answer": "5.5",
+      "points": 20
+    },
+    {
+      "id": 121,
+      "wave": 3,
+      "question": "What is 5.874 + 9.367?",
+      "choices": ["15.241", "16.241", "14.241", "15.151"],
+      "answer": "15.241",
+      "points": 20
+    },
+    {
+      "id": 122,
+      "wave": 3,
+      "question": "What is 23.846 - 15.729?",
+      "choices": ["8.117", "9.117", "7.117", "8.207"],
+      "answer": "8.117",
+      "points": 20
+    },
+    {
+      "id": 123,
+      "wave": 3,
+      "question": "What is 3.96 × 4.25?",
+      "choices": ["16.83", "17.83", "15.83", "16.73"],
+      "answer": "16.83",
+      "points": 20
+    },
+    {
+      "id": 124,
+      "wave": 3,
+      "question": "What is 31.5 ÷ 6.3?",
+      "choices": ["5", "6", "4", "5.5"],
+      "answer": "5",
+      "points": 20
+    },
+    {
+      "id": 125,
+      "wave": 3,
+      "question": "What is 7.958 + 6.437?",
+      "choices": ["14.395", "15.395", "13.395", "14.485"],
+      "answer": "14.395",
+      "points": 20
+    },
+    {
+      "id": 126,
+      "wave": 3,
+      "question": "What is 20.564 - 12.789?",
+      "choices": ["7.775", "8.775", "6.775", "7.865"],
+      "answer": "7.775",
+      "points": 20
+    },
+    {
+      "id": 127,
+      "wave": 3,
+      "question": "What is 5.48 × 3.75?",
+      "choices": ["20.55", "21.55", "19.55", "20.45"],
+      "answer": "20.55",
+      "points": 20
+    },
+    {
+      "id": 128,
+      "wave": 3,
+      "question": "What is 42.84 ÷ 7.14?",
+      "choices": ["6", "7", "5", "6.5"],
+      "answer": "6",
+      "points": 20
+    },
+    {
+      "id": 129,
+      "wave": 3,
+      "question": "What is 9.476 + 8.585?",
+      "choices": ["18.061", "19.061", "17.061", "18.151"],
+      "answer": "18.061",
+      "points": 20
+    },
+    {
+      "id": 130,
+      "wave": 3,
+      "question": "What is 25.738 - 17.869?",
+      "choices": ["7.869", "8.869", "6.869", "7.959"],
+      "answer": "7.869",
+      "points": 20
+    },
+    {
+      "id": 131,
+      "wave": 3,
+      "question": "What is 4.72 × 5.25?",
+      "choices": ["24.78", "25.78", "23.78", "24.68"],
+      "answer": "24.78",
+      "points": 20
+    },
+    {
+      "id": 132,
+      "wave": 3,
+      "question": "What is 38.4 ÷ 9.6?",
+      "choices": ["4", "5", "3", "4.5"],
+      "answer": "4",
+      "points": 20
+    },
+    {
+      "id": 133,
+      "wave": 3,
+      "question": "What is 6.847 + 5.698?",
+      "choices": ["12.545", "13.545", "11.545", "12.635"],
+      "answer": "12.545",
+      "points": 20
+    },
+    {
+      "id": 134,
+      "wave": 3,
+      "question": "What is 22.936 - 14.759?",
+      "choices": ["8.177", "9.177", "7.177", "8.267"],
+      "answer": "8.177",
+      "points": 20
+    },
+    {
+      "id": 135,
+      "wave": 3,
+      "question": "What is 7.24 × 2.65?",
+      "choices": ["19.186", "20.186", "18.186", "19.096"],
+      "answer": "19.186",
+      "points": 20
+    },
+    {
+      "id": 136,
+      "wave": 3,
+      "question": "What is 45.36 ÷ 8.4?",
+      "choices": ["5.4", "6.4", "4.4", "5.9"],
+      "answer": "5.4",
+      "points": 20
+    },
+    {
+      "id": 137,
+      "wave": 3,
+      "question": "What is 8.529 + 7.846?",
+      "choices": ["16.375", "17.375", "15.375", "16.285"],
+      "answer": "16.375",
+      "points": 20
+    },
+    {
+      "id": 138,
+      "wave": 3,
+      "question": "What is 27.485 - 19.697?",
+      "choices": ["7.788", "8.788", "6.788", "7.878"],
+      "answer": "7.788",
+      "points": 20
+    },
+    {
+      "id": 139,
+      "wave": 3,
+      "question": "What is 3.85 × 6.4?",
+      "choices": ["24.64", "25.64", "23.64", "24.54"],
+      "answer": "24.64",
+      "points": 20
+    },
+    {
+      "id": 140,
+      "wave": 3,
+      "question": "What is 41.6 ÷ 6.5?",
+      "choices": ["6.4", "7.4", "5.4", "6.9"],
+      "answer": "6.4",
+      "points": 20
+    },
+    {
+      "id": 141,
+      "wave": 3,
+      "question": "What is 9.738 + 4.597?",
+      "choices": ["14.335", "15.335", "13.335", "14.425"],
+      "answer": "14.335",
+      "points": 20
+    },
+    {
+      "id": 142,
+      "wave": 3,
+      "question": "What is 24.827 - 16.959?",
+      "choices": ["7.868", "8.868", "6.868", "7.958"],
+      "answer": "7.868",
+      "points": 20
+    },
+    {
+      "id": 143,
+      "wave": 3,
+      "question": "What is 6.58 × 3.45?",
+      "choices": ["22.701", "23.701", "21.701", "22.611"],
+      "answer": "22.701",
+      "points": 20
+    },
+    {
+      "id": 144,
+      "wave": 3,
+      "question": "What is 48.3 ÷ 9.66?",
+      "choices": ["5", "6", "4", "5.5"],
+      "answer": "5",
+      "points": 20
+    },
+    {
+      "id": 145,
+      "wave": 3,
+      "question": "What is 5.694 + 8.758?",
+      "choices": ["14.452", "15.452", "13.452", "14.542"],
+      "answer": "14.452",
+      "points": 20
+    },
+    {
+      "id": 146,
+      "wave": 3,
+      "question": "What is 21.736 - 13.889?",
+      "choices": ["7.847", "8.847", "6.847", "7.937"],
+      "answer": "7.847",
+      "points": 20
+    },
+    {
+      "id": 147,
+      "wave": 3,
+      "question": "What is 4.95 × 5.8?",
+      "choices": ["28.71", "29.71", "27.71", "28.61"],
+      "answer": "28.71",
+      "points": 20
+    },
+    {
+      "id": 148,
+      "wave": 3,
+      "question": "What is 52.5 ÷ 10.5?",
+      "choices": ["5", "6", "4", "5.5"],
+      "answer": "5",
+      "points": 20
+    },
+    {
+      "id": 149,
+      "wave": 3,
+      "question": "What is 7.385 + 6.947?",
+      "choices": ["14.332", "15.332", "13.332", "14.422"],
+      "answer": "14.332",
+      "points": 20
+    },
+    {
+      "id": 150,
+      "wave": 3,
+      "question": "What is 29.654 - 18.777?",
+      "choices": ["10.877", "11.877", "9.877", "10.967"],
+      "answer": "10.877",
+      "points": 20
+    },
+    {
+      "id": 150,
+      "wave": 3,
+      "question": "What is 29.654 - 18.777?",
+      "choices": ["10.877", "11.877", "9.877", "10.967"],
+      "answer": "10.877",
+      "points": 20
+    },
+    {
+      "id": 151,
+      "wave": 4,
+      "question": "What is 12.4576 + 8.7389?",
+      "choices": ["21.1965", "22.1965", "20.1965", "21.2865"],
+      "answer": "21.1965",
+      "points": 25
+    },
+    {
+      "id": 152,
+      "wave": 4,
+      "question": "What is 34.8274 - 16.9537?",
+      "choices": ["17.8737", "18.8737", "16.8737", "17.9637"],
+      "answer": "17.8737",
+      "points": 25
+    },
+    {
+      "id": 153,
+      "wave": 4,
+      "question": "What is 6.785 × 4.236?",
+      "choices": ["28.741", "29.741", "27.741", "28.651"],
+      "answer": "28.741",
+      "points": 25
+    },
+    {
+      "id": 154,
+      "wave": 4,
+      "question": "What is 65.472 ÷ 12.96?",
+      "choices": ["5.05", "6.05", "4.05", "5.55"],
+      "answer": "5.05",
+      "points": 25
+    },
+    {
+      "id": 155,
+      "wave": 4,
+      "question": "What is 9.8347 + 15.6824?",
+      "choices": ["25.5171", "26.5171", "24.5171", "25.6071"],
+      "answer": "25.5171",
+      "points": 25
+    },
+    {
+      "id": 156,
+      "wave": 4,
+      "question": "What is 45.7293 - 27.8649?",
+      "choices": ["17.8644", "18.8644", "16.8644", "17.9544"],
+      "answer": "17.8644",
+      "points": 25
+    },
+    {
+      "id": 157,
+      "wave": 4,
+      "question": "What is 7.924 × 3.675?",
+      "choices": ["29.121", "30.121", "28.121", "29.031"],
+      "answer": "29.121",
+      "points": 25
+    },
+    {
+      "id": 158,
+      "wave": 4,
+      "question": "What is 78.624 ÷ 15.48?",
+      "choices": ["5.08", "6.08", "4.08", "5.58"],
+      "answer": "5.08",
+      "points": 25
+    },
+    {
+      "id": 159,
+      "wave": 4,
+      "question": "What is 18.5963 + 24.7428?",
+      "choices": ["43.3391", "44.3391", "42.3391", "43.4291"],
+      "answer": "43.3391",
+      "points": 25
+    },
+    {
+      "id": 160,
+      "wave": 4,
+      "question": "What is 52.8746 - 29.9587?",
+      "choices": ["22.9159", "23.9159", "21.9159", "22.8259"],
+      "answer": "22.9159",
+      "points": 25
+    },
+    {
+      "id": 161,
+      "wave": 4,
+      "question": "What is 5.637 × 6.428?",
+      "choices": ["36.224", "37.224", "35.224", "36.134"],
+      "answer": "36.224",
+      "points": 25
+    },
+    {
+      "id": 162,
+      "wave": 4,
+      "question": "What is 91.35 ÷ 18.27?",
+      "choices": ["5", "6", "4", "5.5"],
+      "answer": "5",
+      "points": 25
+    },
+    {
+      "id": 163,
+      "wave": 4,
+      "question": "What is 13.7849 + 19.5372?",
+      "choices": ["33.3221", "34.3221", "32.3221", "33.4121"],
+      "answer": "33.3221",
+      "points": 25
+    },
+    {
+      "id": 164,
+      "wave": 4,
+      "question": "What is 67.4826 - 38.7954?",
+      "choices": ["28.6872", "29.6872", "27.6872", "28.7772"],
+      "answer": "28.6872",
+      "points": 25
+    },
+    {
+      "id": 165,
+      "wave": 4,
+      "question": "What is 8.495 × 7.236?",
+      "choices": ["61.459", "62.459", "60.459", "61.369"],
+      "answer": "61.459",
+      "points": 25
+    },
+    {
+      "id": 166,
+      "wave": 4,
+      "question": "What is 104.76 ÷ 17.46?",
+      "choices": ["6", "7", "5", "6.5"],
+      "answer": "6",
+      "points": 25
+    },
+    {
+      "id": 167,
+      "wave": 4,
+      "question": "What is 22.6485 + 17.8937?",
+      "choices": ["40.5422", "41.5422", "39.5422", "40.6322"],
+      "answer": "40.5422",
+      "points": 25
+    },
+    {
+      "id": 168,
+      "wave": 4,
+      "question": "What is 73.9264 - 45.7839?",
+      "choices": ["28.1425", "29.1425", "27.1425", "28.2325"],
+      "answer": "28.1425",
+      "points": 25
+    },
+    {
+      "id": 169,
+      "wave": 4,
+      "question": "What is 9.758 × 5.429?",
+      "choices": ["52.97", "53.97", "51.97", "52.88"],
+      "answer": "52.97",
+      "points": 25
+    },
+    {
+      "id": 170,
+      "wave": 4,
+      "question": "What is 123.84 ÷ 19.68?",
+      "choices": ["6.29", "7.29", "5.29", "6.79"],
+      "answer": "6.29",
+      "points": 25
+    },
+    {
+      "id": 171,
+      "wave": 4,
+      "question": "What is 16.9573 + 28.4687?",
+      "choices": ["45.426", "46.426", "44.426", "45.516"],
+      "answer": "45.426",
+      "points": 25
+    },
+    {
+      "id": 172,
+      "wave": 4,
+      "question": "What is 84.7529 - 56.8764?",
+      "choices": ["27.8765", "28.8765", "26.8765", "27.9665"],
+      "answer": "27.8765",
+      "points": 25
+    },
+    {
+      "id": 173,
+      "wave": 4,
+      "question": "What is 4.867 × 8.593?",
+      "choices": ["41.822", "42.822", "40.822", "41.732"],
+      "answer": "41.822",
+      "points": 25
+    },
+    {
+      "id": 174,
+      "wave": 4,
+      "question": "What is 136.5 ÷ 21.84?",
+      "choices": ["6.25", "7.25", "5.25", "6.75"],
+      "answer": "6.25",
+      "points": 25
+    },
+    {
+      "id": 175,
+      "wave": 4,
+      "question": "What is 25.7394 + 32.8567?",
+      "choices": ["58.5961", "59.5961", "57.5961", "58.6861"],
+      "answer": "58.5961",
+      "points": 25
+    },
+    {
+      "id": 176,
+      "wave": 4,
+      "question": "What is 93.6847 - 65.9283?",
+      "choices": ["27.7564", "28.7564", "26.7564", "27.8464"],
+      "answer": "27.7564",
+      "points": 25
+    },
+    {
+      "id": 177,
+      "wave": 4,
+      "question": "What is 7.638 × 6.724?",
+      "choices": ["51.364", "52.364", "50.364", "51.274"],
+      "answer": "51.364",
+      "points": 25
+    },
     {
       "id": 178,
       "wave": 4,

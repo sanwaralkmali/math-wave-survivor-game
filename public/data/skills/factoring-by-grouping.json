@@ -2,7 +2,7 @@
   "title": "Factoring by Grouping",
   "description": "Factor the given expression by grouping",
   "waves": 5,
-  "timePerQuestion": 75,
+  "timePerQuestion": 90,
   "questions": [
     {
       "id": 1,
