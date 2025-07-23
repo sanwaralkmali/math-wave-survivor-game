@@ -97,5 +97,19 @@
     "description": "Practice evaluating, distributing, and combining like terms.",
     "difficulty": "Medium",
     "color": "secondary"
-  }
+  },
+{
+  "id": "solving-equations",
+  "title": "Solving Equations",
+  "description": "Learn to solve one-step, two-step, and multi-step equations.",
+  "difficulty": "Medium",
+  "color": "primary"
+},
+{
+  "id": "solving-inequalities",
+  "title": "Solving Inequalities",
+  "description": "Practice solving and graphing linear inequalities.",
+  "difficulty": "Medium",
+  "color": "primary"
+}
 ]

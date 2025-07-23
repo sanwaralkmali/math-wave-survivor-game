@@ -6,24 +6,17 @@
     "mixed-problems",
     "order-of-operations"
   ],
-  "algebra-builder": [
-    "algebra-basics"
-    ],
-    "rational-conversion":[
-      "fraction-decimal",
-      "fraction-percentage",
-      "decimal-percentage",
-      "mixed-conversion"
-    ],
-    "basic-scientific-notation": [
-      "basic-scientific-notation"
-       ],
-    "operations-scientific-notation": [
-      "operations-scientific-notation"
-    ],
-    "number-classification": [
-      "classification-numbers"
-    ],
-"simplyify-expressions" :
-["simplyify-expressions"]
-} 
+  "algebra-builder": ["algebra-basics"],
+  "rational-conversion": [
+    "fraction-decimal",
+    "fraction-percentage",
+    "decimal-percentage",
+    "mixed-conversion"
+  ],
+  "basic-scientific-notation": ["basic-scientific-notation"],
+  "operations-scientific-notation": ["operations-scientific-notation"],
+  "number-classification": ["classification-numbers"],
+  "simplyify-expressions": ["simplify-expressions"],
+  "solving-equations": ["solving-equations"],
+  "solving-inequalities": ["solving-inequalities"]
+}
