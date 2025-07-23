@@ -103,21 +103,21 @@
     "title": "Solving Equations",
     "description": "Learn to solve one-step, two-step, and multi-step equations.",
     "difficulty": "Medium",
-    "color": "primary"
+    "color": "secondary"
   },
   {
     "id": "solving-inequalities",
     "title": "Solving Inequalities",
     "description": "Practice solving and graphing linear inequalities.",
     "difficulty": "Medium",
-    "color": "primary"
+    "color": "secondary"
   },
   {
     "id": "gcf-factoring",
     "title": "GCF Factoring",
     "description": "Find the greatest common factor of two or more numbers.",
     "difficulty": "Medium",
-    "color": "primary"
+    "color": "secondary"
   },
   {
     "id": "factoring-by-grouping",
@@ -125,5 +125,19 @@
     "description": "Factorize expressions by grouping terms.",
     "difficulty": "Hard",
     "color": "primary"
+  },
+  {
+    "id": "factoring-trinomials-1",
+    "title": "Factoring Trinomials (x² + bx + c)",
+    "description": "Factorize trinomials of the form x² + bx + c.",
+    "difficulty": "Medium",
+    "color": "secondary"
+  },
+  {
+    "id": "factoring-trinomials-2",
+    "title": "Factoring Trinomials (ax² + bx + c)",
+    "description": "Factorize trinomials of the form ax² + bx + c.",
+    "difficulty": "Hard",
+    "color": "secondary"
   }
 ]
