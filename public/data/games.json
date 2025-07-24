@@ -167,5 +167,12 @@
     "description": "Solve equations by factoring.",
     "difficulty": "Medium",
     "color": "secondary"
+  },
+  {
+    "id": "quadratic-formula",
+    "title": "Solving by Quadratic Formula",
+    "description": "Solve quadratic equations by using the quadratic formula.",
+    "difficulty": "Hard",
+    "color": "primary"
   }
 ]
