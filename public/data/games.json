@@ -160,5 +160,12 @@
     "description": "Factorize expressions of the form a² + 2ab + b² or a² - 2ab + b²",
     "difficulty": "Hard",
     "color": "secondary"
+  },
+  {
+    "id": "solving-equations-by-factoring",
+    "title": "Solving Equations by Factoring",
+    "description": "Solve equations by factoring.",
+    "difficulty": "Medium",
+    "color": "secondary"
   }
 ]

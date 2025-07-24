@@ -1,5 +1,11 @@
 import { useState, useMemo } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,7 +13,14 @@ import { Badge } from "@/components/ui/badge";
 import { Brain, Play, ArrowLeft, Timer, Target, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 interface Question {
   wave: number;
@@ -24,7 +37,11 @@ interface SkillData {
 
 interface GameDashboardProps {
   skillData: SkillData;
-  onStartGame: (playerName: string, difficulty: string, timePerQuestion: number) => void;
+  onStartGame: (
+    playerName: string,
+    difficulty: string,
+    timePerQuestion: number
+  ) => void;
   onBack?: () => void;
 }
 
@@ -33,13 +50,18 @@ function getRandomSample<T>(arr: T[], n: number): T[] {
   return shuffled.slice(0, n);
 }
 
-export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardProps) {
+export function GameDashboard({
+  skillData,
+  onStartGame,
+  onBack,
+}: GameDashboardProps) {
   const [playerName, setPlayerName] = useState("");
   const [difficulty, setDifficulty] = useState("standard");
 
   const getAdjustedTime = () => {
     if (difficulty === "easy") return skillData.timePerQuestion * 2;
-    if (difficulty === "hard") return Math.round(skillData.timePerQuestion * 0.75);
+    if (difficulty === "hard")
+      return Math.round(skillData.timePerQuestion * 0.75);
     return skillData.timePerQuestion;
   };
 
@@ -53,7 +75,7 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
   // Sampled questions per wave (same logic as QuizGame)
   const { sampledQuestionsByWave, totalSampledQuestions } = useMemo(() => {
     const questionsByWave: Record<number, Question[]> = {};
-    skillData.questions.forEach(q => {
+    skillData.questions.forEach((q) => {
       if (!questionsByWave[q.wave]) questionsByWave[q.wave] = [];
       questionsByWave[q.wave].push(q);
     });
@@ -78,7 +100,9 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
               <Brain className="h-8 w-8 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-foreground">{skillData.title}</h1>
+              <h1 className="text-3xl font-bold text-foreground">
+                {skillData.title}
+              </h1>
               <p className="text-muted-foreground">{skillData.description}</p>
             </div>
           </div>
@@ -96,7 +120,7 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
                 Prepare for your math challenge!
               </CardDescription>
             </CardHeader>
-            
+
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="playerName" className="text-base font-semibold">
@@ -108,25 +132,46 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
                   value={playerName}
                   onChange={(e) => setPlayerName(e.target.value)}
                   className="text-lg h-12"
-                  onKeyDown={(e) => e.key === 'Enter' && handleStartGame()}
+                  onKeyDown={(e) => e.key === "Enter" && handleStartGame()}
                 />
               </div>
 
               {/* Difficulty Selector */}
               <div className="space-y-2">
-                <Label className="text-base font-semibold">Difficulty Level</Label>
-                <RadioGroup value={difficulty} onValueChange={setDifficulty} className="flex flex-col gap-2">
+                <Label className="text-base font-semibold">
+                  Difficulty Level
+                </Label>
+                <RadioGroup
+                  value={difficulty}
+                  onValueChange={setDifficulty}
+                  className="flex flex-col gap-2"
+                >
                   <div className="flex items-center gap-2">
                     <RadioGroupItem value="easy" id="easy" />
-                    <Label htmlFor="easy" className="cursor-pointer">Easy <span className="text-xs text-muted-foreground">(+100% time)</span></Label>
+                    <Label htmlFor="easy" className="cursor-pointer">
+                      Easy{" "}
+                      <span className="text-xs text-muted-foreground">
+                        (+100% time)
+                      </span>
+                    </Label>
                   </div>
                   <div className="flex items-center gap-2">
                     <RadioGroupItem value="standard" id="standard" />
-                    <Label htmlFor="standard" className="cursor-pointer">Standard <span className="text-xs text-muted-foreground">(standard time)</span></Label>
+                    <Label htmlFor="standard" className="cursor-pointer">
+                      Standard{" "}
+                      <span className="text-xs text-muted-foreground">
+                        (standard time)
+                      </span>
+                    </Label>
                   </div>
                   <div className="flex items-center gap-2">
                     <RadioGroupItem value="hard" id="hard" />
-                    <Label htmlFor="hard" className="cursor-pointer">Hard <span className="text-xs text-muted-foreground">(-25% time)</span></Label>
+                    <Label htmlFor="hard" className="cursor-pointer">
+                      Hard{" "}
+                      <span className="text-xs text-muted-foreground">
+                        (-25% time)
+                      </span>
+                    </Label>
                   </div>
                 </RadioGroup>
               </div>
@@ -134,28 +179,46 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
               {/* Leaderboard Button */}
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline" className="w-full font-semibold mt-2 text-lg py-3 rounded-lg shadow-sm bg-gradient-to-r from-primary/10 to-secondary/10 font-cairo">🏆 Leaderboard</Button>
+                  <Button
+                    variant="outline"
+                    className="w-full font-semibold mt-2 text-lg py-3 rounded-lg shadow-sm bg-gradient-to-r from-primary/10 to-secondary/10 font-cairo"
+                  >
+                    🏆 Leaderboard
+                  </Button>
                 </DialogTrigger>
                 <DialogContent className="font-cairo">
                   <DialogHeader>
                     <div className="flex flex-col items-center gap-2 mb-2">
                       <span className="text-5xl">🏆</span>
-                      <DialogTitle className="text-2xl font-bold tracking-tight">Leaderboard</DialogTitle>
-                      <DialogDescription className="text-base text-muted-foreground">See how you stack up against the best!</DialogDescription>
+                      <DialogTitle className="text-2xl font-bold tracking-tight">
+                        Leaderboard
+                      </DialogTitle>
+                      <DialogDescription className="text-base text-muted-foreground">
+                        See how you stack up against the best!
+                      </DialogDescription>
                     </div>
                   </DialogHeader>
                   <div className="rounded-xl border bg-card/80 p-4 shadow-md w-full max-w-md mx-auto">
                     <table className="w-full text-left font-cairo">
                       <thead>
                         <tr className="border-b">
-                          <th className="py-2 px-3 text-lg font-semibold">Rank</th>
-                          <th className="py-2 px-3 text-lg font-semibold">Player</th>
-                          <th className="py-2 px-3 text-lg font-semibold">Score</th>
+                          <th className="py-2 px-3 text-lg font-semibold">
+                            Rank
+                          </th>
+                          <th className="py-2 px-3 text-lg font-semibold">
+                            Player
+                          </th>
+                          <th className="py-2 px-3 text-lg font-semibold">
+                            Score
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="py-3 px-3 text-center text-xl text-muted-foreground" colSpan={3}>
+                          <td
+                            className="py-3 px-3 text-center text-xl text-muted-foreground"
+                            colSpan={3}
+                          >
                             <span className="block mb-1">Coming soon</span>
                             <span className="text-2xl">🚧</span>
                           </td>
@@ -165,7 +228,7 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
                   </div>
                 </DialogContent>
               </Dialog>
-              
+
               <Button
                 onClick={handleStartGame}
                 disabled={!playerName.trim()}
@@ -186,7 +249,7 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
                 Challenge Details
               </CardTitle>
             </CardHeader>
-            
+
             <CardContent className="space-y-6">
               <div className="grid gap-4">
                 <div className="flex items-center justify-between p-4 rounded-lg bg-muted/50">
@@ -198,7 +261,7 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
                     {skillData.waves}
                   </Badge>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-4 rounded-lg bg-muted/50">
                   <div className="flex items-center gap-3">
                     <Timer className="h-5 w-5 text-game-primary" />
@@ -215,7 +278,7 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-4 rounded-lg bg-muted/50">
                   <div className="flex items-center gap-3">
                     <Brain className="h-5 w-5 text-game-success" />
@@ -231,14 +294,21 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
               <div className="space-y-3">
                 <h4 className="font-semibold text-lg">Wave Breakdown:</h4>
                 <div className="space-y-2">
-                  {Array.from({ length: skillData.waves }, (_, i) => i + 1).map(wave => (
-                    <div key={wave} className="flex items-center justify-between text-sm">
-                      <span className="text-muted-foreground">Wave {wave}</span>
-                      <Badge variant="outline" className="text-xs">
-                        {sampledQuestionsByWave[wave]?.length || 0} questions
-                      </Badge>
-                    </div>
-                  ))}
+                  {Array.from({ length: skillData.waves }, (_, i) => i + 1).map(
+                    (wave) => (
+                      <div
+                        key={wave}
+                        className="flex items-center justify-between text-sm"
+                      >
+                        <span className="text-muted-foreground">
+                          Wave {wave}
+                        </span>
+                        <Badge variant="outline" className="text-xs">
+                          {sampledQuestionsByWave[wave]?.length || 0} questions
+                        </Badge>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
             </CardContent>
@@ -252,11 +322,13 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
               🎮 How to Play
             </CardTitle>
           </CardHeader>
-          
+
           <CardContent>
             <div className="grid gap-4 md:grid-cols-2">
               <div className="space-y-2">
-                <h4 className="font-semibold text-foreground">Scoring System:</h4>
+                <h4 className="font-semibold text-foreground">
+                  Scoring System:
+                </h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>• Base points per correct answer</li>
                   <li>• Time bonus for quick answers</li>
@@ -264,9 +336,11 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
                   <li>• Higher waves = more points</li>
                 </ul>
               </div>
-              
+
               <div className="space-y-2">
-                <h4 className="font-semibold text-foreground">Lives & Rules:</h4>
+                <h4 className="font-semibold text-foreground">
+                  Lives & Rules:
+                </h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>• Start with 3 lives ❤️</li>
                   <li>• Lose a life for wrong answers</li>
