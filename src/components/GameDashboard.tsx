@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,6 +28,11 @@ interface GameDashboardProps {
   onBack?: () => void;
 }
 
+function getRandomSample<T>(arr: T[], n: number): T[] {
+  const shuffled = arr.slice().sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, n);
+}
+
 export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardProps) {
   const [playerName, setPlayerName] = useState("");
   const [difficulty, setDifficulty] = useState("standard");
@@ -45,10 +50,22 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
     }
   };
 
-  const questionsByWave = skillData.questions.reduce((acc, question) => {
-    acc[question.wave] = (acc[question.wave] || 0) + 1;
-    return acc;
-  }, {} as Record<number, number>);
+  // Sampled questions per wave (same logic as QuizGame)
+  const { sampledQuestionsByWave, totalSampledQuestions } = useMemo(() => {
+    const questionsByWave: Record<number, Question[]> = {};
+    skillData.questions.forEach(q => {
+      if (!questionsByWave[q.wave]) questionsByWave[q.wave] = [];
+      questionsByWave[q.wave].push(q);
+    });
+    const sampledQuestionsByWave: Record<number, Question[]> = {};
+    let total = 0;
+    for (let wave = 1; wave <= skillData.waves; wave++) {
+      const sampled = getRandomSample(questionsByWave[wave] || [], 4);
+      sampledQuestionsByWave[wave] = sampled;
+      total += sampled.length;
+    }
+    return { sampledQuestionsByWave, totalSampledQuestions: total };
+  }, [skillData.questions, skillData.waves]);
 
   return (
     <div className="min-h-screen bg-background font-cairo p-4">
@@ -205,7 +222,7 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
                     <span className="font-semibold">Total Questions</span>
                   </div>
                   <Badge variant="secondary" className="text-lg px-3 py-1">
-                    {skillData.questions.length}
+                    {totalSampledQuestions}
                   </Badge>
                 </div>
               </div>
@@ -218,7 +235,7 @@ export function GameDashboard({ skillData, onStartGame, onBack }: GameDashboardP
                     <div key={wave} className="flex items-center justify-between text-sm">
                       <span className="text-muted-foreground">Wave {wave}</span>
                       <Badge variant="outline" className="text-xs">
-                        {questionsByWave[wave] || 0} questions
+                        {sampledQuestionsByWave[wave]?.length || 0} questions
                       </Badge>
                     </div>
                   ))}

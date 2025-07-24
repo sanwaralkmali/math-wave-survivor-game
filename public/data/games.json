@@ -139,5 +139,26 @@
     "description": "Factorize trinomials of the form ax² + bx + c.",
     "difficulty": "Hard",
     "color": "secondary"
+  },
+  {
+    "id": "difference-squares",
+    "title": "Factoring Difference of Squares",
+    "description": "Factorize expressions of the form a² - b².",
+    "difficulty": "Medium",
+    "color": "secondary"
+  },
+  {
+    "id": "difference-sum-of-cubes",
+    "title": "Factoring Difference of Cubes",
+    "description": "Factorize expressions of the form a³ - b³ or a³ + b³",
+    "difficulty": "Hard",
+    "color": "secondary"
+  },
+  {
+    "id": "perfect-squares",
+    "title": "Factoring Perfect Squares",
+    "description": "Factorize expressions of the form a² + 2ab + b² or a² - 2ab + b²",
+    "difficulty": "Hard",
+    "color": "secondary"
   }
 ]
