@@ -7,6 +7,7 @@ import { GameOver } from "@/components/GameOver";
 import { Card, CardContent } from "@/components/ui/card";
 import { Brain, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
 
 interface Skill {
   id: string;
@@ -32,7 +33,7 @@ interface SkillData {
   questions: Question[];
 }
 
-type GameState = 'home' | 'dashboard' | 'playing' | 'gameover';
+type GameState = 'home' | 'dashboard' | 'playing' | 'gameover' | 'error';
 
 const Index = () => {
   const [skills, setSkills] = useState<Skill[]>([]);
@@ -46,6 +47,7 @@ const Index = () => {
   const [difficulty, setDifficulty] = useState('standard');
   const [adjustedTime, setAdjustedTime] = useState<number | null>(null);
   const [filterSkillIds, setFilterSkillIds] = useState<string[] | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string>('');
   
   const [searchParams] = useSearchParams();
   const skillParam = searchParams.get('skill');
@@ -79,6 +81,10 @@ const Index = () => {
           const skill = skillsData.find((s: Skill) => s.id === skillParam);
           if (skill) {
             await loadSkillData(skill);
+          } else {
+            // Skill not found - show error
+            setErrorMessage(`Skill "${skillParam}" does not exist.`);
+            setGameState('error');
           }
         }
       } catch (error) {
@@ -228,77 +234,106 @@ const Index = () => {
   }
 
   // Home State
-  return (
-    <div className="min-h-screen bg-background font-cairo">
-      <div className="container mx-auto px-4 py-8">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="p-3 rounded-xl bg-gradient-primary">
-              <Brain className="h-10 w-10 text-primary-foreground" />
+  if (gameState === 'home') {
+    return (
+      <div className="min-h-screen bg-background font-cairo">
+        <div className="container mx-auto px-4 py-8">
+          {/* Hero Section */}
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="p-3 rounded-xl bg-gradient-primary">
+                <Brain className="h-10 w-10 text-primary-foreground" />
+              </div>
+              <h1 className="text-5xl font-bold text-foreground">
+                Math Quest
+              </h1>
+              <Sparkles className="h-8 w-8 text-game-warning animate-pulse" />
             </div>
-            <h1 className="text-5xl font-bold text-foreground">
-              Math Quest
-            </h1>
-            <Sparkles className="h-8 w-8 text-game-warning animate-pulse" />
+            
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Master math skills through engaging quiz gameplay. Choose your challenge and 
+              survive waves of increasingly difficult questions!
+            </p>
           </div>
-          
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Master math skills through engaging quiz gameplay. Choose your challenge and 
-            survive waves of increasingly difficult questions!
-          </p>
-        </div>
 
-        {/* Features */}
-        <div className="grid gap-4 md:grid-cols-3 mb-12">
-          <Card className="bg-gradient-to-br from-game-primary/10 to-transparent border-game-primary/20">
-            <CardContent className="p-6 text-center">
-              <div className="text-2xl font-bold text-game-primary mb-2">🎯</div>
-              <h3 className="font-semibold mb-2">Skill-Based Learning</h3>
-              <p className="text-sm text-muted-foreground">Focus on specific math topics</p>
-            </CardContent>
-          </Card>
-          
-          <Card className="bg-gradient-to-br from-game-secondary/10 to-transparent border-game-secondary/20">
-            <CardContent className="p-6 text-center">
-              <div className="text-2xl font-bold text-game-secondary mb-2">⚡</div>
-              <h3 className="font-semibold mb-2">Wave Survival</h3>
-              <p className="text-sm text-muted-foreground">Survive increasing difficulty</p>
-            </CardContent>
-          </Card>
-          
-          <Card className="bg-gradient-to-br from-game-warning/10 to-transparent border-game-warning/20">
-            <CardContent className="p-6 text-center">
-              <div className="text-2xl font-bold text-game-warning mb-2">🏆</div>
-              <h3 className="font-semibold mb-2">Score & Streaks</h3>
-              <p className="text-sm text-muted-foreground">Earn points and multipliers</p>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Skills Grid */}
-        <div>
-          <h2 className="text-3xl font-bold text-center mb-8">Choose Your Challenge</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
-            {(filterSkillIds === null
-              ? skills
-              : skills.filter(skill => filterSkillIds.includes(skill.id))
-            ).map((skill) => (
-              <SkillCard
-                key={skill.id}
-                skill={skill}
-              />
-            ))}
+          {/* Features */}
+          <div className="grid gap-4 md:grid-cols-3 mb-12">
+            <Card className="bg-gradient-to-br from-game-primary/10 to-transparent border-game-primary/20">
+              <CardContent className="p-6 text-center">
+                <div className="text-2xl font-bold text-game-primary mb-2">🎯</div>
+                <h3 className="font-semibold mb-2">Skill-Based Learning</h3>
+                <p className="text-sm text-muted-foreground">Focus on specific math topics</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gradient-to-br from-game-secondary/10 to-transparent border-game-secondary/20">
+              <CardContent className="p-6 text-center">
+                <div className="text-2xl font-bold text-game-secondary mb-2">⚡</div>
+                <h3 className="font-semibold mb-2">Wave Survival</h3>
+                <p className="text-sm text-muted-foreground">Survive increasing difficulty</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gradient-to-br from-game-warning/10 to-transparent border-game-warning/20">
+              <CardContent className="p-6 text-center">
+                <div className="text-2xl font-bold text-game-warning mb-2">🏆</div>
+                <h3 className="font-semibold mb-2">Score & Streaks</h3>
+                <p className="text-sm text-muted-foreground">Earn points and multipliers</p>
+              </CardContent>
+            </Card>
           </div>
-        </div>
 
-        {/* Footer */}
-        <div className="text-center mt-16 text-muted-foreground">
-          <p>Ready to test your math skills? Pick a challenge above and start your quest!</p>
+          {/* Skills Grid */}
+          <div>
+            <h2 className="text-3xl font-bold text-center mb-8">Choose Your Challenge</h2>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
+              {(filterSkillIds === null
+                ? skills
+                : skills.filter(skill => filterSkillIds.includes(skill.id))
+              ).map((skill) => (
+                <SkillCard
+                  key={skill.id}
+                  skill={skill}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="text-center mt-16 text-muted-foreground">
+            <p>Ready to test your math skills? Pick a challenge above and start your quest!</p>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  // Error State
+  if (gameState === 'error') {
+    return (
+      <div className="min-h-screen bg-background font-cairo flex items-center justify-center p-4">
+        <Card className="w-full max-w-md border-2 border-game-danger bg-card/90 backdrop-blur-sm">
+          <CardContent className="p-8 text-center space-y-6">
+            <div className="text-6xl">❌</div>
+            <div>
+              <h1 className="text-2xl font-bold text-game-danger mb-2">Skill Not Found</h1>
+              <p className="text-muted-foreground">{errorMessage}</p>
+            </div>
+            <Button
+              onClick={() => {
+                setGameState('home');
+                setErrorMessage('');
+                navigate('/');
+              }}
+              className="w-full bg-gradient-primary hover:opacity-90"
+            >
+              Go to Home
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 };
 
 export default Index;

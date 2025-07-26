@@ -2,7 +2,7 @@
   "title": "Master Conversions",
   "description": "Jump between fractions, decimals and percentages in one mega-set. Can you master all three forms?",
   "waves": 5,
-  "timePerQuestion": 20,
+  "timePerQuestion": 30,
   "questions": [
     {
       "id": 1,

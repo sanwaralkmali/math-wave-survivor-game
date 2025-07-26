@@ -174,5 +174,12 @@
     "description": "Solve quadratic equations by using the quadratic formula.",
     "difficulty": "Hard",
     "color": "primary"
+  },
+  {
+    "id": "understanding-polynomials",
+    "title": "Understanding Polynomials",
+    "description": "Learn about polynomials and their properties.",
+    "difficulty": "Medium",
+    "color": "secondary"
   }
 ]

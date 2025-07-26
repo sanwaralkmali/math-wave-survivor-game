@@ -2,7 +2,7 @@
   "title": "Order of Operations",
   "description": "Can you follow the correct order? Use PEMDAS to solve tricky math expressions. One wrong step and you’re out! Stay focused, stay fast, and climb the leaderboard!",
   "waves": 5,
-  "timePerQuestion": 25,
+  "timePerQuestion": 60,
   "questions": [
     {
       "id": 1,

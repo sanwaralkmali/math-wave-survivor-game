@@ -2,7 +2,7 @@
   "title": "SOLVING EQUATIONS",
   "description": "Solve the equations to score up!",
   "waves": 5,
-  "timePerQuestion": 45,
+  "timePerQuestion": 60,
   "questions": [
     {
       "id": 1,

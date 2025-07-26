@@ -2,7 +2,7 @@
   "title": "Fraction ↔ Percentage",
   "description": "Switch between fractions and percentages like a pro. Ready to hit 100 %?",
   "waves": 5,
-  "timePerQuestion": 20,
+  "timePerQuestion": 30,
   "questions": [
     {
       "id": 1,

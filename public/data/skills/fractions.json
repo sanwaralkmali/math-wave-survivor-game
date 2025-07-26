@@ -2,7 +2,7 @@
   "title": "Math Operations with Fractions",
   "description": "Fractions can be fun! Solve problems with different denominators, mix and match whole numbers and fractions, and master the four operations step by step. Let’s make fractions your new favorite!",
   "waves": 5,
-  "timePerQuestion": 20,
+  "timePerQuestion": 30,
   "questions": [
     {
       "id": 1,

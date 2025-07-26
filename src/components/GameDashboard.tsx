@@ -50,6 +50,36 @@ function getRandomSample<T>(arr: T[], n: number): T[] {
   return shuffled.slice(0, n);
 }
 
+function getQuestionsPerWaveByDifficulty(difficulty: string): Record<number, number> {
+  switch (difficulty) {
+    case 'easy':
+      return {
+        1: 6,
+        2: 6,
+        3: 6,
+        4: 2,
+        5: 0
+      };
+    case 'hard':
+      return {
+        1: 2,
+        2: 2,
+        3: 8,
+        4: 4,
+        5: 4
+      };
+    case 'standard':
+    default:
+      return {
+        1: 4,
+        2: 4,
+        3: 8,
+        4: 3,
+        5: 1
+      };
+  }
+}
+
 export function GameDashboard({
   skillData,
   onStartGame,
@@ -81,13 +111,16 @@ export function GameDashboard({
     });
     const sampledQuestionsByWave: Record<number, Question[]> = {};
     let total = 0;
+    const questionsPerWave = getQuestionsPerWaveByDifficulty(difficulty);
+    
     for (let wave = 1; wave <= skillData.waves; wave++) {
-      const sampled = getRandomSample(questionsByWave[wave] || [], 4);
+      const questionsToSample = questionsPerWave[wave] || 0;
+      const sampled = getRandomSample(questionsByWave[wave] || [], questionsToSample);
       sampledQuestionsByWave[wave] = sampled;
       total += sampled.length;
     }
     return { sampledQuestionsByWave, totalSampledQuestions: total };
-  }, [skillData.questions, skillData.waves]);
+  }, [skillData.questions, skillData.waves, difficulty]);
 
   return (
     <div className="min-h-screen bg-background font-cairo p-4">

@@ -2,7 +2,7 @@
   "title": "Solving by Quadratic Formula",
   "description": "Solve quadratic equations by using the quadratic formula.",
   "waves": 5,
-  "timePerQuestion": 30,
+  "timePerQuestion": 180,
   "questions": [
     {
       "id": 1,

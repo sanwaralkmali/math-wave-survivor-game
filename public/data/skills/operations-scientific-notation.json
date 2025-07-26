@@ -2,7 +2,7 @@
   "title": "Operations with Scientific Notation",
   "description": "Master adding, subtracting, multiplying, and dividing numbers in scientific notation across 5 difficulty levels!",
   "waves": 5,
-  "timePerQuestion": 25,
+  "timePerQuestion": 90,
   "questions": [
     {
       "id": 1,

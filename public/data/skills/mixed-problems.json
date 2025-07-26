@@ -2,7 +2,7 @@
   "title": "Mixed Problems",
   "description": "Think you're ready for a real challenge? This game mixes integers, fractions, and decimals all in one! It’s a great way to test your overall math power. Survive the waves and boost your brain!",
   "waves": 5,
-  "timePerQuestion": 25,
+  "timePerQuestion": 30,
   "questions": [
     {
       "id": 1,

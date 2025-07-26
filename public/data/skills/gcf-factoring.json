@@ -2,7 +2,7 @@
   "title": "Greatest Common Factor",
   "description": "Find the Greatest Common Factor of the numbers",
   "waves": 5,
-  "timePerQuestion": 30,
+  "timePerQuestion": 45,
   "questions": [
     {
       "id": 1,

@@ -50,6 +50,36 @@ function shuffleChoicesAndAnswer(question: Question): Question {
   };
 }
 
+function getQuestionsPerWaveByDifficulty(difficulty: string): Record<number, number> {
+  switch (difficulty) {
+    case 'easy':
+      return {
+        1: 6,
+        2: 6,
+        3: 6,
+        4: 2,
+        5: 0
+      };
+    case 'hard':
+      return {
+        1: 2,
+        2: 2,
+        3: 8,
+        4: 4,
+        5: 4
+      };
+    case 'standard':
+    default:
+      return {
+        1: 4,
+        2: 4,
+        3: 8,
+        4: 3,
+        5: 1
+      };
+  }
+}
+
 export function QuizGame({ skillData, onGameEnd, onBackToDashboard, initialTimePerQuestion, difficulty }: QuizGameProps) {
   const [currentWave, setCurrentWave] = useState(1);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -72,11 +102,14 @@ export function QuizGame({ skillData, onGameEnd, onBackToDashboard, initialTimeP
     });
     const allWaves = Array.from(new Set(skillData.questions.map(q => q.wave))).sort((a, b) => a - b);
     const questionsByWaveSampled: Record<number, Question[]> = {};
+    const questionsPerWave = getQuestionsPerWaveByDifficulty(difficulty);
+    
     allWaves.forEach(wave => {
-      questionsByWaveSampled[wave] = getRandomSample(questionsByWave[wave] || [], 4).map(shuffleChoicesAndAnswer);
+      const questionsToSample = questionsPerWave[wave] || 0;
+      questionsByWaveSampled[wave] = getRandomSample(questionsByWave[wave] || [], questionsToSample).map(shuffleChoicesAndAnswer);
     });
     return { allWaves, questionsByWaveSampled };
-  }, [skillData.questions]);
+  }, [skillData.questions, difficulty]);
 
   // Use sampled questions for the game
   const currentWaveQuestions = questionsByWaveSampled[currentWave] || [];

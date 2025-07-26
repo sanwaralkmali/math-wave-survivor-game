@@ -2,7 +2,7 @@
   "title": "Solving Equations by Factoring",
   "description": "Solve equations by factoring.",
   "waves": 5,
-  "timePerQuestion": 30,
+  "timePerQuestion": 120,
   "questions": [
     {
       "id": 1,

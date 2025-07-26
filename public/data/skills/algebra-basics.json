@@ -2,7 +2,7 @@
     "title": "Algebra Builder ",
     "description": "",
     "waves": 5,
-    "timePerQuestion": 20,
+    "timePerQuestion": 30,
     "questions": [
       {"id":1,"wave":1,"question":"x","choices":["Variable","Constant","Expression","Equation"],"answer":"Variable","points":10},
       {"id":2,"wave":1,"question":"7","choices":["Variable","Constant","Expression","Equation"],"answer":"Constant","points":10},

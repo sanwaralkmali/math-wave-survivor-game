@@ -2,7 +2,7 @@
   "title": "Simplify Expression ",
   "description": "score up!",
   "waves": 5,
-  "timePerQuestion": 30,
+  "timePerQuestion": 120,
   "questions": [
     {
       "id": 1,
@@ -1369,7 +1369,8 @@
         "30d² - 120f + 45g",
         "30d² + 120f - 45g",
         "17d² - 23f + 18g",
-        "30d² - 120f - 45g"],
+        "30d² - 120f - 45g"
+      ],
       "answer": "30d² - 120f + 45g",
       "points": 30
     }

@@ -2,7 +2,7 @@
   "title": "Rational Conversion",
   "description": "Convert between fractions and decimals. Can you master the transformations?",
   "waves": 5,
-  "timePerQuestion": 20,
+  "timePerQuestion": 30,
   "questions": [
     {
       "id": 1,

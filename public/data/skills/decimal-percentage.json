@@ -2,7 +2,7 @@
   "title": "Decimal ↔ Percentage",
   "description": "Slide between decimals and percentages like a pro. Can you hit 100 % accuracy?",
   "waves": 5,
-  "timePerQuestion": 20,
+  "timePerQuestion": 30,
   "questions": [
     {
       "id": 1,
