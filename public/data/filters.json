@@ -26,5 +26,7 @@
   "perfect-squares": ["perfect-squares"],
   "solving-equations-by-factoring": ["solving-equations-by-factoring"],
   "quadratic-formula": ["quadratic-formula"],
-  "understanding-polynomials": ["understanding-polynomials"]
+  "understanding-polynomials": ["understanding-polynomials"],
+  "adding-subtracting-polynomials": ["adding-subtracting-polynomials"],
+  "multiplying-polynomials": ["multiplying-polynomials"]
 }

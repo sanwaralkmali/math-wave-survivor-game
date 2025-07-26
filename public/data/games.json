@@ -181,5 +181,19 @@
     "description": "Learn about polynomials and their properties.",
     "difficulty": "Medium",
     "color": "secondary"
+  },
+  {
+    "id": "adding-subtracting-polynomials",
+    "title": "Adding and Subtracting Polynomials",
+    "description": "Add and subtract polynomials.",
+    "difficulty": "Medium",
+    "color": "secondary"
+  },
+  {
+    "id": "multiplying-polynomials",
+    "title": "Multiplying Polynomials",
+    "description": "Multiply polynomials.",
+    "difficulty": "Hard",
+    "color": "primary"
   }
 ]
