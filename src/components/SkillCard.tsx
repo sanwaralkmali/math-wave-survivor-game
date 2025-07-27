@@ -16,16 +16,22 @@ interface SkillCardProps {
 }
 
 const difficultyColors = {
-  Easy: "bg-game-success text-game-success-foreground",
-  Medium: "bg-game-warning text-foreground",
-  Hard: "bg-game-danger text-game-danger-foreground"
+  Easy: "bg-green-100 text-green-700 border-green-200",
+  Medium: "bg-yellow-100 text-yellow-700 border-yellow-200",
+  Hard: "bg-red-100 text-red-700 border-red-200"
+};
+
+const difficultyEmojis = {
+  Easy: "😊",
+  Medium: "😎", 
+  Hard: "🔥"
 };
 
 const cardColors = {
-  primary: "border-game-primary hover:shadow-[0_0_30px_hsl(var(--game-primary)/0.3)]",
-  secondary: "border-game-secondary hover:shadow-[0_0_30px_hsl(var(--game-secondary)/0.3)]",
-  warning: "border-game-warning hover:shadow-[0_0_30px_hsl(var(--game-warning)/0.3)]",
-  success: "border-game-success hover:shadow-[0_0_30px_hsl(var(--game-success)/0.3)]"
+  primary: "border-purple-300 hover:shadow-[0_0_20px_hsl(270_50%_60%/0.3)] hover:border-purple-400",
+  secondary: "border-pink-300 hover:shadow-[0_0_20px_hsl(330_50%_60%/0.3)] hover:border-pink-400",
+  warning: "border-yellow-300 hover:shadow-[0_0_20px_hsl(45_50%_60%/0.3)] hover:border-yellow-400",
+  success: "border-green-300 hover:shadow-[0_0_20px_hsl(150_50%_60%/0.3)] hover:border-green-400"
 };
 
 export function SkillCard({ skill }: SkillCardProps) {
@@ -33,44 +39,47 @@ export function SkillCard({ skill }: SkillCardProps) {
   return (
     <Card className={cn(
       "group relative overflow-hidden transition-all duration-300 hover:scale-105",
-      "bg-card/90 backdrop-blur-sm border-2",
+      "bg-white/90 backdrop-blur-sm border-2 shadow-lg",
       cardColors[skill.color as keyof typeof cardColors] || cardColors.primary
     )}>
-      <CardHeader className="pb-4">
+      <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-gradient-primary">
-              <Brain className="h-6 w-6 text-primary-foreground" />
+          <div className="flex items-center gap-2">
+            <div className="p-1.5 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500">
+              <Brain className="h-4 w-4 text-white" />
             </div>
-            <div>
-              <CardTitle className="text-xl font-cairo font-bold text-foreground">
+            <div className="flex-1">
+              <CardTitle className="text-base font-bold text-gray-800 leading-tight">
                 {skill.title}
               </CardTitle>
-              <Badge 
-                className={cn(
-                  "mt-2 font-medium",
-                  difficultyColors[skill.difficulty as keyof typeof difficultyColors]
-                )}
-              >
-                {skill.difficulty}
-              </Badge>
+              <div className="flex items-center gap-2 mt-1">
+                <Badge 
+                  className={cn(
+                    "text-xs font-medium border",
+                    difficultyColors[skill.difficulty as keyof typeof difficultyColors]
+                  )}
+                >
+                  <span className="mr-1">{difficultyEmojis[skill.difficulty as keyof typeof difficultyEmojis]}</span>
+                  {skill.difficulty}
+                </Badge>
+              </div>
             </div>
           </div>
         </div>
       </CardHeader>
       
-      <CardContent className="space-y-4">
-        <CardDescription className="text-muted-foreground leading-relaxed">
+      <CardContent className="space-y-3">
+        <CardDescription className="text-xs text-gray-600 leading-relaxed">
           {skill.description}
         </CardDescription>
         
         <Button 
           onClick={() => navigate(`/?skill=${encodeURIComponent(skill.id)}`)}
-          className="w-full bg-gradient-primary hover:opacity-90 transition-all duration-300 group-hover:shadow-glow font-cairo font-semibold"
+          className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg h-10"
           size="lg"
         >
-          <Play className="mr-2 h-5 w-5" />
-          Start Game
+          <div className="text-base mr-2">🚀</div>
+          Start Challenge
         </Button>
       </CardContent>
     </Card>

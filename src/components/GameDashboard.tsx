@@ -10,7 +10,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Play, ArrowLeft, Timer, Target, Zap } from "lucide-react";
+import {
+  Brain,
+  Play,
+  ArrowLeft,
+  Timer,
+  Target,
+  Zap,
+  Star,
+  Trophy,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
@@ -50,32 +59,34 @@ function getRandomSample<T>(arr: T[], n: number): T[] {
   return shuffled.slice(0, n);
 }
 
-function getQuestionsPerWaveByDifficulty(difficulty: string): Record<number, number> {
+function getQuestionsPerWaveByDifficulty(
+  difficulty: string
+): Record<number, number> {
   switch (difficulty) {
-    case 'easy':
+    case "easy":
       return {
         1: 6,
         2: 6,
         3: 6,
         4: 2,
-        5: 0
+        5: 0,
       };
-    case 'hard':
+    case "hard":
       return {
         1: 2,
         2: 2,
         3: 8,
         4: 4,
-        5: 4
+        5: 4,
       };
-    case 'standard':
+    case "standard":
     default:
       return {
         1: 4,
         2: 4,
         3: 8,
         4: 3,
-        5: 1
+        5: 1,
       };
   }
 }
@@ -97,7 +108,6 @@ export function GameDashboard({
 
   const handleStartGame = () => {
     if (playerName.trim()) {
-      // Pass difficulty and adjusted time if needed
       onStartGame(playerName.trim(), difficulty, getAdjustedTime());
     }
   };
@@ -112,10 +122,13 @@ export function GameDashboard({
     const sampledQuestionsByWave: Record<number, Question[]> = {};
     let total = 0;
     const questionsPerWave = getQuestionsPerWaveByDifficulty(difficulty);
-    
+
     for (let wave = 1; wave <= skillData.waves; wave++) {
       const questionsToSample = questionsPerWave[wave] || 0;
-      const sampled = getRandomSample(questionsByWave[wave] || [], questionsToSample);
+      const sampled = getRandomSample(
+        questionsByWave[wave] || [],
+        questionsToSample
+      );
       sampledQuestionsByWave[wave] = sampled;
       total += sampled.length;
     }
@@ -123,268 +136,369 @@ export function GameDashboard({
   }, [skillData.questions, skillData.waves, difficulty]);
 
   return (
-    <div className="min-h-screen bg-background font-cairo p-4">
-      <div className="max-w-4xl mx-auto space-y-8">
-        {/* Header */}
-        <div className="flex items-center gap-4">
-          {/* Removed back button */}
-          <div className="flex items-center gap-3">
-            <div className="p-3 rounded-xl bg-gradient-primary">
-              <Brain className="h-8 w-8 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="text-3xl font-bold text-foreground">
-                {skillData.title}
-              </h1>
-              <p className="text-muted-foreground">{skillData.description}</p>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 font-cairo p-4 relative overflow-hidden">
+      {/* Floating Math Symbols - Background Decorations */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        {/* Top left symbols */}
+        <div
+          className="absolute top-12 left-12 text-2xl opacity-20 animate-float"
+          style={{ animationDelay: "0s" }}
+        >
+          ➗
+        </div>
+        <div
+          className="absolute top-20 left-20 text-xl opacity-20 animate-float"
+          style={{ animationDelay: "1s" }}
+        >
+          ×
+        </div>
+
+        {/* Top right symbols */}
+        <div
+          className="absolute top-16 right-16 text-xl opacity-20 animate-float"
+          style={{ animationDelay: "2s" }}
+        >
+          π
+        </div>
+        <div
+          className="absolute top-24 right-12 text-lg opacity-20 animate-float"
+          style={{ animationDelay: "3s" }}
+        >
+          √
+        </div>
+
+        {/* Middle left symbols */}
+        <div
+          className="absolute top-1/3 left-8 text-xl opacity-20 animate-float"
+          style={{ animationDelay: "0.5s" }}
+        >
+          +
+        </div>
+        <div
+          className="absolute top-1/2 left-16 text-lg opacity-20 animate-float"
+          style={{ animationDelay: "1.5s" }}
+        >
+          =
+        </div>
+
+        {/* Middle right symbols */}
+        <div
+          className="absolute top-1/3 right-10 text-lg opacity-20 animate-float"
+          style={{ animationDelay: "2.5s" }}
+        >
+          %
+        </div>
+        <div
+          className="absolute top-1/2 right-8 text-xl opacity-20 animate-float"
+          style={{ animationDelay: "0.8s" }}
+        >
+          ∞
+        </div>
+
+        {/* Bottom left symbols */}
+        <div
+          className="absolute bottom-24 left-12 text-lg opacity-20 animate-float"
+          style={{ animationDelay: "1.2s" }}
+        >
+          ∑
+        </div>
+        <div
+          className="absolute bottom-16 left-20 text-xl opacity-20 animate-float"
+          style={{ animationDelay: "2.8s" }}
+        >
+          ∫
+        </div>
+
+        {/* Bottom right symbols */}
+        <div
+          className="absolute bottom-20 right-16 text-lg opacity-20 animate-float"
+          style={{ animationDelay: "0.3s" }}
+        >
+          ∆
+        </div>
+        <div
+          className="absolute bottom-12 right-12 text-xl opacity-20 animate-float"
+          style={{ animationDelay: "1.8s" }}
+        >
+          θ
+        </div>
+
+        {/* Fun elements scattered around */}
+        <div
+          className="absolute top-1/4 left-1/4 text-lg opacity-20 animate-float"
+          style={{ animationDelay: "0.7s" }}
+        >
+          ⭐
+        </div>
+        <div
+          className="absolute top-3/4 right-1/4 text-lg opacity-20 animate-float"
+          style={{ animationDelay: "1.3s" }}
+        >
+          💎
+        </div>
+        <div
+          className="absolute bottom-1/4 left-1/3 text-lg opacity-20 animate-float"
+          style={{ animationDelay: "2.1s" }}
+        >
+          🔥
+        </div>
+        <div
+          className="absolute top-1/2 left-1/3 text-lg opacity-20 animate-float"
+          style={{ animationDelay: "0.9s" }}
+        >
+          ✨
+        </div>
+      </div>
+
+      <div className="max-w-md mx-auto space-y-6 relative z-10">
+        {/* Compact Header */}
+        <div className="text-center space-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <div className="text-3xl">🧠</div>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              {skillData.title}
+            </h1>
+            <div className="text-3xl">⚡</div>
           </div>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
-          {/* Game Setup */}
-          <Card className="border-2 border-game-primary bg-card/90 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold flex items-center gap-3">
-                <Play className="h-6 w-6 text-game-primary" />
-                Game Setup
-              </CardTitle>
-              <CardDescription>
-                Prepare for your math challenge!
-              </CardDescription>
-            </CardHeader>
-
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="playerName" className="text-base font-semibold">
-                  Player Name
-                </Label>
-                <Input
-                  id="playerName"
-                  placeholder="Enter your name..."
-                  value={playerName}
-                  onChange={(e) => setPlayerName(e.target.value)}
-                  className="text-lg h-12"
-                  onKeyDown={(e) => e.key === "Enter" && handleStartGame()}
-                />
-              </div>
-
-              {/* Difficulty Selector */}
-              <div className="space-y-2">
-                <Label className="text-base font-semibold">
-                  Difficulty Level
-                </Label>
-                <RadioGroup
-                  value={difficulty}
-                  onValueChange={setDifficulty}
-                  className="flex flex-col gap-2"
-                >
-                  <div className="flex items-center gap-2">
-                    <RadioGroupItem value="easy" id="easy" />
-                    <Label htmlFor="easy" className="cursor-pointer">
-                      Easy{" "}
-                      <span className="text-xs text-muted-foreground">
-                        (+100% time)
-                      </span>
-                    </Label>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <RadioGroupItem value="standard" id="standard" />
-                    <Label htmlFor="standard" className="cursor-pointer">
-                      Standard{" "}
-                      <span className="text-xs text-muted-foreground">
-                        (standard time)
-                      </span>
-                    </Label>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <RadioGroupItem value="hard" id="hard" />
-                    <Label htmlFor="hard" className="cursor-pointer">
-                      Hard{" "}
-                      <span className="text-xs text-muted-foreground">
-                        (-25% time)
-                      </span>
-                    </Label>
-                  </div>
-                </RadioGroup>
-              </div>
-
-              {/* Leaderboard Button */}
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    variant="outline"
-                    className="w-full font-semibold mt-2 text-lg py-3 rounded-lg shadow-sm bg-gradient-to-r from-primary/10 to-secondary/10 font-cairo"
-                  >
-                    🏆 Leaderboard
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="font-cairo">
-                  <DialogHeader>
-                    <div className="flex flex-col items-center gap-2 mb-2">
-                      <span className="text-5xl">🏆</span>
-                      <DialogTitle className="text-2xl font-bold tracking-tight">
-                        Leaderboard
-                      </DialogTitle>
-                      <DialogDescription className="text-base text-muted-foreground">
-                        See how you stack up against the best!
-                      </DialogDescription>
-                    </div>
-                  </DialogHeader>
-                  <div className="rounded-xl border bg-card/80 p-4 shadow-md w-full max-w-md mx-auto">
-                    <table className="w-full text-left font-cairo">
-                      <thead>
-                        <tr className="border-b">
-                          <th className="py-2 px-3 text-lg font-semibold">
-                            Rank
-                          </th>
-                          <th className="py-2 px-3 text-lg font-semibold">
-                            Player
-                          </th>
-                          <th className="py-2 px-3 text-lg font-semibold">
-                            Score
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td
-                            className="py-3 px-3 text-center text-xl text-muted-foreground"
-                            colSpan={3}
-                          >
-                            <span className="block mb-1">Coming soon</span>
-                            <span className="text-2xl">🚧</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </DialogContent>
-              </Dialog>
-
-              <Button
-                onClick={handleStartGame}
-                disabled={!playerName.trim()}
-                className="w-full h-14 text-lg font-bold bg-gradient-primary hover:opacity-90 transition-all duration-300 hover:shadow-glow"
-                size="lg"
-              >
-                <Play className="mr-3 h-6 w-6" />
-                Start Challenge
-              </Button>
-            </CardContent>
-          </Card>
-
-          {/* Game Info */}
-          <Card className="border-2 border-game-secondary bg-card/90 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold flex items-center gap-3">
-                <Target className="h-6 w-6 text-game-secondary" />
-                Challenge Details
-              </CardTitle>
-            </CardHeader>
-
-            <CardContent className="space-y-6">
-              <div className="grid gap-4">
-                <div className="flex items-center justify-between p-4 rounded-lg bg-muted/50">
-                  <div className="flex items-center gap-3">
-                    <Zap className="h-5 w-5 text-game-warning" />
-                    <span className="font-semibold">Total Waves</span>
-                  </div>
-                  <Badge variant="secondary" className="text-lg px-3 py-1">
-                    {skillData.waves}
-                  </Badge>
-                </div>
-
-                <div className="flex items-center justify-between p-4 rounded-lg bg-muted/50">
-                  <div className="flex items-center gap-3">
-                    <Timer className="h-5 w-5 text-game-primary" />
-                    <span className="font-semibold">Time per Question</span>
-                  </div>
-                  <div className="flex flex-col items-end">
-                    <Badge variant="secondary" className="text-lg px-3 py-1">
-                      {getAdjustedTime()}s
-                    </Badge>
-                    <span className="text-xs text-muted-foreground mt-1">
-                      {difficulty === "easy" && "Easy (+100% time)"}
-                      {difficulty === "standard" && "Standard (default time)"}
-                      {difficulty === "hard" && "Hard (-25% time)"}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between p-4 rounded-lg bg-muted/50">
-                  <div className="flex items-center gap-3">
-                    <Brain className="h-5 w-5 text-game-success" />
-                    <span className="font-semibold">Total Questions</span>
-                  </div>
-                  <Badge variant="secondary" className="text-lg px-3 py-1">
-                    {totalSampledQuestions}
-                  </Badge>
-                </div>
-              </div>
-
-              {/* Wave Breakdown */}
-              <div className="space-y-3">
-                <h4 className="font-semibold text-lg">Wave Breakdown:</h4>
-                <div className="space-y-2">
-                  {Array.from({ length: skillData.waves }, (_, i) => i + 1).map(
-                    (wave) => (
-                      <div
-                        key={wave}
-                        className="flex items-center justify-between text-sm"
-                      >
-                        <span className="text-muted-foreground">
-                          Wave {wave}
-                        </span>
-                        <Badge variant="outline" className="text-xs">
-                          {sampledQuestionsByWave[wave]?.length || 0} questions
-                        </Badge>
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        {/* Quick Stats - Compact */}
+        <div className="grid grid-cols-3 gap-3">
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-3 text-center border border-purple-200">
+            <div className="text-xl mb-1">📈</div>
+            <div className="text-base font-bold text-purple-600">
+              {skillData.waves}
+            </div>
+            <div className="text-xs text-gray-500">Waves</div>
+          </div>
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-3 text-center border border-pink-200">
+            <div className="text-xl mb-1">⏱️</div>
+            <div className="text-base font-bold text-pink-600">
+              {getAdjustedTime()}s
+            </div>
+            <div className="text-xs text-gray-500">Per Q</div>
+          </div>
+          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-3 text-center border border-blue-200">
+            <div className="text-xl mb-1">🎯</div>
+            <div className="text-base font-bold text-blue-600">
+              {totalSampledQuestions}
+            </div>
+            <div className="text-xs text-gray-500">Total</div>
+          </div>
         </div>
 
-        {/* Rules Card */}
-        <Card className="border-2 border-game-warning bg-card/90 backdrop-blur-sm">
-          <CardHeader>
-            <CardTitle className="text-xl font-bold text-game-warning">
-              🎮 How to Play
+        {/* Game Setup - Compact */}
+        <Card className="bg-white/90 backdrop-blur-sm border-2 border-purple-300 shadow-lg">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg font-bold flex items-center gap-2 text-purple-700">
+              <div className="text-xl">🎮</div>
+              Ready to Play?
             </CardTitle>
           </CardHeader>
 
-          <CardContent>
-            <div className="grid gap-4 md:grid-cols-2">
-              <div className="space-y-2">
-                <h4 className="font-semibold text-foreground">
-                  Scoring System:
-                </h4>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Base points per correct answer</li>
-                  <li>• Time bonus for quick answers</li>
-                  <li>• Streak multiplier (up to 5x)</li>
-                  <li>• Higher waves = more points</li>
-                </ul>
-              </div>
-
-              <div className="space-y-2">
-                <h4 className="font-semibold text-foreground">
-                  Lives & Rules:
-                </h4>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Start with 3 lives ❤️</li>
-                  <li>• Lose a life for wrong answers</li>
-                  <li>• Lose a life if time runs out</li>
-                  <li>• Game over when lives reach 0</li>
-                </ul>
-              </div>
+          <CardContent className="space-y-4">
+            {/* Player Name */}
+            <div className="space-y-2">
+              <Label className="text-xs font-semibold text-gray-700">
+                What's your name, champion? 🏆
+              </Label>
+              <Input
+                placeholder="Enter your name..."
+                value={playerName}
+                onChange={(e) => setPlayerName(e.target.value)}
+                className="h-10 text-base border-2 border-purple-200 focus:border-purple-400"
+                onKeyDown={(e) => e.key === "Enter" && handleStartGame()}
+              />
             </div>
+
+            {/* Difficulty - Compact */}
+            <div className="space-y-2">
+              <Label className="text-xs font-semibold text-gray-700">
+                Choose your challenge level! 💪
+              </Label>
+              <RadioGroup
+                value={difficulty}
+                onValueChange={setDifficulty}
+                className="grid grid-cols-3 gap-2"
+              >
+                <div className="relative">
+                  <RadioGroupItem value="easy" id="easy" className="sr-only" />
+                  <Label
+                    htmlFor="easy"
+                    className={cn(
+                      "block p-2 text-center rounded-lg border-2 cursor-pointer transition-all text-xs",
+                      difficulty === "easy"
+                        ? "border-green-400 bg-green-50 text-green-700"
+                        : "border-gray-200 bg-white text-gray-600 hover:border-green-300"
+                    )}
+                  >
+                    <div className="text-sm mb-1">😊</div>
+                    <div className="font-semibold">Easy</div>
+                    <div className="text-xs opacity-75">+100% time</div>
+                  </Label>
+                </div>
+
+                <div className="relative">
+                  <RadioGroupItem
+                    value="standard"
+                    id="standard"
+                    className="sr-only"
+                  />
+                  <Label
+                    htmlFor="standard"
+                    className={cn(
+                      "block p-2 text-center rounded-lg border-2 cursor-pointer transition-all text-xs",
+                      difficulty === "standard"
+                        ? "border-blue-400 bg-blue-50 text-blue-700"
+                        : "border-gray-200 bg-white text-gray-600 hover:border-blue-300"
+                    )}
+                  >
+                    <div className="text-sm mb-1">😎</div>
+                    <div className="font-semibold">Normal</div>
+                    <div className="text-xs opacity-75">Standard</div>
+                  </Label>
+                </div>
+
+                <div className="relative">
+                  <RadioGroupItem value="hard" id="hard" className="sr-only" />
+                  <Label
+                    htmlFor="hard"
+                    className={cn(
+                      "block p-2 text-center rounded-lg border-2 cursor-pointer transition-all text-xs",
+                      difficulty === "hard"
+                        ? "border-red-400 bg-red-50 text-red-700"
+                        : "border-gray-200 bg-white text-gray-600 hover:border-red-300"
+                    )}
+                  >
+                    <div className="text-sm mb-1">🔥</div>
+                    <div className="font-semibold">Hard</div>
+                    <div className="text-xs opacity-75">-25% time</div>
+                  </Label>
+                </div>
+              </RadioGroup>
+            </div>
+
+            {/* Start Button */}
+            <Button
+              onClick={handleStartGame}
+              disabled={!playerName.trim()}
+              className="w-full h-12 text-base font-bold bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
+              size="lg"
+            >
+              <div className="text-xl mr-2">🚀</div>
+              Start Adventure!
+            </Button>
           </CardContent>
         </Card>
+
+        {/* Compact Buttons */}
+        <div className="grid grid-cols-2 gap-3">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="outline"
+                className="h-10 text-purple-600 border-2 border-purple-200 hover:bg-purple-50 font-semibold text-sm"
+              >
+                <div className="text-lg mr-1">📖</div>
+                How to Play
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="font-cairo max-w-sm mx-4">
+              <DialogHeader>
+                <DialogTitle className="text-lg font-bold text-center text-purple-700">
+                  <div className="text-2xl mb-1">🎮</div>
+                  How to Play
+                </DialogTitle>
+              </DialogHeader>
+              <div className="space-y-3 text-sm">
+                <div className="bg-gradient-to-r from-green-50 to-blue-50 p-3 rounded-lg border border-green-200">
+                  <div className="font-semibold text-green-700 mb-1">
+                    💚 You have 3 lives
+                  </div>
+                  <div className="text-gray-600 space-y-1 text-xs">
+                    <div>• Wrong answer = lose 1 life</div>
+                    <div>• Time runs out = lose 1 life</div>
+                    <div>• No lives left = game over!</div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-3 rounded-lg border border-yellow-200">
+                  <div className="font-semibold text-orange-700 mb-1">
+                    ⭐ Score Points
+                  </div>
+                  <div className="text-gray-600 space-y-1 text-xs">
+                    <div>• Correct answer = base points</div>
+                    <div>• Quick answer = time bonus</div>
+                    <div>• Streak = up to 5x multiplier!</div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-3 rounded-lg border border-purple-200">
+                  <div className="font-semibold text-purple-700 mb-1">
+                    📈 Survive All Waves
+                  </div>
+                  <div className="text-gray-600 space-y-1 text-xs">
+                    <div>• Each wave gets harder</div>
+                    <div>• Higher waves = more points</div>
+                    <div>• Survive all waves to win!</div>
+                  </div>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="outline"
+                className="h-10 text-yellow-600 border-2 border-yellow-200 hover:bg-yellow-50 font-semibold text-sm"
+              >
+                <div className="text-lg mr-1">🏆</div>
+                Leaderboard
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="font-cairo max-w-sm mx-4">
+              <DialogHeader>
+                <div className="text-center">
+                  <div className="text-3xl mb-1">🏆</div>
+                  <DialogTitle className="text-lg font-bold text-yellow-700">
+                    Leaderboard
+                  </DialogTitle>
+                  <DialogDescription className="text-xs text-gray-600">
+                    See how you stack up against the best!
+                  </DialogDescription>
+                </div>
+              </DialogHeader>
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl border border-yellow-200 p-3">
+                <div className="text-center space-y-1">
+                  <div className="text-2xl">🚧</div>
+                  <div className="font-semibold text-gray-700 text-sm">
+                    Coming Soon!
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    Leaderboards will be available soon
+                  </div>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
       </div>
+
+      {/* Custom CSS for floating animation */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+            @keyframes float {
+              0%, 100% { transform: translateY(0px); }
+              50% { transform: translateY(-10px); }
+            }
+            .animate-float {
+              animation: float 3s ease-in-out infinite;
+            }
+          `,
+        }}
+      />
     </div>
   );
 }

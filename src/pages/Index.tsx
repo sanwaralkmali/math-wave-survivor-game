@@ -18,6 +18,7 @@ interface Skill {
 }
 
 interface Question {
+  id: number;
   question: string;
   choices: string[];
   answer: string;
@@ -33,25 +34,25 @@ interface SkillData {
   questions: Question[];
 }
 
-type GameState = 'home' | 'dashboard' | 'playing' | 'gameover' | 'error';
+type GameState = "home" | "dashboard" | "playing" | "gameover" | "error";
 
 const Index = () => {
   const [skills, setSkills] = useState<Skill[]>([]);
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
   const [skillData, setSkillData] = useState<SkillData | null>(null);
-  const [gameState, setGameState] = useState<GameState>('home');
-  const [playerName, setPlayerName] = useState('');
+  const [gameState, setGameState] = useState<GameState>("home");
+  const [playerName, setPlayerName] = useState("");
   const [gameScore, setGameScore] = useState(0);
   const [gameWave, setGameWave] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [difficulty, setDifficulty] = useState('standard');
+  const [difficulty, setDifficulty] = useState("standard");
   const [adjustedTime, setAdjustedTime] = useState<number | null>(null);
   const [filterSkillIds, setFilterSkillIds] = useState<string[] | null>(null);
-  const [errorMessage, setErrorMessage] = useState<string>('');
-  
+  const [errorMessage, setErrorMessage] = useState<string>("");
+
   const [searchParams] = useSearchParams();
-  const skillParam = searchParams.get('skill');
-  const filteredParam = searchParams.get('filtered');
+  const skillParam = searchParams.get("skill");
+  const filteredParam = searchParams.get("filtered");
   const { toast } = useToast();
   const navigate = useNavigate();
 
@@ -59,13 +60,13 @@ const Index = () => {
   useEffect(() => {
     const loadSkills = async () => {
       try {
-        const response = await fetch('/data/games.json');
+        const response = await fetch("/data/games.json");
         const skillsData = await response.json();
         setSkills(skillsData);
 
         // If there's a filter param, load filters.json and set filterSkillIds
         if (filteredParam) {
-          const filterRes = await fetch('/data/filters.json');
+          const filterRes = await fetch("/data/filters.json");
           const filters = await filterRes.json();
           if (filters[filteredParam]) {
             setFilterSkillIds(filters[filteredParam]);
@@ -84,15 +85,15 @@ const Index = () => {
           } else {
             // Skill not found - show error
             setErrorMessage(`Skill "${skillParam}" does not exist.`);
-            setGameState('error');
+            setGameState("error");
           }
         }
       } catch (error) {
-        console.error('Failed to load skills:', error);
+        console.error("Failed to load skills:", error);
         toast({
           title: "Error",
           description: "Failed to load skills. Please refresh the page.",
-          variant: "destructive"
+          variant: "destructive",
         });
       } finally {
         setLoading(false);
@@ -108,19 +109,19 @@ const Index = () => {
       const data = await response.json();
       setSelectedSkill(skill);
       setSkillData(data);
-      setGameState('dashboard');
+      setGameState("dashboard");
     } catch (error) {
-      console.error('Failed to load skill data:', error);
+      console.error("Failed to load skill data:", error);
       toast({
         title: "Error",
         description: "Failed to load skill data. Please try again.",
-        variant: "destructive"
+        variant: "destructive",
       });
     }
   };
 
   const handleStartGame = (skillId: string) => {
-    const skill = skills.find(s => s.id === skillId);
+    const skill = skills.find((s) => s.id === skillId);
     if (skill) {
       loadSkillData(skill);
     }
@@ -130,42 +131,45 @@ const Index = () => {
     setPlayerName(name);
     setDifficulty(difficulty);
     setAdjustedTime(time);
-    setGameState('playing');
+    setGameState("playing");
   };
 
   const handleBackToDashboard = () => {
-    setGameState('dashboard');
+    setGameState("dashboard");
     // Keep ?skill=... param in URL
   };
 
   const handleGameEnd = (score: number, wave: number) => {
     setGameScore(score);
     setGameWave(wave);
-    setGameState('gameover');
+    setGameState("gameover");
   };
 
   const handlePlayAgain = () => {
-    setGameState('dashboard');
+    setGameState("dashboard");
     setGameScore(0);
     setGameWave(0);
   };
 
   const handleBackToHome = () => {
-    setGameState('home');
+    setGameState("home");
     setSelectedSkill(null);
     setSkillData(null);
-    setPlayerName('');
+    setPlayerName("");
     setGameScore(0);
     setGameWave(0);
 
     // Dynamically determine filter group for the skill
     if (selectedSkill) {
-      fetch('/data/filters.json')
-        .then(res => res.json())
-        .then(filters => {
+      fetch("/data/filters.json")
+        .then((res) => res.json())
+        .then((filters) => {
           let foundFilter = null;
           for (const [filterName, skillIds] of Object.entries(filters)) {
-            if (Array.isArray(skillIds) && skillIds.includes(selectedSkill.id)) {
+            if (
+              Array.isArray(skillIds) &&
+              skillIds.includes(selectedSkill.id)
+            ) {
               foundFilter = filterName;
               break;
             }
@@ -173,30 +177,30 @@ const Index = () => {
           if (foundFilter) {
             navigate(`/?filtered=${encodeURIComponent(foundFilter)}`);
           } else {
-            navigate('/');
+            navigate("/");
           }
         })
         .catch(() => {
-          navigate('/');
+          navigate("/");
         });
     } else {
-      navigate('/');
+      navigate("/");
     }
   };
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background font-cairo flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 font-cairo flex items-center justify-center">
         <div className="text-center space-y-4">
-          <div className="animate-spin h-12 w-12 border-4 border-game-primary border-t-transparent rounded-full mx-auto"></div>
-          <p className="text-muted-foreground">Loading skills...</p>
+          <div className="animate-spin h-12 w-12 border-4 border-purple-500 border-t-transparent rounded-full mx-auto"></div>
+          <p className="text-gray-600">Loading your math adventure...</p>
         </div>
       </div>
     );
   }
 
   // Game Over State
-  if (gameState === 'gameover' && selectedSkill && skillData) {
+  if (gameState === "gameover" && selectedSkill && skillData) {
     return (
       <GameOver
         score={gameScore}
@@ -211,7 +215,7 @@ const Index = () => {
   }
 
   // Playing State
-  if (gameState === 'playing' && skillData) {
+  if (gameState === "playing" && skillData) {
     return (
       <QuizGame
         skillData={skillData}
@@ -224,108 +228,224 @@ const Index = () => {
   }
 
   // Dashboard State
-  if (gameState === 'dashboard' && selectedSkill && skillData) {
+  if (gameState === "dashboard" && selectedSkill && skillData) {
     return (
-      <GameDashboard
-        skillData={skillData}
-        onStartGame={handleStartQuiz}
-      />
+      <GameDashboard skillData={skillData} onStartGame={handleStartQuiz} />
     );
   }
 
   // Home State
-  if (gameState === 'home') {
+  if (gameState === "home") {
     return (
-      <div className="min-h-screen bg-background font-cairo">
-        <div className="container mx-auto px-4 py-8">
-          {/* Hero Section */}
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="p-3 rounded-xl bg-gradient-primary">
-                <Brain className="h-10 w-10 text-primary-foreground" />
-              </div>
-              <h1 className="text-5xl font-bold text-foreground">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 font-cairo relative overflow-hidden">
+        {/* Floating Math Symbols - Background Decorations */}
+        <div className="fixed inset-0 pointer-events-none z-0">
+          {/* Top left symbols */}
+          <div
+            className="absolute top-16 left-16 text-2xl opacity-20 animate-float"
+            style={{ animationDelay: "0s" }}
+          >
+            ➗
+          </div>
+          <div
+            className="absolute top-24 left-24 text-xl opacity-20 animate-float"
+            style={{ animationDelay: "1s" }}
+          >
+            ×
+          </div>
+
+          {/* Top right symbols */}
+          <div
+            className="absolute top-20 right-20 text-xl opacity-20 animate-float"
+            style={{ animationDelay: "2s" }}
+          >
+            π
+          </div>
+          <div
+            className="absolute top-28 right-16 text-lg opacity-20 animate-float"
+            style={{ animationDelay: "3s" }}
+          >
+            √
+          </div>
+
+          {/* Middle left symbols */}
+          <div
+            className="absolute top-1/3 left-12 text-xl opacity-20 animate-float"
+            style={{ animationDelay: "0.5s" }}
+          >
+            +
+          </div>
+          <div
+            className="absolute top-1/2 left-20 text-lg opacity-20 animate-float"
+            style={{ animationDelay: "1.5s" }}
+          >
+            =
+          </div>
+
+          {/* Middle right symbols */}
+          <div
+            className="absolute top-1/3 right-14 text-lg opacity-20 animate-float"
+            style={{ animationDelay: "2.5s" }}
+          >
+            %
+          </div>
+          <div
+            className="absolute top-1/2 right-12 text-xl opacity-20 animate-float"
+            style={{ animationDelay: "0.8s" }}
+          >
+            ∞
+          </div>
+
+          {/* Bottom left symbols */}
+          <div
+            className="absolute bottom-28 left-16 text-lg opacity-20 animate-float"
+            style={{ animationDelay: "1.2s" }}
+          >
+            ∑
+          </div>
+          <div
+            className="absolute bottom-20 left-24 text-xl opacity-20 animate-float"
+            style={{ animationDelay: "2.8s" }}
+          >
+            ∫
+          </div>
+
+          {/* Bottom right symbols */}
+          <div
+            className="absolute bottom-24 right-20 text-lg opacity-20 animate-float"
+            style={{ animationDelay: "0.3s" }}
+          >
+            ∆
+          </div>
+          <div
+            className="absolute bottom-16 right-16 text-xl opacity-20 animate-float"
+            style={{ animationDelay: "1.8s" }}
+          >
+            θ
+          </div>
+
+          {/* Fun elements scattered around */}
+          <div
+            className="absolute top-1/4 left-1/4 text-lg opacity-20 animate-float"
+            style={{ animationDelay: "0.7s" }}
+          >
+            ⭐
+          </div>
+          <div
+            className="absolute top-3/4 right-1/4 text-lg opacity-20 animate-float"
+            style={{ animationDelay: "1.3s" }}
+          >
+            💎
+          </div>
+          <div
+            className="absolute bottom-1/4 left-1/3 text-lg opacity-20 animate-float"
+            style={{ animationDelay: "2.1s" }}
+          >
+            🔥
+          </div>
+          <div
+            className="absolute top-1/2 left-1/3 text-lg opacity-20 animate-float"
+            style={{ animationDelay: "0.9s" }}
+          >
+            ✨
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 py-4 relative z-10">
+          {/* Compact Hero Section */}
+          <div className="text-center mb-4">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="text-3xl">🧠</div>
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Math Quest
               </h1>
-              <Sparkles className="h-8 w-8 text-game-warning animate-pulse" />
+              <div className="text-3xl">⚡</div>
             </div>
-            
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Master math skills through engaging quiz gameplay. Choose your challenge and 
-              survive waves of increasingly difficult questions!
+
+            <p className="text-sm text-gray-600 max-w-xs mx-auto">
+              Master math skills through epic quiz battles! 🎮
             </p>
           </div>
 
-          {/* Features */}
-          <div className="grid gap-4 md:grid-cols-3 mb-12">
-            <Card className="bg-gradient-to-br from-game-primary/10 to-transparent border-game-primary/20">
-              <CardContent className="p-6 text-center">
-                <div className="text-2xl font-bold text-game-primary mb-2">🎯</div>
-                <h3 className="font-semibold mb-2">Skill-Based Learning</h3>
-                <p className="text-sm text-muted-foreground">Focus on specific math topics</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gradient-to-br from-game-secondary/10 to-transparent border-game-secondary/20">
-              <CardContent className="p-6 text-center">
-                <div className="text-2xl font-bold text-game-secondary mb-2">⚡</div>
-                <h3 className="font-semibold mb-2">Wave Survival</h3>
-                <p className="text-sm text-muted-foreground">Survive increasing difficulty</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gradient-to-br from-game-warning/10 to-transparent border-game-warning/20">
-              <CardContent className="p-6 text-center">
-                <div className="text-2xl font-bold text-game-warning mb-2">🏆</div>
-                <h3 className="font-semibold mb-2">Score & Streaks</h3>
-                <p className="text-sm text-muted-foreground">Earn points and multipliers</p>
-              </CardContent>
-            </Card>
+          {/* Compact Features */}
+          <div className="grid grid-cols-3 gap-2 mb-4">
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center border border-purple-200">
+              <div className="text-lg mb-1">🎯</div>
+              <div className="text-xs font-semibold text-purple-600">
+                Skills
+              </div>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center border border-pink-200">
+              <div className="text-lg mb-1">⚡</div>
+              <div className="text-xs font-semibold text-pink-600">Waves</div>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center border border-blue-200">
+              <div className="text-lg mb-1">🏆</div>
+              <div className="text-xs font-semibold text-blue-600">Score</div>
+            </div>
           </div>
 
-          {/* Skills Grid */}
+          {/* Skills Grid - Compact */}
           <div>
-            <h2 className="text-3xl font-bold text-center mb-8">Choose Your Challenge</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
+            <h2 className="text-lg font-bold text-center mb-3 text-gray-800">
+              Choose Your Challenge! 🚀
+            </h2>
+            <div className="grid gap-3 max-w-sm mx-auto">
               {(filterSkillIds === null
                 ? skills
-                : skills.filter(skill => filterSkillIds.includes(skill.id))
+                : skills.filter((skill) => filterSkillIds.includes(skill.id))
               ).map((skill) => (
-                <SkillCard
-                  key={skill.id}
-                  skill={skill}
-                />
+                <SkillCard key={skill.id} skill={skill} />
               ))}
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="text-center mt-16 text-muted-foreground">
-            <p>Ready to test your math skills? Pick a challenge above and start your quest!</p>
+          {/* Compact Footer */}
+          <div className="text-center mt-4 text-gray-600">
+            <p className="text-xs">Ready to become a math champion? 💪</p>
           </div>
         </div>
+
+        {/* Custom CSS for floating animation */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+              }
+              .animate-float {
+                animation: float 3s ease-in-out infinite;
+              }
+            `,
+          }}
+        />
       </div>
     );
   }
 
   // Error State
-  if (gameState === 'error') {
+  if (gameState === "error") {
     return (
-      <div className="min-h-screen bg-background font-cairo flex items-center justify-center p-4">
-        <Card className="w-full max-w-md border-2 border-game-danger bg-card/90 backdrop-blur-sm">
-          <CardContent className="p-8 text-center space-y-6">
-            <div className="text-6xl">❌</div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 font-cairo flex items-center justify-center p-4">
+        <Card className="w-full max-w-sm border-2 border-red-300 bg-white/90 backdrop-blur-sm">
+          <CardContent className="p-6 text-center space-y-4">
+            <div className="text-4xl">❌</div>
             <div>
-              <h1 className="text-2xl font-bold text-game-danger mb-2">Skill Not Found</h1>
-              <p className="text-muted-foreground">{errorMessage}</p>
+              <h1 className="text-xl font-bold text-red-600 mb-2">
+                Oops! Skill Not Found
+              </h1>
+              <p className="text-gray-600 text-sm">{errorMessage}</p>
             </div>
             <Button
               onClick={() => {
-                setGameState('home');
-                setErrorMessage('');
-                navigate('/');
+                setGameState("home");
+                setErrorMessage("");
+                navigate("/");
               }}
-              className="w-full bg-gradient-primary hover:opacity-90"
+              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
             >
               Go to Home
             </Button>
