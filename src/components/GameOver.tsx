@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Trophy, Star, Home, RotateCcw, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
+import "katex/dist/katex.min.css";
+import { InlineMath, BlockMath } from "react-katex";
 
 interface GameOverProps {
   score: number;
@@ -13,6 +15,31 @@ interface GameOverProps {
   onPlayAgain: () => void;
   onBackToHome: () => void;
 }
+
+// Helper function to render text with LaTeX expressions
+const renderMathText = (text: string) => {
+  // Split text by LaTeX delimiters
+  const parts = text.split(/(\$[^$]*\$|\\\([^)]*\\\)|\\\[[^\]]*\\\])/);
+
+  return parts.map((part, index) => {
+    if (part.startsWith("$") && part.endsWith("$")) {
+      // Inline math
+      const math = part.slice(1, -1);
+      return <InlineMath key={index} math={math} />;
+    } else if (part.startsWith("\\(") && part.endsWith("\\)")) {
+      // Inline math with \( \)
+      const math = part.slice(2, -2);
+      return <InlineMath key={index} math={math} />;
+    } else if (part.startsWith("\\[") && part.endsWith("\\]")) {
+      // Block math with \[ \]
+      const math = part.slice(2, -2);
+      return <BlockMath key={index} math={math} />;
+    } else {
+      // Regular text
+      return <span key={index}>{part}</span>;
+    }
+  });
+};
 
 export function GameOver({
   score,
@@ -306,14 +333,12 @@ export function GameOver({
 
           {/* Skill Info */}
           <div className="text-center">
-            <Badge
-              variant="outline"
-              className="text-xs px-2 py-1 mb-1 border-2 border-purple-300 bg-purple-50 text-purple-700"
-            >
-              🎯 {skillTitle}
+            <Badge variant="outline" className="text-lg px-4 py-2 mb-2">
+              <Target className="mr-2 h-4 w-4" />
+              {renderMathText(skillTitle)}
             </Badge>
-            <p className="text-xs text-gray-600">
-              {wave} out of {maxWave} waves completed
+            <p className="text-muted-foreground">
+              Challenge completed with {wave} out of {maxWave} waves!
             </p>
           </div>
 

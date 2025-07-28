@@ -30,6 +30,8 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import "katex/dist/katex.min.css";
+import { InlineMath, BlockMath } from "react-katex";
 
 interface Question {
   wave: number;
@@ -90,6 +92,31 @@ function getQuestionsPerWaveByDifficulty(
       };
   }
 }
+
+// Helper function to render text with LaTeX expressions
+const renderMathText = (text: string) => {
+  // Split text by LaTeX delimiters
+  const parts = text.split(/(\$[^$]*\$|\\\([^)]*\\\)|\\\[[^\]]*\\\])/);
+
+  return parts.map((part, index) => {
+    if (part.startsWith("$") && part.endsWith("$")) {
+      // Inline math
+      const math = part.slice(1, -1);
+      return <InlineMath key={index} math={math} />;
+    } else if (part.startsWith("\\(") && part.endsWith("\\)")) {
+      // Inline math with \( \)
+      const math = part.slice(2, -2);
+      return <InlineMath key={index} math={math} />;
+    } else if (part.startsWith("\\[") && part.endsWith("\\]")) {
+      // Block math with \[ \]
+      const math = part.slice(2, -2);
+      return <BlockMath key={index} math={math} />;
+    } else {
+      // Regular text
+      return <span key={index}>{part}</span>;
+    }
+  });
+};
 
 export function GameDashboard({
   skillData,

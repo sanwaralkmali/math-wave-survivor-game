@@ -1,9 +1,17 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Play } from "lucide-react";
+import { Brain, Play, Target, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
+import "katex/dist/katex.min.css";
+import { InlineMath, BlockMath } from "react-katex";
 
 interface SkillCardProps {
   skill: {
@@ -18,30 +26,61 @@ interface SkillCardProps {
 const difficultyColors = {
   Easy: "bg-green-100 text-green-700 border-green-200",
   Medium: "bg-yellow-100 text-yellow-700 border-yellow-200",
-  Hard: "bg-red-100 text-red-700 border-red-200"
+  Hard: "bg-red-100 text-red-700 border-red-200",
 };
 
 const difficultyEmojis = {
   Easy: "😊",
-  Medium: "😎", 
-  Hard: "🔥"
+  Medium: "😎",
+  Hard: "🔥",
 };
 
 const cardColors = {
-  primary: "border-purple-300 hover:shadow-[0_0_20px_hsl(270_50%_60%/0.3)] hover:border-purple-400",
-  secondary: "border-pink-300 hover:shadow-[0_0_20px_hsl(330_50%_60%/0.3)] hover:border-pink-400",
-  warning: "border-yellow-300 hover:shadow-[0_0_20px_hsl(45_50%_60%/0.3)] hover:border-yellow-400",
-  success: "border-green-300 hover:shadow-[0_0_20px_hsl(150_50%_60%/0.3)] hover:border-green-400"
+  primary:
+    "border-purple-300 hover:shadow-[0_0_20px_hsl(270_50%_60%/0.3)] hover:border-purple-400",
+  secondary:
+    "border-pink-300 hover:shadow-[0_0_20px_hsl(330_50%_60%/0.3)] hover:border-pink-400",
+  warning:
+    "border-yellow-300 hover:shadow-[0_0_20px_hsl(45_50%_60%/0.3)] hover:border-yellow-400",
+  success:
+    "border-green-300 hover:shadow-[0_0_20px_hsl(150_50%_60%/0.3)] hover:border-green-400",
+};
+
+// Helper function to render text with LaTeX expressions
+const renderMathText = (text: string) => {
+  // Split text by LaTeX delimiters
+  const parts = text.split(/(\$[^$]*\$|\\\([^)]*\\\)|\\\[[^\]]*\\\])/);
+
+  return parts.map((part, index) => {
+    if (part.startsWith("$") && part.endsWith("$")) {
+      // Inline math
+      const math = part.slice(1, -1);
+      return <InlineMath key={index} math={math} />;
+    } else if (part.startsWith("\\(") && part.endsWith("\\)")) {
+      // Inline math with \( \)
+      const math = part.slice(2, -2);
+      return <InlineMath key={index} math={math} />;
+    } else if (part.startsWith("\\[") && part.endsWith("\\]")) {
+      // Block math with \[ \]
+      const math = part.slice(2, -2);
+      return <BlockMath key={index} math={math} />;
+    } else {
+      // Regular text
+      return <span key={index}>{part}</span>;
+    }
+  });
 };
 
 export function SkillCard({ skill }: SkillCardProps) {
   const navigate = useNavigate();
   return (
-    <Card className={cn(
-      "group relative overflow-hidden transition-all duration-300 hover:scale-105",
-      "bg-white/90 backdrop-blur-sm border-2 shadow-lg",
-      cardColors[skill.color as keyof typeof cardColors] || cardColors.primary
-    )}>
+    <Card
+      className={cn(
+        "group relative overflow-hidden transition-all duration-300 hover:scale-105",
+        "bg-white/90 backdrop-blur-sm border-2 shadow-lg",
+        cardColors[skill.color as keyof typeof cardColors] || cardColors.primary
+      )}
+    >
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -53,13 +92,21 @@ export function SkillCard({ skill }: SkillCardProps) {
                 {skill.title}
               </CardTitle>
               <div className="flex items-center gap-2 mt-1">
-                <Badge 
+                <Badge
                   className={cn(
                     "text-xs font-medium border",
-                    difficultyColors[skill.difficulty as keyof typeof difficultyColors]
+                    difficultyColors[
+                      skill.difficulty as keyof typeof difficultyColors
+                    ]
                   )}
                 >
-                  <span className="mr-1">{difficultyEmojis[skill.difficulty as keyof typeof difficultyEmojis]}</span>
+                  <span className="mr-1">
+                    {
+                      difficultyEmojis[
+                        skill.difficulty as keyof typeof difficultyEmojis
+                      ]
+                    }
+                  </span>
                   {skill.difficulty}
                 </Badge>
               </div>
@@ -67,13 +114,13 @@ export function SkillCard({ skill }: SkillCardProps) {
           </div>
         </div>
       </CardHeader>
-      
-      <CardContent className="space-y-3">
-        <CardDescription className="text-xs text-gray-600 leading-relaxed">
-          {skill.description}
-        </CardDescription>
-        
-        <Button 
+
+      <CardContent className="p-6">
+        <p className="text-muted-foreground mb-4">
+          {renderMathText(skill.description)}
+        </p>
+
+        <Button
           onClick={() => navigate(`/?skill=${encodeURIComponent(skill.id)}`)}
           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg h-10"
           size="lg"

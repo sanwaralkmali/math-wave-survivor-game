@@ -6,6 +6,8 @@ import { Progress } from "@/components/ui/progress";
 import { Heart, Timer, Trophy, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
+import "katex/dist/katex.min.css";
+import { InlineMath, BlockMath } from "react-katex";
 
 interface Question {
   id: number;
@@ -82,6 +84,31 @@ function getQuestionsPerWaveByDifficulty(
   }
 }
 
+// Helper function to render text with LaTeX expressions
+const renderMathText = (text: string) => {
+  // Split text by LaTeX delimiters
+  const parts = text.split(/(\$[^$]*\$|\\\([^)]*\\\)|\\\[[^\]]*\\\])/);
+
+  return parts.map((part, index) => {
+    if (part.startsWith("$") && part.endsWith("$")) {
+      // Inline math
+      const math = part.slice(1, -1);
+      return <InlineMath key={index} math={math} />;
+    } else if (part.startsWith("\\(") && part.endsWith("\\)")) {
+      // Inline math with \( \)
+      const math = part.slice(2, -2);
+      return <InlineMath key={index} math={math} />;
+    } else if (part.startsWith("\\[") && part.endsWith("\\]")) {
+      // Block math with \[ \]
+      const math = part.slice(2, -2);
+      return <BlockMath key={index} math={math} />;
+    } else {
+      // Regular text
+      return <span key={index}>{part}</span>;
+    }
+  });
+};
+
 export function QuizGame({
   skillData,
   onGameEnd,
@@ -103,7 +130,7 @@ export function QuizGame({
   const [shakeAnimation, setShakeAnimation] = useState(false);
   const [pulseAnimation, setPulseAnimation] = useState(false);
   const [scoreAnimation, setScoreAnimation] = useState(false);
-  const [showParticles, setShowParticles] = useState(false);
+  const [isEnding, setIsEnding] = useState(false);
 
   const { toast } = useToast();
 
@@ -135,6 +162,13 @@ export function QuizGame({
   const waveProgress =
     ((currentQuestionIndex + 1) / currentWaveQuestions.length) * 100;
 
+  // Effect to handle game end callback
+  useEffect(() => {
+    if (isEnding) {
+      onGameEnd(score, currentWave);
+    }
+  }, [isEnding, score, currentWave, onGameEnd]);
+
   // Timer effect
   useEffect(() => {
     if (gameOver || isAnswered) return;
@@ -155,8 +189,8 @@ export function QuizGame({
     setLives((prev) => {
       const newLives = prev - 1;
       if (newLives <= 0) {
+        setIsEnding(true);
         setGameOver(true);
-        onGameEnd(score, currentWave);
         return 0;
       }
       return newLives;
@@ -203,10 +237,6 @@ export function QuizGame({
       setScoreAnimation(true);
       setTimeout(() => setScoreAnimation(false), 1000);
 
-      // Show particles for correct answer
-      setShowParticles(true);
-      setTimeout(() => setShowParticles(false), 1000);
-
       // Fun success toast
       const emojis = ["🎉", "🎊", "🔥", "⭐", "💯", "🚀"];
       const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
@@ -226,8 +256,8 @@ export function QuizGame({
       setLives((prev) => {
         const newLives = prev - 1;
         if (newLives <= 0) {
+          setIsEnding(true);
           setGameOver(true);
-          onGameEnd(score, currentWave);
           return 0;
         }
         return newLives;
@@ -262,20 +292,31 @@ export function QuizGame({
     if (currentQuestionIndex + 1 < currentWaveQuestions.length) {
       setCurrentQuestionIndex((prev) => prev + 1);
     } else if (currentWave < allWaves.length) {
-      setCurrentWave((prev) => prev + 1);
-      setCurrentQuestionIndex(0);
+      // Check if the next wave has questions
+      const nextWave = currentWave + 1;
+      const nextWaveQuestions = questionsByWaveSampled[nextWave] || [];
 
-      // Fun wave completion toast
-      toast({
-        title: "🌊 Wave Complete!",
-        description: "Get ready for harder questions! 💪",
-        duration: 3000,
-        className:
-          "bg-gradient-to-r from-blue-500 to-purple-500 text-white border-blue-600",
-      });
+      if (nextWaveQuestions.length > 0) {
+        setCurrentWave((prev) => prev + 1);
+        setCurrentQuestionIndex(0);
+
+        // Fun wave completion toast
+        toast({
+          title: "🌊 Wave Complete!",
+          description: "Get ready for harder questions! 💪",
+          duration: 3000,
+          className:
+            "bg-gradient-to-r from-blue-500 to-purple-500 text-white border-blue-600",
+        });
+      } else {
+        // No more questions available, end the game
+        setIsEnding(true);
+        setGameOver(true);
+        return;
+      }
     } else {
+      setIsEnding(true);
       setGameOver(true);
-      onGameEnd(score, currentWave);
       return;
     }
 
@@ -285,7 +326,11 @@ export function QuizGame({
     setTimeLeft(initialTimePerQuestion);
   };
 
-  if (gameOver || !currentQuestion) {
+  if (gameOver || isEnding) {
+    return null; // Let the parent component handle the game over screen
+  }
+
+  if (!currentQuestion) {
     return null;
   }
 
@@ -503,7 +548,7 @@ export function QuizGame({
         <Card className="border-2 border-purple-300 bg-white/90 backdrop-blur-sm shadow-lg">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg text-center font-bold text-gray-800 leading-relaxed">
-              {currentQuestion.question}
+              {renderMathText(currentQuestion.question)}
             </CardTitle>
           </CardHeader>
 
@@ -547,7 +592,7 @@ export function QuizGame({
                   onClick={() => handleAnswerSelect(choice)}
                   disabled={isAnswered}
                 >
-                  {choice}
+                  {renderMathText(choice)}
                   {/* Success checkmark for correct answer */}
                   {isAnswered && choice === currentQuestion.answer && (
                     <div className="absolute right-2 text-white text-lg">
@@ -572,26 +617,6 @@ export function QuizGame({
           </CardContent>
         </Card>
       </div>
-
-      {/* Particles for correct answers */}
-      {showParticles && (
-        <div className="fixed inset-0 pointer-events-none z-50">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute animate-bounce"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 0.5}s`,
-                animationDuration: `${1 + Math.random()}s`,
-              }}
-            >
-              {["🎉", "⭐", "💎", "🔥", "✨"][Math.floor(Math.random() * 5)]}
-            </div>
-          ))}
-        </div>
-      )}
 
       {/* Custom CSS for animations */}
       <style
