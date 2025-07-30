@@ -1,13 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { SkillCard } from "@/components/SkillCard";
 import { GameDashboard } from "@/components/GameDashboard";
 import { QuizGame } from "@/components/QuizGame";
 import { GameOver } from "@/components/GameOver";
-import { Card, CardContent } from "@/components/ui/card";
-import { Brain, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
 
 interface Skill {
   id: string;
@@ -34,65 +30,260 @@ interface SkillData {
   questions: Question[];
 }
 
-type GameState = "home" | "dashboard" | "playing" | "gameover" | "error";
+type GameState = "dashboard" | "playing" | "gameover";
+
+// Hardcoded skills list for better performance
+const SKILLS: Skill[] = [
+  {
+    id: "integers",
+    title: "Integer Operations",
+    description:
+      "Master addition, subtraction, multiplication, and division with integers.",
+    difficulty: "Easy",
+    color: "primary",
+  },
+  {
+    id: "fractions",
+    title: "Fraction Fundamentals",
+    description:
+      "Convert decimals to fractions and practice fraction operations.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "decimals",
+    title: "Decimal Operations",
+    description:
+      "Convert fractions to decimals and practice decimal operations.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "mixed-problems",
+    title: "Mixed Problems",
+    description: "Solve problems that combine multiple operations.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "order-of-operations",
+    title: "Order of Operations",
+    description: "Learn and practice the order of operations in math.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "algebra-basics",
+    title: "Algebra Builder",
+    description: "Solve simple Algebraic questions",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "fraction-decimal",
+    title: "Fraction to Decimal",
+    description:
+      "Convert fractions into their decimal equivalents and practice related problems.",
+    difficulty: "Easy",
+    color: "primary",
+  },
+  {
+    id: "fraction-percentage",
+    title: "Fraction to Percentage",
+    description:
+      "Convert fractions into percentages and solve percentage-based questions.",
+    difficulty: "Easy",
+    color: "primary",
+  },
+  {
+    id: "decimal-percentage",
+    title: "Decimal to Percentage",
+    description:
+      "Convert decimals into percentages and practice percentage calculations.",
+    difficulty: "Easy",
+    color: "primary",
+  },
+  {
+    id: "mixed-conversion",
+    title: "Mixed Conversion",
+    description:
+      "Practice converting between fractions, decimals, and percentages in a variety of problems.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "basic-scientific-notation",
+    title: "Basic Scientific Notation",
+    description:
+      "Learn the basics of scientific notation and how to express numbers in this form.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "classification-numbers",
+    title: "Classification of Numbers",
+    description:
+      "Classify numbers as natural, whole, integers, rational, or irrational.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "operations-scientific-notation",
+    title: "Operations with Scientific Notation",
+    description:
+      "Practice addition, subtraction, multiplication, and division with numbers in scientific notation.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "simplify-expressions",
+    title: "Simplify Expressions",
+    description: "Practice evaluating, distributing, and combining like terms.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "solving-equations",
+    title: "Solving Equations",
+    description: "Learn to solve one-step, two-step, and multi-step equations.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "solving-inequalities",
+    title: "Solving Inequalities",
+    description: "Practice solving and graphing linear inequalities.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "gcf-factoring",
+    title: "GCF Factoring",
+    description: "Find the greatest common factor of two or more numbers.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "factoring-by-grouping",
+    title: "Factoring by Grouping",
+    description: "Factorize expressions by grouping terms.",
+    difficulty: "Hard",
+    color: "primary",
+  },
+  {
+    id: "factoring-trinomials-1",
+    title: "Factoring Trinomials (x² + bx + c)",
+    description: "Factorize trinomials of the form x² + bx + c.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "factoring-trinomials-2",
+    title: "Factoring Trinomials (ax² + bx + c)",
+    description: "Factorize trinomials of the form ax² + bx + c.",
+    difficulty: "Hard",
+    color: "secondary",
+  },
+  {
+    id: "difference-squares",
+    title: "Factoring Difference of Squares",
+    description: "Factorize expressions of the form a² - b².",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "difference-sum-of-cubes",
+    title: "Factoring Difference of Cubes",
+    description: "Factorize expressions of the form a³ - b³ or a³ + b³",
+    difficulty: "Hard",
+    color: "secondary",
+  },
+  {
+    id: "perfect-squares",
+    title: "Factoring Perfect Squares",
+    description:
+      "Factorize expressions of the form a² + 2ab + b² or a² - 2ab + b²",
+    difficulty: "Hard",
+    color: "secondary",
+  },
+  {
+    id: "solving-equations-by-factoring",
+    title: "Solving Equations by Factoring",
+    description: "Solve equations by factoring.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "quadratic-formula",
+    title: "Solving by Quadratic Formula",
+    description: "Solve quadratic equations by using the quadratic formula.",
+    difficulty: "Hard",
+    color: "primary",
+  },
+  {
+    id: "understanding-polynomials",
+    title: "Understanding Polynomials",
+    description: "Learn about polynomials and their properties.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "adding-subtracting-polynomials",
+    title: "Adding and Subtracting Polynomials",
+    description: "Add and subtract polynomials.",
+    difficulty: "Medium",
+    color: "secondary",
+  },
+  {
+    id: "multiplying-polynomials",
+    title: "Multiplying Polynomials",
+    description: "Multiply polynomials.",
+    difficulty: "Hard",
+    color: "primary",
+  },
+];
 
 const Index = () => {
-  const [skills, setSkills] = useState<Skill[]>([]);
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
   const [skillData, setSkillData] = useState<SkillData | null>(null);
-  const [gameState, setGameState] = useState<GameState>("home");
+  const [gameState, setGameState] = useState<GameState>("dashboard");
   const [playerName, setPlayerName] = useState("");
   const [gameScore, setGameScore] = useState(0);
   const [gameWave, setGameWave] = useState(0);
   const [loading, setLoading] = useState(true);
   const [difficulty, setDifficulty] = useState("standard");
   const [adjustedTime, setAdjustedTime] = useState<number | null>(null);
-  const [filterSkillIds, setFilterSkillIds] = useState<string[] | null>(null);
-  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const [searchParams] = useSearchParams();
   const skillParam = searchParams.get("skill");
-  const filteredParam = searchParams.get("filtered");
   const { toast } = useToast();
   const navigate = useNavigate();
 
-  // Load skills from JSON
+  // Load skill data
   useEffect(() => {
-    const loadSkills = async () => {
+    const loadSkill = async () => {
       try {
-        const response = await fetch("/data/games.json");
-        const skillsData = await response.json();
-        setSkills(skillsData);
-
-        // If there's a filter param, load filters.json and set filterSkillIds
-        if (filteredParam) {
-          const filterRes = await fetch("/data/filters.json");
-          const filters = await filterRes.json();
-          if (filters[filteredParam]) {
-            setFilterSkillIds(filters[filteredParam]);
-          } else {
-            setFilterSkillIds([]); // No match, show nothing
-          }
-        } else {
-          setFilterSkillIds(null); // No filter, show all
-        }
-
         // If there's a skill parameter, load that skill directly
         if (skillParam) {
-          const skill = skillsData.find((s: Skill) => s.id === skillParam);
+          const skill = SKILLS.find((s) => s.id === skillParam);
+
           if (skill) {
             await loadSkillData(skill);
           } else {
-            // Skill not found - show error
-            setErrorMessage(`Skill "${skillParam}" does not exist.`);
-            setGameState("error");
+            // Skill not found - redirect to 404
+            navigate("/404");
+            return;
           }
+        } else {
+          // No skill parameter provided - redirect to 404
+          navigate("/404");
+          return;
         }
       } catch (error) {
-        console.error("Failed to load skills:", error);
+        console.error("Failed to load skill data:", error);
         toast({
           title: "Error",
-          description: "Failed to load skills. Please refresh the page.",
+          description: "Failed to load skill data. Please refresh the page.",
           variant: "destructive",
         });
       } finally {
@@ -100,12 +291,21 @@ const Index = () => {
       }
     };
 
-    loadSkills();
-  }, [skillParam, filteredParam, toast]);
+    loadSkill();
+  }, [skillParam, toast]);
 
   const loadSkillData = async (skill: Skill) => {
     try {
-      const response = await fetch(`/data/skills/${skill.id}.json`);
+      // Get the correct file name from filters.json
+      const filtersResponse = await fetch("/data/filters.json");
+      const filters = await filtersResponse.json();
+
+      if (!filters[skill.id] || !filters[skill.id][0]) {
+        throw new Error(`No file mapping found for skill: ${skill.id}`);
+      }
+
+      const fileName = filters[skill.id][0];
+      const response = await fetch(`/data/skills/${fileName}`);
       const data = await response.json();
       setSelectedSkill(skill);
       setSkillData(data);
@@ -117,13 +317,6 @@ const Index = () => {
         description: "Failed to load skill data. Please try again.",
         variant: "destructive",
       });
-    }
-  };
-
-  const handleStartGame = (skillId: string) => {
-    const skill = skills.find((s) => s.id === skillId);
-    if (skill) {
-      loadSkillData(skill);
     }
   };
 
@@ -152,40 +345,15 @@ const Index = () => {
   };
 
   const handleBackToHome = () => {
-    setGameState("home");
+    setGameState("dashboard");
     setSelectedSkill(null);
     setSkillData(null);
     setPlayerName("");
     setGameScore(0);
     setGameWave(0);
 
-    // Dynamically determine filter group for the skill
-    if (selectedSkill) {
-      fetch("/data/filters.json")
-        .then((res) => res.json())
-        .then((filters) => {
-          let foundFilter = null;
-          for (const [filterName, skillIds] of Object.entries(filters)) {
-            if (
-              Array.isArray(skillIds) &&
-              skillIds.includes(selectedSkill.id)
-            ) {
-              foundFilter = filterName;
-              break;
-            }
-          }
-          if (foundFilter) {
-            navigate(`/?filtered=${encodeURIComponent(foundFilter)}`);
-          } else {
-            navigate("/");
-          }
-        })
-        .catch(() => {
-          navigate("/");
-        });
-    } else {
-      navigate("/");
-    }
+    // Navigate to 404 since no skill is specified
+    navigate("/404");
   };
 
   if (loading) {
@@ -231,227 +399,6 @@ const Index = () => {
   if (gameState === "dashboard" && selectedSkill && skillData) {
     return (
       <GameDashboard skillData={skillData} onStartGame={handleStartQuiz} />
-    );
-  }
-
-  // Home State
-  if (gameState === "home") {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 font-cairo relative overflow-hidden">
-        {/* Floating Math Symbols - Background Decorations */}
-        <div className="fixed inset-0 pointer-events-none z-0">
-          {/* Top left symbols */}
-          <div
-            className="absolute top-16 left-16 text-2xl opacity-20 animate-float"
-            style={{ animationDelay: "0s" }}
-          >
-            ➗
-          </div>
-          <div
-            className="absolute top-24 left-24 text-xl opacity-20 animate-float"
-            style={{ animationDelay: "1s" }}
-          >
-            ×
-          </div>
-
-          {/* Top right symbols */}
-          <div
-            className="absolute top-20 right-20 text-xl opacity-20 animate-float"
-            style={{ animationDelay: "2s" }}
-          >
-            π
-          </div>
-          <div
-            className="absolute top-28 right-16 text-lg opacity-20 animate-float"
-            style={{ animationDelay: "3s" }}
-          >
-            √
-          </div>
-
-          {/* Middle left symbols */}
-          <div
-            className="absolute top-1/3 left-12 text-xl opacity-20 animate-float"
-            style={{ animationDelay: "0.5s" }}
-          >
-            +
-          </div>
-          <div
-            className="absolute top-1/2 left-20 text-lg opacity-20 animate-float"
-            style={{ animationDelay: "1.5s" }}
-          >
-            =
-          </div>
-
-          {/* Middle right symbols */}
-          <div
-            className="absolute top-1/3 right-14 text-lg opacity-20 animate-float"
-            style={{ animationDelay: "2.5s" }}
-          >
-            %
-          </div>
-          <div
-            className="absolute top-1/2 right-12 text-xl opacity-20 animate-float"
-            style={{ animationDelay: "0.8s" }}
-          >
-            ∞
-          </div>
-
-          {/* Bottom left symbols */}
-          <div
-            className="absolute bottom-28 left-16 text-lg opacity-20 animate-float"
-            style={{ animationDelay: "1.2s" }}
-          >
-            ∑
-          </div>
-          <div
-            className="absolute bottom-20 left-24 text-xl opacity-20 animate-float"
-            style={{ animationDelay: "2.8s" }}
-          >
-            ∫
-          </div>
-
-          {/* Bottom right symbols */}
-          <div
-            className="absolute bottom-24 right-20 text-lg opacity-20 animate-float"
-            style={{ animationDelay: "0.3s" }}
-          >
-            ∆
-          </div>
-          <div
-            className="absolute bottom-16 right-16 text-xl opacity-20 animate-float"
-            style={{ animationDelay: "1.8s" }}
-          >
-            θ
-          </div>
-
-          {/* Fun elements scattered around */}
-          <div
-            className="absolute top-1/4 left-1/4 text-lg opacity-20 animate-float"
-            style={{ animationDelay: "0.7s" }}
-          >
-            ⭐
-          </div>
-          <div
-            className="absolute top-3/4 right-1/4 text-lg opacity-20 animate-float"
-            style={{ animationDelay: "1.3s" }}
-          >
-            💎
-          </div>
-          <div
-            className="absolute bottom-1/4 left-1/3 text-lg opacity-20 animate-float"
-            style={{ animationDelay: "2.1s" }}
-          >
-            🔥
-          </div>
-          <div
-            className="absolute top-1/2 left-1/3 text-lg opacity-20 animate-float"
-            style={{ animationDelay: "0.9s" }}
-          >
-            ✨
-          </div>
-        </div>
-
-        <div className="container mx-auto px-4 py-4 relative z-10">
-          {/* Compact Hero Section */}
-          <div className="text-center mb-4">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <div className="text-3xl">🧠</div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Math Quest
-              </h1>
-              <div className="text-3xl">⚡</div>
-            </div>
-
-            <p className="text-sm text-gray-600 max-w-xs mx-auto">
-              Master math skills through epic quiz battles! 🎮
-            </p>
-          </div>
-
-          {/* Compact Features */}
-          <div className="grid grid-cols-3 gap-2 mb-4">
-            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center border border-purple-200">
-              <div className="text-lg mb-1">🎯</div>
-              <div className="text-xs font-semibold text-purple-600">
-                Skills
-              </div>
-            </div>
-
-            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center border border-pink-200">
-              <div className="text-lg mb-1">⚡</div>
-              <div className="text-xs font-semibold text-pink-600">Waves</div>
-            </div>
-
-            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-2 text-center border border-blue-200">
-              <div className="text-lg mb-1">🏆</div>
-              <div className="text-xs font-semibold text-blue-600">Score</div>
-            </div>
-          </div>
-
-          {/* Skills Grid - Compact */}
-          <div>
-            <h2 className="text-lg font-bold text-center mb-3 text-gray-800">
-              Choose Your Challenge! 🚀
-            </h2>
-            <div className="grid gap-3 max-w-sm mx-auto">
-              {(filterSkillIds === null
-                ? skills
-                : skills.filter((skill) => filterSkillIds.includes(skill.id))
-              ).map((skill) => (
-                <SkillCard key={skill.id} skill={skill} />
-              ))}
-            </div>
-          </div>
-
-          {/* Compact Footer */}
-          <div className="text-center mt-4 text-gray-600">
-            <p className="text-xs">Ready to become a math champion? 💪</p>
-          </div>
-        </div>
-
-        {/* Custom CSS for floating animation */}
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-              @keyframes float {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-10px); }
-              }
-              .animate-float {
-                animation: float 3s ease-in-out infinite;
-              }
-            `,
-          }}
-        />
-      </div>
-    );
-  }
-
-  // Error State
-  if (gameState === "error") {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 font-cairo flex items-center justify-center p-4">
-        <Card className="w-full max-w-sm border-2 border-red-300 bg-white/90 backdrop-blur-sm">
-          <CardContent className="p-6 text-center space-y-4">
-            <div className="text-4xl">❌</div>
-            <div>
-              <h1 className="text-xl font-bold text-red-600 mb-2">
-                Oops! Skill Not Found
-              </h1>
-              <p className="text-gray-600 text-sm">{errorMessage}</p>
-            </div>
-            <Button
-              onClick={() => {
-                setGameState("home");
-                setErrorMessage("");
-                navigate("/");
-              }}
-              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
-            >
-              Go to Home
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
     );
   }
 };
