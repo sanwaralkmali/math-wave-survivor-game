@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import DebugQuestions from "./pages/DebugQuestions";
-import Footer from "./components/Footer";
+import { MATHLOGAMEFooter } from "./components/MATHLOGAMEFooter";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +22,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        <MATHLOGAMEFooter />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
