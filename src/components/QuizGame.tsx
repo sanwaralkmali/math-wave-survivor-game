@@ -275,7 +275,12 @@ export function QuizGame({
 
       toast({
         title: `${randomEmoji} Wrong Answer`,
-        description: `Correct: ${currentQuestion.answer}`,
+        description: (
+          <div className="flex items-center gap-2">
+            <span>Correct:</span>
+            {renderMathText(currentQuestion.answer)}
+          </div>
+        ),
         variant: "destructive",
         duration: 3000,
         className:
@@ -560,8 +565,9 @@ export function QuizGame({
                   variant="outline"
                   size="sm"
                   className={cn(
-                    "h-12 p-3 text-sm transition-all duration-300 border-2 rounded-lg relative overflow-hidden",
+                    "min-h-[48px] p-2 sm:p-3 text-sm transition-all duration-300 border-2 rounded-lg relative",
                     "hover:scale-105 hover:shadow-lg",
+                    "flex items-center justify-center text-center whitespace-normal break-words leading-relaxed",
                     // Selected but not answered
                     selectedAnswer === choice &&
                       !isAnswered &&
@@ -595,7 +601,7 @@ export function QuizGame({
                   {renderMathText(choice)}
                   {/* Success checkmark for correct answer */}
                   {isAnswered && choice === currentQuestion.answer && (
-                    <div className="absolute right-2 text-white text-lg">
+                    <div className="absolute top-2 right-2 text-white text-lg">
                       ✅
                     </div>
                   )}
@@ -603,7 +609,7 @@ export function QuizGame({
                   {isAnswered &&
                     selectedAnswer === choice &&
                     choice !== currentQuestion.answer && (
-                      <div className="absolute right-2 text-white text-lg">
+                      <div className="absolute top-2 right-2 text-white text-lg">
                         ❌
                       </div>
                     )}

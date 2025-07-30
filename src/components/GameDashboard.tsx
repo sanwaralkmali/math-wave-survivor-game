@@ -430,7 +430,7 @@ export function GameDashboard({
                 How to Play
               </Button>
             </DialogTrigger>
-            <DialogContent className="font-cairo max-w-sm mx-4">
+            <DialogContent className="font-cairo max-w-[98%] w-[98%] mx-auto sm:max-w-sm">
               <DialogHeader>
                 <DialogTitle className="text-lg font-bold text-center text-purple-700">
                   <div className="text-2xl mb-1">🎮</div>
@@ -484,7 +484,7 @@ export function GameDashboard({
                 Leaderboard
               </Button>
             </DialogTrigger>
-            <DialogContent className="font-cairo max-w-sm mx-4">
+            <DialogContent className="font-cairo max-w-[98%] w-[98%] mx-auto sm:max-w-sm">
               <DialogHeader>
                 <div className="text-center">
                   <div className="text-3xl mb-1">🏆</div>
